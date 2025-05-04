@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "pwd-input": "components\\pwdInput\\pwd_input"
+  },
+  "navigationBarTitleText": "挂失解挂"
+}

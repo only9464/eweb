@@ -1,0 +1,41 @@
+<view class="weui-cells">
+    <picker bindchange="bindSystemChange" range="{{elesystem}}" rangeKey="elcname" value="{{systemIndex}}">
+        <view class="weui-cell" style="display:block">
+            <label class="weui-label">{{i18n.t('elec_system',$_locale)}}</label>
+            <view class="picker-value" wx:if="{{systemIndex}}">{{elesystem[systemIndex].elcname}}</view>
+            <view class="picker-value" wx:else>{{i18n.t('elec_system',$_locale)}}</view>
+        </view>
+    </picker>
+    <picker bindchange="bindAreaChange" range="{{area}}" rangeKey="areaName" value="{{areaIndex}}" wx:if="{{type!='ecnu'}}">
+        <view class="weui-cell" style="display:block">
+            <label class="weui-label">{{i18n.t('elec_school',$_locale)}}</label>
+            <view class="picker-value" wx:if="{{areaIndex}}">{{area[areaIndex].areaName}}</view>
+            <view class="picker-value" wx:else>{{i18n.t('elec_school',$_locale)}}</view>
+        </view>
+    </picker>
+    <picker bindchange="bindDistrictChange" range="{{district}}" rangeKey="districtName" value="{{districtIndex}}">
+        <view class="weui-cell" style="display:block">
+            <label class="weui-label">{{i18n.t('elec_area',$_locale)}}</label>
+            <view class="picker-value" wx:if="{{districtIndex}}">{{district[districtIndex].districtName}}</view>
+            <view class="picker-value" wx:else>{{i18n.t('elec_area',$_locale)}}</view>
+        </view>
+    </picker>
+    <picker bindchange="bindBuildingChange" range="{{building}}" rangeKey="buiName" value="{{buildingIndex}}">
+        <view class="weui-cell" style="display:block">
+            <label class="weui-label">{{i18n.t('elec_build',$_locale)}}</label>
+            <view class="picker-value" wx:if="{{buildingIndex}}">{{building[buildingIndex].buiName}}</view>
+            <view class="picker-value" wx:else>{{i18n.t('elec_build',$_locale)}}</view>
+        </view>
+    </picker>
+    <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <label class="weui-label">{{i18n.t('elec_room_cqjtu',$_locale)}}</label>
+        </view>
+        <view class="weui-cell__bd">
+            <input bindinput="getRoomId" class="weui-input" maxlength="20" placeholder="{{i18n.t('elec_room_cqjtu',$_locale)}}" type="text" value="{{roomid}}"></input>
+        </view>
+    </view>
+</view>
+<button bindtap="doNext" class="longbutton">{{i18n.t('next',$_locale)}}</button>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

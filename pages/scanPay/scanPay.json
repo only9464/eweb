@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "pwd": "pages\\scanPay\\components\\pwdInput\\pwd_input"
+  },
+  "navigationBarTitleText": "订单支付"
+}

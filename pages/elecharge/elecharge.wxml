@@ -1,0 +1,46 @@
+<view class="weui-cells">
+    <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <label class="weui-label">{{i18n.t('lifeCharge_room_name',$_locale)}}</label>
+        </view>
+        <view class="weui-cell__bd">
+            <view class="weui-cell__ft">{{remark?remark:roomname}}</view>
+        </view>
+    </view>
+    <view class="weui-cell" wx:if="{{restElecDegree!=0}}">
+        <view class="weui-cell__hd">
+            <label class="weui-label">{{rest}}</label>
+        </view>
+        <view class="weui-cell__bd">
+            <view class="weui-cell__ft">{{restElecDegree?restElecDegree:0}}</view>
+        </view>
+    </view>
+</view>
+<view class="weui-cells">
+    <picker bindchange="bindDegree" range="{{degreelist}}" rangeKey="name" value="{{degreeIndex}}" wx:if="{{degreelist.length}}">
+        <view class="weui-cell" style="display:block">
+            <label class="weui-label">{{i18n.t('elecharge_select',$_locale)}}</label>
+            <view class="picker-value">{{degreelist[degreeIndex].name}}</view>
+        </view>
+    </picker>
+    <picker bindchange="changePayKind" range="{{array}}" rangeKey="bankname" value="{{index}}" wx:if="{{array.length!=1}}">
+        <view class="picker" style="padding:30rpx;display:flex;justify-content:space-between;">
+            <text>{{i18n.t('recharge_kind',$_locale)}}</text>
+            <text style="color:rgba(0,0,0,0.5);">{{array[index].bankname}}</text>
+        </view>
+    </picker>
+    <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <label class="weui-label">{{i18n.t('recharge_note',$_locale)}}</label>
+        </view>
+        <view class="weui-cell__bd">
+            <input bindinput="setAmount" class="weui-cell__ft" maxlength="6" placeholder="{{i18n.t('recharge_input_placeholder',$_locale)}}" style="color:black" type="{{enterType}}" value="{{amount}}"></input>
+        </view>
+    </view>
+</view>
+<view bindtap="backtoEle" class="back">{{i18n.t('elecharge_prompt',$_locale)}}</view>
+<view class="toast">此处的“{{isWaterSystem?'剩余水量':'剩余电量'}}”非实时查询，实际{{isWaterSystem?'水量':'电量'}}以{{isWaterSystem?'水表':'电表'}}显示为准。</view>
+<button bindtap="doNext" class="longbutton">{{i18n.t('recharge',$_locale)}}</button>
+<pwd bind:close="close" bind:getValue="getPwd" bind:input="getPwdToPay" id="pwd" status="{{status}}" wx:if="{{status}}"></pwd>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

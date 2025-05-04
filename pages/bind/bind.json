@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "modal": "pages\\bind\\components\\modal\\modal"
+  }
+}

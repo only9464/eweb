@@ -1,0 +1,140 @@
+<view class="sign">
+    <form bindsubmit="submit">
+        <view class="weui-cells">
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <label class="weui-label">{{i18n.t('jkcodeRign_loginTime',$_locale)}}</label>
+                </view>
+                <view class="weui-cell__bd">
+                    <input disabled class="weui-cell__ft" placeholder="{{i18n.t('jkcodeRign_loginTime_p',$_locale)}}" placeholderStyle="color:#cfcfcf" style="color:black" type="text" value="{{record}}"></input>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <label class="weui-label">{{i18n.t('name',$_locale)}}</label>
+                </view>
+                <view class="weui-cell__bd">
+                    <input disabled class="weui-cell__ft" name="custname" placeholder="{{i18n.t('bind_name_placeholder',$_locale)}}" placeholderStyle="color:#cfcfcf" style="color:black" type="text" value="{{form.custname?form.custname:user.name}}"></input>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <label class="weui-label">{{i18n.t('student_id',$_locale)}}</label>
+                </view>
+                <view class="weui-cell__bd">
+                    <input disabled class="weui-cell__ft" name="stuempno" placeholder="{{i18n.t('bind_student_id_placeholder',$_locale)}}" placeholderStyle="color:#cfcfcf" style="color:black" type="text" value="{{form.stuempno?form.stuempno:user.stuempno}}"></input>
+                </view>
+                <text class="need">*</text>
+            </view>
+            <view class="weui-cell">
+                <text class="need">*</text>
+                <view class="weui-cell__hd">
+                    <label class="weui-label">{{i18n.t('jkcodeRign_phone',$_locale)}}</label>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-cell__ft" name="phone" placeholder="{{i18n.t('jkcodeRign_phone_p',$_locale)}}" placeholderStyle="color:#cfcfcf" style="color:black" type="text" value="{{form.phone}}"></input>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <text class="need">*</text>
+                <view class="weui-cell__hd">
+                    <label class="weui-label">{{i18n.t('jkcodeRecord_triptype',$_locale)}}</label>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker bindchange="kindChange" name="routeKindsIndex" range="{{routeKinds}}" value="{{form.routeKindsIndex}}">
+                        <view class="weui-cell pickerCell">
+                            <label class="weui-label" wx:if="{{routeKindsIndex==='0'}}">{{i18n.t('jkcodeRecord_triptype_p',$_locale)}}</label>
+                            <view class="picker-value" wx:else>{{routeKinds[routeKindsIndex]}}</view>
+                        </view>
+                    </picker>
+                </view>
+            </view>
+            <view class="weui-cell" wx:if="{{routeKindsIndex===6}}">
+                <text class="need">*</text>
+                <view class="weui-cell__hd">
+                    <label class="weui-label">{{i18n.t('jkcodeRecord_tourarea',$_locale)}}</label>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-cell__ft" name="tourarea" placeholder="{{i18n.t('jkcodeRecord_tourarea_p',$_locale)}}" placeholderStyle="color:#cfcfcf" style="color:black" type="text" value="{{form.tourarea}}"></input>
+                </view>
+            </view>
+            <view class="weui-cell" wx:if="{{routeKindsIndex===6}}">
+                <text class="need">*</text>
+                <view class="weui-cell__hd">
+                    <label class="weui-label">{{i18n.t('jkcodeRecord_tourvehicle',$_locale)}}</label>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-cell__ft" name="tourvehicle" placeholder="{{i18n.t('jkcodeRecord_tourvehicle_p',$_locale)}}" placeholderStyle="color:#cfcfcf" style="color:black" type="text" value="{{form.tourvehicle}}"></input>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <text class="need">*</text>
+                <view class="weui-cell__hd">
+                    <label class="weui-label">{{i18n.t('jkcodeRecord_position',$_locale)}}</label>
+                </view>
+                <view bindtap="getLocation" class="weui-cell__bd">
+                    <input disabled class="weui-cell__ft" name="position" placeholder="{{i18n.t('jkcodeRecord_position_p',$_locale)}}" placeholderStyle="color:#cfcfcf" style="color:black" type="text" value="{{address}}"></input>
+                </view>
+            </view>
+            <view class="weui-cell" wx:if="{{street}}">
+                <text class="need">*</text>
+                <view class="weui-cell__hd">
+                    <label class="weui-label">{{i18n.t('jkcodeRecord_street',$_locale)}}</label>
+                </view>
+                <view bindtap="getLocation" class="weui-cell__bd">
+                    <input disabled class="weui-cell__ft" name="street" style="color:black" type="text" value="{{street}}"></input>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <label class="weui-label">{{i18n.t('jkcodeRecord_reviseposition',$_locale)}}</label>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-cell__ft" name="resiveposition" placeholder="{{i18n.t('jkcodeRecord_reviseposition_p',$_locale)}}" placeholderStyle="color:#cfcfcf" style="color:black" type="text"></input>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <text class="need">*</text>
+                <view class="weui-cell__hd">
+                    <label class="weui-label">{{i18n.t('jkcodeRecord_jkstatus',$_locale)}}</label>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker bindchange="jkChange" name="jkStatusIndex" range="{{jkstatus}}" value="{{form.jkStatusIndex}}">
+                        <view class="weui-cell pickerCell">
+                            <label class="weui-label" wx:if="{{jkStatusIndex==='0'}}">{{i18n.t('jkcodeRecord_jkstatus_p',$_locale)}}</label>
+                            <view class="picker-value" wx:else>{{jkstatus[jkStatusIndex]}}</view>
+                        </view>
+                    </picker>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <text class="need">*</text>
+                <view class="weui-cell__hd">
+                    <label class="weui-label">{{i18n.t('jkcodeRecord_status',$_locale)}}</label>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker bindchange="statusChange" name="statusIndex" range="{{status}}" value="{{form.statusIndex}}">
+                        <view class="weui-cell pickerCell">
+                            <label class="weui-label" wx:if="{{statusIndex==='0'}}">{{i18n.t('jkcodeRecord_status_p',$_locale)}}</label>
+                            <view class="picker-value" wx:else>{{status[statusIndex]}}</view>
+                        </view>
+                    </picker>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <label class="weui-label">{{i18n.t('note_info',$_locale)}}</label>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-cell__ft" name="remark" placeholder="{{i18n.t('jkcodeRecord_note',$_locale)}}" placeholderStyle="color:#cfcfcf" style="color:black" type="text"></input>
+                </view>
+            </view>
+        </view>
+        <view style="padding:30rpx;color:#3C9DFB;display:flex;justify-content:space-between;">
+            <text bindtap="toRecords">{{i18n.t('jkcodeRecord',$_locale)}}</text>
+        </view>
+        <button class="btn" formType="submit">{{i18n.t('submit',$_locale)}}</button>
+    </form>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

@@ -1,0 +1,31 @@
+<view class="detail">
+    <view class="detail-title">
+        <text>{{name}}</text>
+        <view class="detail-title-use">
+            <text>总数：{{detail.total}}</text>
+            <text>使用中：{{detail.inuse}}</text>
+            <text>可用：{{detail.canuse}}</text>
+            <text style="opacity:0">离线：{{detail.offline}}</text>
+        </view>
+        <view class="detail-title-progress">
+            <text>使用率</text>
+            <progress showInfo borderRadius="20" percent="{{percent}}" strokeWidth="5"></progress>
+        </view>
+    </view>
+    <view class="detail-devices">
+        <text>浴室设备使用情况列表</text>
+        <view class="detail-devices-head">
+            <text style="flex:3">设备名称</text>
+            <text style="flex:1;text-align:center;">使用情况</text>
+            <text style="flex:1;text-align:center;">设备状态</text>
+        </view>
+        <view class="detail-devices-item" wx:for="{{detail.list}}" wx:key="{{item.deviceid}}">
+            <text style="flex:3">{{item.devicename}}</text>
+            <text class="{{item.inuse?'err':'success'}}" style="flex:1;text-align:center;" wx:if="{{!item.isoffline}}">{{item.inuse?'在用':'可用'}}</text>
+            <text class="info" style="flex:1;text-align:center;" wx:else>-</text>
+            <text class="{{item.isoffline?'info':'success'}}" style="flex:1;text-align:center;">{{item.isoffline?'离线':'在线'}}</text>
+        </view>
+    </view>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

@@ -1,0 +1,66 @@
+.scanPay {
+    background-color: #fff;
+    box-sizing: border-box;
+    height: 100vh
+}
+
+.box,.scanPay {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    padding: 30rpx
+}
+
+.box {
+    box-shadow: 1rpx 1rpx 10rpx #dedede;
+    width: 650rpx
+}
+
+.scanPay-shop {
+    font-weight: 700;
+    margin-bottom: 30rpx
+}
+
+.scanPay-title {
+    font-size: 30rpx
+}
+
+.scanPay-content {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    margin-top: 30rpx
+}
+
+.scanPay-content wx-text {
+    line-height: 60rpx
+}
+
+.scanPay-content-title {
+    color: #bababa;
+    font-size: 26rpx
+}
+
+.scanPay-content-con {
+    font-size: 30rpx;
+    margin: 30rpx 0
+}
+
+.scanPay-content-con-num {
+    color: #286cf3;
+    font-size: 80rpx
+}
+
+.btn {
+    background-color: #3c9dfb;
+    border-radius: 50rpx;
+    color: #fff;
+    margin-top: 60rpx;
+    width: 600rpx
+}

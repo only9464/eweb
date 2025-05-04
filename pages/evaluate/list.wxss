@@ -1,0 +1,210 @@
+.list {
+    padding: 30rpx;
+    position: relative
+}
+
+.list-con-item {
+    background-color: #fff;
+    border-radius: 20rpx;
+    margin-bottom: 30rpx;
+    padding: 30rpx 40rpx
+}
+
+.list-con-item-user,.list-con-item-user-avatar {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex
+}
+
+.list-con-item-user-avatar {
+    background-color: rgba(95,176,229,.4);
+    border-radius: 50%;
+    height: 100rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-right: 30rpx;
+    width: 100rpx
+}
+
+.list-con-item-user-avatar wx-image {
+    border-radius: 50%;
+    height: 60rpx;
+    width: 60rpx
+}
+
+.list-con-item-user>wx-view:last-child {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column
+}
+
+.list-con-item-user>wx-view wx-text:first-child {
+    font-size: 34rpx
+}
+
+.list-con-item-user>wx-view wx-text:last-child {
+    color: rgba(0,0,0,.3);
+    font-size: 28rpx
+}
+
+.list-con-item-evaluation {
+    margin: 30rpx 0
+}
+
+.list-con-item-star {
+    -webkit-align-items: center;
+    align-items: center;
+    color: #787878;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 28rpx;
+    margin: 10rpx 0
+}
+
+.list-con-item-star wx-text {
+    margin-right: 30rpx
+}
+
+.list-con-item-reply {
+    background-color: hsla(0,0%,98%,.8);
+    border-radius: 10rpx;
+    color: rgba(0,0,0,.7);
+    font-size: 28rpx;
+    padding: 30rpx 20rpx
+}
+
+.list-con-item-reply wx-text {
+    color: rgba(0,0,0,.3)
+}
+
+.list-con-item-reply>wx-view:first-child {
+    margin-bottom: 10rpx
+}
+
+.list-con-item-photos {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 30rpx
+}
+
+.list-con-item-photos-item {
+    height: 200rpx;
+    width: 200rpx
+}
+
+.evaluationBtn {
+    background-color: #3599fb;
+    border-radius: 20rpx 20rpx 0 0;
+    bottom: 0;
+    color: #fff;
+    left: 50%;
+    line-height: 1;
+    padding: 30rpx;
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 600rpx
+}
+
+.scroll-view-con {
+    padding-bottom: 60rpx
+}
+
+.nomore {
+    color: rgba(0,0,0,.3);
+    padding-top: 150rpx;
+    text-align: center
+}
+
+.list-fliter {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 30rpx
+}
+
+.list-fliter-title wx-text:first-child {
+    font-size: 36rpx
+}
+
+.list-fliter-title wx-text:last-child {
+    color: #fd7d20;
+    font-size: 30rpx;
+    margin-left: 30rpx
+}
+
+.list-fliter-items {
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-top: 30rpx
+}
+
+.list-fliter-items,.list-fliter-items-btns {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex
+}
+
+.list-fliter-items-btns wx-button {
+    background-color: #fff4ec;
+    border: 1rpx solid #fd7d20;
+    border-radius: 10rpx;
+    color: #fd7d20;
+    line-height: 1;
+    margin-right: 20rpx;
+    padding: 10rpx 30rpx;
+    width: auto
+}
+
+.list-fliter-items-btns .active {
+    background-color: #fd7d20;
+    color: #fff
+}
+
+.list-fliter-items-orders {
+    -webkit-align-items: center;
+    align-items: center;
+    color: #666;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 28rpx
+}
+
+.list-fliter-items-orders wx-image {
+    height: 40rpx;
+    width: 40rpx
+}
+
+.list-fliter-items-orders .picker-value {
+    color: #fd7d20;
+    display: inline-block;
+    padding: 0 10rpx 0 15rpx
+}
+
+.line {
+    background-color: #f5f6f7;
+    height: 2px;
+    margin: 30rpx 0;
+    width: 100%
+}
+
+.list-con-item-delete {
+    display: -webkit-flex;
+    display: flex;
+    font-size: 28rpx;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+    padding: 0 30rpx
+}
+
+.list-con-item-delete wx-image {
+    height: 40rpx;
+    margin-right: 10rpx;
+    width: 40rpx
+}

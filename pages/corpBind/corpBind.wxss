@@ -1,0 +1,7 @@
+.longbutton {
+    background-color: #3c9dfb;
+    border-radius: 50rpx;
+    color: #fff;
+    margin-top: 100rpx;
+    width: 600rpx
+}

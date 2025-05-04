@@ -1,0 +1,8 @@
+<view class="flex-row">
+    <image catchtap="{{readOnly?'':'choseStar'}}" class="star" data-index="{{index}}" src="{{item==1?'./img/star.png':'./img/star-o.png'}}" style="width:{{starWidth}}rpx;height:{{starWidth}}rpx" wx:for="{{stars}}" wx:key="index"></image>
+    <view class="rating_text flex-row" wx:if="{{showRating&&desc.length===0}}">{{rating}}<span wx:if="{{rating}}">星</span>
+    </view>
+    <view class="rating_text1" style="{{descStyle}}" wx:if="{{showRating&&desc.length>0}}">{{desc[rating-1]}}</view>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

@@ -1,0 +1,1168 @@
+var fallbackLocale = 'zh-CN';
+var translations = ({
+  "en-US": ({
+    "index": ["Index"],
+    "bills": ["Bills"],
+    "mine": ["Mine"],
+    "school_name": [
+      ["value"]
+    ],
+    "account_balance": ["The account balance"],
+    "ecard_account_balance": ["the account balance of ecard"],
+    "grants_credits": ["Grants credits"],
+    "grants_credits_balance": ["Special fund account balance"],
+    "account_balance1": ["The account balance"],
+    "ecard_account_balance1": ["the account balance of ecard"],
+    "grants_credits1": ["Grants credits"],
+    "grants_credits_balance1": ["Special fund account balance"],
+    "recharge": ["Recharge"],
+    "hello": ["Hello"],
+    "user": ["user"],
+    "no_student_id": ["No student id"],
+    "no_partment": ["No partment"],
+    "card_status_ok": ["normal"],
+    "card_status_err": ["err"],
+    "status": ["Status"],
+    "validity_period": ["Validity period"],
+    "pay": ["Pay "],
+    "school": ["School Card"],
+    "school_placeholder": ["Please enter school card"],
+    "account": ["Account"],
+    "id": ["Id"],
+    "placeholder": ["Please enter"],
+    "card": ["Card"],
+    "common_function": [
+      ["value"]
+    ],
+    "card_service_center": [
+      ["value"]
+    ],
+    "scan": [
+      ["value"]
+    ],
+    "qrcode": [
+      ["value"]
+    ],
+    "qrcodeFD": [
+      ["value"]
+    ],
+    "authcode": [
+      ["value"]
+    ],
+    "scanWaterCode": [
+      ["value"]
+    ],
+    "amountTransfer": [
+      ["value"]
+    ],
+    "onlineRepair": [
+      ["value"]
+    ],
+    "touchorder": [
+      ["value"]
+    ],
+    "CCBEcard": [
+      ["value"]
+    ],
+    "schoolpay": [
+      ["value"]
+    ],
+    "subscribe": [
+      ["value"]
+    ],
+    "charge": [
+      ["value"]
+    ],
+    "chargeErgy": [
+      ["value"]
+    ],
+    "reportLoss": [
+      ["value"]
+    ],
+    "onlineCharge": [
+      ["value"]
+    ],
+    "epidemicSign": [
+      ["value"]
+    ],
+    "bath": [
+      ["value"]
+    ],
+    "cgAppointment": [
+      ["value"]
+    ],
+    "newcapecH5": [
+      ["value"]
+    ],
+    "toOtherMiniprogram": [
+      ["value"]
+    ],
+    "attendance": [
+      ["value"]
+    ],
+    "custom01": [
+      ["value"]
+    ],
+    "custom02": [
+      ["value"]
+    ],
+    "custom03": [
+      ["value"]
+    ],
+    "custom04": [
+      ["value"]
+    ],
+    "custom05": [
+      ["value"]
+    ],
+    "custom06": [
+      ["value"]
+    ],
+    "custom07": [
+      ["value"]
+    ],
+    "custom08": [
+      ["value"]
+    ],
+    "custom09": [
+      ["value"]
+    ],
+    "custom10": [
+      ["value"]
+    ],
+    "custom11": [
+      ["value"]
+    ],
+    "custom12": [
+      ["value"]
+    ],
+    "custom13": [
+      ["value"]
+    ],
+    "custom14": [
+      ["value"]
+    ],
+    "custom15": [
+      ["value"]
+    ],
+    "custom16": [
+      ["value"]
+    ],
+    "summary": [
+      ["value"]
+    ],
+    "coupon": [
+      ["value"]
+    ],
+    "offline": [
+      ["value"]
+    ],
+    "getLossCard": [
+      ["value"]
+    ],
+    "ecard": [
+      ["value"]
+    ],
+    "annualReport": [
+      ["value"]
+    ],
+    "register": [
+      ["value"]
+    ],
+    "apply": [
+      ["value"]
+    ],
+    "getPhoto": [
+      ["value"]
+    ],
+    "getPhotoHn": [
+      ["value"]
+    ],
+    "getPhotoHs": [
+      ["value"]
+    ],
+    "smateCard": [
+      ["value"]
+    ],
+    "bindBankCard": [
+      ["value"]
+    ],
+    "outSpecialFound": [
+      ["value"]
+    ],
+    "cardsTransfer": [
+      ["value"]
+    ],
+    "changePwd": [
+      ["value"]
+    ],
+    "changeQuota": [
+      ["value"]
+    ],
+    "elecQuery": [
+      ["value"]
+    ],
+    "elecQuerySmis": [
+      ["value"]
+    ],
+    "elecQueryHgc": [
+      ["value"]
+    ],
+    "elecQuerySanda": [
+      ["value"]
+    ],
+    "elecQueryCqjtu": [
+      ["value"]
+    ],
+    "elecQueryYt": [
+      ["value"]
+    ],
+    "inteFeePay": [
+      ["value"]
+    ],
+    "inteFeePayHgc": [
+      ["value"]
+    ],
+    "question": [
+      ["value"]
+    ],
+    "notice": [
+      ["value"]
+    ],
+    "noticeCard": [
+      ["value"]
+    ],
+    "waterOrder": [
+      ["value"]
+    ],
+    "waterOrderHn": [
+      ["value"]
+    ],
+    "lifePay": [
+      ["value"]
+    ],
+    "msgPush": [
+      ["value"]
+    ],
+    "partnershipFee": [
+      ["value"]
+    ],
+    "bindPhone": [
+      ["value"]
+    ],
+    "oneCodePass": [
+      ["value"]
+    ],
+    "bathCode": [
+      ["value"]
+    ],
+    "unbindBusCard": [
+      ["value"]
+    ],
+    "bindBusCard": [
+      ["value"]
+    ],
+    "closeAccount": [
+      ["value"]
+    ],
+    "closeAccountHs": [
+      ["value"]
+    ],
+    "waterPay": [
+      ["value"]
+    ],
+    "parkPay": [
+      ["value"]
+    ],
+    "changeJwPwd": [
+      ["value"]
+    ],
+    "changeDoorPwd": [
+      ["value"]
+    ],
+    "refund": [
+      ["value"]
+    ],
+    "bindBankCardNkd": [
+      ["value"]
+    ],
+    "fixedTel": [
+      ["value"]
+    ],
+    "aiface": [
+      ["value"]
+    ],
+    "fixedTel_tel": ["Fixed Telephone Number(0451)"],
+    "fixedTel_tel_placeholder": ["Please enter fixed telephone number"],
+    "fixedTel_area": ["Recharge Area"],
+    "fixedTel_balance": ["Now Balance"],
+    "fixedTel_user": ["Telephone User"],
+    "payNotice": [
+      ["value"]
+    ],
+    "payNotice_history": ["Payment history"],
+    "deal_flow": ["Deal bills"],
+    "auth_flow": ["Auth bills"],
+    "consume": ["consume"],
+    "recharge_channels": ["Recharge channels"],
+    "rechage_way": ["Recharge way"],
+    "rechage_date": ["Recharge date"],
+    "merchant_name": ["Merchant name"],
+    "consume_way": ["Consume way"],
+    "consume_channels": ["Consume channels"],
+    "consume_date": ["Consume date"],
+    "consume_khdate": ["Deduction time"],
+    "refno": ["Refno"],
+    "miniprogram": ["Miniprogram"],
+    "device_name": ["Device name"],
+    "visit_time": ["Visit time"],
+    "note_info": ["Note information"],
+    "no_note": ["No note"],
+    "nomore": ["No more"],
+    "loading": ["Loading..."],
+    "bill_no": ["Bill no"],
+    "pwd_input_prompt": ["Please enter your campus card password"],
+    "pwd_input_btn": ["Confirm password"],
+    "bankcard": ["Bank card"],
+    "logout": ["Logout"],
+    "recharge_note": ["Top-up amount(￥)"],
+    "pay_note": ["Payment amount(￥)"],
+    "recharge_input_placeholder": ["Please enter the amount of recharge"],
+    "recharge_kind": ["Method of payment"],
+    "vwxPay": ["Wechat pay"],
+    "student_id": ["Student id"],
+    "card_type": ["Card type"],
+    "report_loss": ["Report the loss"],
+    "reportLoss_rule": ["Campus card report loss, does not affect the use of the virtual card in the one-card small program."],
+    "loss_unregister": ["Loss unregister"],
+    "prompt": ["Prompt"],
+    "status_err": ["User expiration date has expired!!!"],
+    "code_err": ["The Qrcode is not supported"],
+    "scan_err": ["Scan err, please try again"],
+    "function_err": ["The function is not open yet, and will be opened later"],
+    "add_bankcard": ["Add bank cards"],
+    "add_bankcard_prompt": ["Please bind my bank card!"],
+    "cardholder": ["The cardholder"],
+    "currently_select": ["Currently select bank"],
+    "choose_bank": ["Please select bank"],
+    "cardno": ["Cardno"],
+    "add_card_placeholder": ["Please input my bank cardno"],
+    "name": ["Name"],
+    "bind_name_placeholder": ["Please input your name"],
+    "bind_student_id_placeholder": ["Please input your student id"],
+    "bind_outside": ["Mobile phone registration personnel input mobile phone number"],
+    "password": ["Password"],
+    "bind_pwd_placeholder": ["Please input your password"],
+    "login": ["Login"],
+    "bind": ["Bind ecard"],
+    "transfer_name_placeholder": ["Please enter the name of the payee"],
+    "transfer_student_id_placeholder": ["Please enter the receiver number"],
+    "transfer_balance": ["Transfer the balance"],
+    "transfer_balance_placeholder": ["Please enter the transfer amount"],
+    "transfer_balance_left": ["The remaining sum inside card"],
+    "transfer_btn": ["Confirm the transfer"],
+    "changePwd_1_pwd": ["Please input new password"],
+    "changePwd_1_placeholder": ["Please input a new password of 6 digits in length"],
+    "changePwd_2_pwd": ["Confirm new password:"],
+    "changePwd_2_placeholder": ["Please confirm new password"],
+    "changeQuota_once_limit": ["Current single consumption limit(￥):"],
+    "changeQuota_day_limit": ["Current day accumulative consumption limit(￥):"],
+    "changeQuota_once_limit_set": ["Single consumption limit(￥):"],
+    "changeQuota_day_limit_set": ["Day accumulative consumption limit(￥):"],
+    "changeQuota_once_limit_set_placeholder": ["Please set your single consumption limit"],
+    "changeQuota_day_limit_set_placeholder": ["Please set your daily cumulative spending limit"],
+    "changeQuota_btn": ["Confirm the change"],
+    "inteFeePay_system": ["Internet fee system"],
+    "inteFeePay_system_placeholder": ["Please choose fee system"],
+    "inteFeePay_account": ["Net account"],
+    "inteFeePay_account_placeholder": ["Please input net account"],
+    "inteFeePay_query": ["Query"],
+    "inteFeePay_left": ["The remaining Internet fee"],
+    "inteFeePay_prompt": ["Wrong account? Click here to reselect"],
+    "elecharge_prompt": ["Wrong room? Click here to reselect"],
+    "elecharge_select": ["Plaece select electric meter"],
+    "userDetails": ["Personal message"],
+    "amountTransfer_prompt": ["Are you sure to transfer the balance in the campus card to the bank card?"],
+    "amountTransfer_btn": ["Refund confirm"],
+    "amountTransfer_btn1": ["Close confirm"],
+    "bathCode_personal_pwd": ["Shower password"],
+    "bathCode_unbind": ["Unbind"],
+    "bathCode_query": ["Query using details"],
+    "bathCode_prompt1": ["Add a device or bathroom that can use a shower password"],
+    "bathCode_prompt2": ["The password can only be used for the device or bathroom that I add by scanning the code. Enter the password and password to take a bath.Please take good care of your password to prevent others from misappropriating it!"],
+    "bathCode_prompt2_hs": ["...... Input password and campus card consumption password to use water......"],
+    "add_bathCode": ["Device bind"],
+    "bindBathCode_bind": ["Binding successful"],
+    "refresh_code": ["Refresh code"],
+    "phone": ["Phone number"],
+    "phone_placeholder": ["Please bind your mobile phone number"],
+    "choose_identity": ["Select identity"],
+    "choose_identity1": ["Select university area"],
+    "more_after_login": ["More exciting after logging in"],
+    "inside_login": ["Campus User Login"],
+    "outside_login": ["Off Campus User Login "],
+    "reading": ["I have read and agreed"],
+    "agreement": ["Fudan University Campus One-Card Management Regulations"],
+    "elec_system": ["Select electronic control system"],
+    "elec_school": ["Select the campus"],
+    "elec_area": ["Select area"],
+    "elec_build": ["Select the building"],
+    "elec_floor": ["Select floor"],
+    "elec_room": ["Select room"],
+    "elec_room_cqjtu": ["Enter room"],
+    "next": ["Next"],
+    "profile_picture": ["Profile picture"],
+    "up_profile_picture": ["Upload profile picture"],
+    "getPhoto_notice": ["Matters needing attention:"],
+    "getPhoto_rule1": ["1.Make sure your facial features are clearly visible and do not wear accessories such as hats"],
+    "getPhoto_rule2": ["2.If uploading a photo, please select a photo with an aspect ratio of 4:3"],
+    "getPhoto_rule3": ["3.Upload or take photos no more than 2 times per day"],
+    "getPhoto_rule4": ["4.Please select your photo and upload it with an aspect ratio of 4:3. It will be reviewed within 3 working days after uploading. Photos can only be updated once a month!"],
+    "getPhoto_rule1_hn": ["1.Please upload your recent one-inch bareheaded photo with white background, 295 x 413 pixels, resolution 300dpi;"],
+    "getPhoto_rule2_hn": ["2.The size of the uploaded photo file cannot be larger than 200kb. Only JPG files are supported;"],
+    "getPhoto_rule3_hn": ["3.Life photos, cute photos, cartoon photos and overly photoshopped photos are prohibited;"],
+    "getPhoto_rule4_hn": ["4.You can check the reason why the photos are not approved. You can adjust or replace the photos and upload them again. After the photos are approved, you can view them in the \\x22Mine\\x22 menu."],
+    "getPhoto_rule1_hs": ["1.The photo background should be a pure color background without any decoration, and the color should be light color. Do not use brown, black and other dark background."],
+    "getPhoto_rule2_hs": ["2.Photos must show the front of the head, and hats must not be worn."],
+    "getPhoto_rule4_hs": ["Toast:"],
+    "getPhoto_rule3_hs": ["Other requirements: Photos cannot be uploaded again during the approval period and within six months after the approval. Please be careful to select photos that meet the requirements."],
+    "getPhoto_btn": ["Determine the clipping"],
+    "lifeCharge_no_order": ["No bills"],
+    "lifeCharge_prompt": ["Wrong room number? Click here to reselect"],
+    "lifeCharge_room_name": ["Room name"],
+    "lifeCharge_shop": ["Capture expends merchants"],
+    "lifeCharge_bills_date": ["The billing date"],
+    "lifeCharge_bills_amount": ["Payment amount"],
+    "lifeCharge_btn": ["Pay cost"],
+    "no_message": ["Nothing"],
+    "lifePay_select": ["Please select"],
+    "msgPush_prompt1": ["To open the push reminder, you need to follow and bind to the public account first"],
+    "msgPush_prompt2": ["1.Reminder for recharge: the system will remind you when you recharge each time"],
+    "msgPush_prompt3": ["2.Consumption Reminder: The system will remind you every time you successfully consume"],
+    "msgPush_prompt4": ["3.Insufficient balance reminder: after opening, the system will remind you once respectively when your balance is less than 20 yuan, 10 yuan and 5 yuan"],
+    "public": ["The public"],
+    "public_name": ["复旦信息办"],
+    "msg_list_text1": ["Prepaid phone to remind"],
+    "msg_list_text2": ["Consumption reminds"],
+    "msg_list_text3": ["Insufficient Balance Reminder"],
+    "neterr": ["Net err"],
+    "neterr_prompt": ["Please check the network and re-enter the applet"],
+    "payResult": ["Scan result"],
+    "payResult_success": ["Scan success"],
+    "payResult_fail": ["Scan fail"],
+    "return": ["Return Home"],
+    "scanPay": ["Order payment"],
+    "scanPay_cost": ["The order price："],
+    "scanPay_more": ["Still need to pay"],
+    "scanPay_btn": ["Immediate payment"],
+    "card_no": ["Card no:"],
+    "unbindBusCard_prompt": ["The remaining amount of the campus card"],
+    "unbindBusCard_prompt1": ["The recent deal"],
+    "unbindBusCard_prompt2": ["Currently, there is no joint traffic card binding"],
+    "unbindBankCards": ["Unbind bank card"],
+    "selectHost": ["Select login environment"],
+    "wechat_host": ["WeChat APP terminal to authorize login"],
+    "wechatqy_host": ["Corporation WeChat APP terminal to authorize login"],
+    "apply_h1": ["New User Registration"],
+    "apply_h2": ["External staff register"],
+    "apply_name": ["Please enter name"],
+    "apply_sex1": ["male"],
+    "apply_sex2": ["female"],
+    "apply_phone": ["Please enter your cell phone number"],
+    "apply_code": ["Please enter the verification code"],
+    "apply_id": ["Please enter your ID number"],
+    "apply_tobind": ["Have an account? Login immediately"],
+    "apply_btn": ["Register"],
+    "parkPay_account": ["License plate number"],
+    "parkPay_account_placeholder": ["Please enter the license plate number"],
+    "parkPay_amount": ["Parking amount"],
+    "pay_input_placeholder": ["Please enter the payment amount"],
+    "query_account": ["Account"],
+    "left_water": ["The water balance"],
+    "query_account_input": ["Please enter account"],
+    "fliters_pay_recharge": ["The month recharge:"],
+    "fliters_pay_consume": ["Consume:"],
+    "money": ["Yuan"],
+    "current_query": ["The recent query："],
+    "current_recharge": ["The recent pay："],
+    "elec_acc": ["Electronic Account"],
+    "water_acc": ["Water Account"],
+    "special_none": ["No Special Fund"],
+    "verifycode": ["Verify code"],
+    "fail": ["Fail"],
+    "reason": ["To check the reason"],
+    "upload": ["Upload ", ["value"], " recently"],
+    "account_placeholder": ["Please enter account"],
+    "cardno_placeholder": ["Please enter card number"],
+    "fixedTel_add": ["Address"],
+    "fixedTel_dept": ["Department"],
+    "arrears": ["Arrears Turnover"],
+    "arrears_now": ["Current arrears:"],
+    "arrears_dtl": ["View details"],
+    "smsbind_placeholder": ["Please enter phone number"],
+    "smsbind_title": ["Phone/Student id"],
+    "jkcodeRecord_startdate": ["Start Date"],
+    "jkcodeRecord_enddate": ["End Date"],
+    "jkcodeRecord_date": ["Date"],
+    "jkcodeRecord_jkstatus": ["Health"],
+    "jkcodeRecord_position": ["Position"],
+    "jkcodeRecord_reviseposition": ["Revise Position"],
+    "jkcodeRecord_triptype": ["Type"],
+    "jkcodeRecord_tourarea": ["Area"],
+    "jkcodeRecord_tourvehicle": ["Vehicle"],
+    "jkcodeRecord_symptom": ["Symptom"],
+    "jkcodeRign_loginTime": ["Last registration"],
+    "jkcodeRign_loginTime_p": ["No records"],
+    "jkcodeRign_phone": ["Phone"],
+    "jkcodeRign_phone_p": ["Please enter the phone"],
+    "jkcodeRecord_triptype_p": ["Please select the type"],
+    "jkcodeRecord_tourarea_p": ["Please select the area"],
+    "jkcodeRecord_tourvehicle_p": ["Please fill in train number, flight number, self-driving route, etc"],
+    "jkcodeRecord_position_p": ["Please click to get current location"],
+    "jkcodeRecord_street": ["Street"],
+    "jkcodeRecord_reviseposition_p": ["Modifiable position"],
+    "jkcodeRecord_jkstatus_p": ["Select health status"],
+    "jkcodeRecord_status": ["Check whether"],
+    "jkcodeRecord_status_p": ["Select whether the following conditions exist"],
+    "jkcodeRecord_note": ["More note"],
+    "jkcodeRecord": ["Health registration"],
+    "submit": ["Submit"],
+    "heu_login": ["Campus card authentication login"],
+    "heu_name": ["Name of Payee"],
+    "heu_cardno": ["Campus card number"],
+    "heu_cardno_placeholder": ["Please enter the payee campus card number"],
+    "changepwd": ["Pay password change"],
+    "kaikahang": ["The card bank"],
+    "sfz": ["ID number"],
+    "confirm": ["Confirm"],
+    "yanzheng": ["Verify"],
+    "recharge_kinds": ["No more payment options available, please click here to try again!"],
+    "paycode_prompt_h1": ["Please show the QR code "],
+    "paycode_prompt_h2": ["aim at the scanning device"],
+    "refresh_prompt": ["The QR code is refreshed every ", ["secend"], "s"],
+    "refresh": ["Manually refresh"],
+    "code": ["code"],
+    "email": ["Email"],
+    "jine": ["money"],
+    "refund_all": ["Full donation"],
+    "aiface_desc": ["Open Aiface"],
+    "getLossCard_search": ["Input student number query"],
+    "stuempno1": ["Student id"],
+    "back": ["Back"],
+    "dhf": ["management fee"],
+    "take": ["Take"],
+    "managefee": ["Discount amount"],
+    "yskk": ["Delay deduction"],
+    "evaluate": ["Evaluation"],
+    "bath_district_area": ["Please select the bathroom area"],
+    "bath_district_room": ["Please select bathroom"],
+  }),
+  "zh-CN": ({
+    "index": ["首页"],
+    "bills": ["流水"],
+    "mine": ["我的"],
+    "school_name": [
+      ["value"]
+    ],
+    "account_balance": ["账户余额"],
+    "ecard_account_balance": ["一卡通账户余额"],
+    "grants_credits": ["专款额度"],
+    "grants_credits_balance": ["专款账户余额"],
+    "account_balance1": ["主账户余额"],
+    "ecard_account_balance1": ["原主卡账户余额"],
+    "grants_credits1": ["专用账户余额"],
+    "grants_credits_balance1": ["原副卡账户余额"],
+    "recharge": ["充值"],
+    "hello": ["您好"],
+    "user": ["用户"],
+    "no_student_id": ["暂无学号"],
+    "no_partment": ["暂无部门"],
+    "card_status_ok": ["正常"],
+    "card_status_err": ["异常"],
+    "status": ["状态"],
+    "validity_period": ["有效期"],
+    "pay": ["支付"],
+    "school": ["校园卡"],
+    "school_placeholder": ["请输入校园卡号"],
+    "account": ["账户"],
+    "id": ["工号"],
+    "placeholder": ["请输入"],
+    "card": ["卡"],
+    "common_function": [
+      ["value"]
+    ],
+    "card_service_center": [
+      ["value"]
+    ],
+    "scan": [
+      ["value"]
+    ],
+    "qrcode": [
+      ["value"]
+    ],
+    "qrcodeFD": [
+      ["value"]
+    ],
+    "authcode": [
+      ["value"]
+    ],
+    "scanWaterCode": [
+      ["value"]
+    ],
+    "amountTransfer": [
+      ["value"]
+    ],
+    "onlineRepair": [
+      ["value"]
+    ],
+    "touchorder": [
+      ["value"]
+    ],
+    "CCBEcard": [
+      ["value"]
+    ],
+    "schoolpay": [
+      ["value"]
+    ],
+    "subscribe": [
+      ["value"]
+    ],
+    "charge": [
+      ["value"]
+    ],
+    "chargeErgy": [
+      ["value"]
+    ],
+    "reportLoss": [
+      ["value"]
+    ],
+    "onlineCharge": [
+      ["value"]
+    ],
+    "epidemicSign": [
+      ["value"]
+    ],
+    "newcapecH5": [
+      ["value"]
+    ],
+    "toOtherMiniprogram": [
+      ["value"]
+    ],
+    "coupon": [
+      ["value"]
+    ],
+    "annualReport": [
+      ["value"]
+    ],
+    "register": [
+      ["value"]
+    ],
+    "apply": [
+      ["value"]
+    ],
+    "getPhoto": [
+      ["value"]
+    ],
+    "getPhotoHn": [
+      ["value"]
+    ],
+    "getPhotoHs": [
+      ["value"]
+    ],
+    "smateCard": [
+      ["value"]
+    ],
+    "bindBankCard": [
+      ["value"]
+    ],
+    "outSpecialFound": [
+      ["value"]
+    ],
+    "cardsTransfer": [
+      ["value"]
+    ],
+    "changePwd": [
+      ["value"]
+    ],
+    "changeQuota": [
+      ["value"]
+    ],
+    "elecQuery": [
+      ["value"]
+    ],
+    "elecQueryHgc": [
+      ["value"]
+    ],
+    "elecQuerySanda": [
+      ["value"]
+    ],
+    "elecQuerySmis": [
+      ["value"]
+    ],
+    "elecQueryCqjtu": [
+      ["value"]
+    ],
+    "elecQueryYt": [
+      ["value"]
+    ],
+    "inteFeePay": [
+      ["value"]
+    ],
+    "inteFeePayHgc": [
+      ["value"]
+    ],
+    "question": [
+      ["value"]
+    ],
+    "notice": [
+      ["value"]
+    ],
+    "noticeCard": [
+      ["value"]
+    ],
+    "waterOrder": [
+      ["value"]
+    ],
+    "waterOrderHn": [
+      ["value"]
+    ],
+    "lifePay": [
+      ["value"]
+    ],
+    "msgPush": [
+      ["value"]
+    ],
+    "partnershipFee": [
+      ["value"]
+    ],
+    "bindPhone": [
+      ["value"]
+    ],
+    "bathCode": [
+      ["value"]
+    ],
+    "bindBusCard": [
+      ["value"]
+    ],
+    "unbindBusCard": [
+      ["value"]
+    ],
+    "closeAccount": [
+      ["value"]
+    ],
+    "closeAccountHs": [
+      ["value"]
+    ],
+    "waterPay": [
+      ["value"]
+    ],
+    "parkPay": [
+      ["value"]
+    ],
+    "changeJwPwd": [
+      ["value"]
+    ],
+    "changeDoorPwd": [
+      ["value"]
+    ],
+    "bindBankCardNkd": [
+      ["value"]
+    ],
+    "fixedTel": [
+      ["value"]
+    ],
+    "payNotice": [
+      ["value"]
+    ],
+    "bath": [
+      ["value"]
+    ],
+    "oneCodePass": [
+      ["value"]
+    ],
+    "custom01": [
+      ["value"]
+    ],
+    "custom02": [
+      ["value"]
+    ],
+    "custom03": [
+      ["value"]
+    ],
+    "custom04": [
+      ["value"]
+    ],
+    "custom05": [
+      ["value"]
+    ],
+    "custom06": [
+      ["value"]
+    ],
+    "custom07": [
+      ["value"]
+    ],
+    "custom08": [
+      ["value"]
+    ],
+    "custom09": [
+      ["value"]
+    ],
+    "custom10": [
+      ["value"]
+    ],
+    "custom11": [
+      ["value"]
+    ],
+    "custom12": [
+      ["value"]
+    ],
+    "custom13": [
+      ["value"]
+    ],
+    "custom14": [
+      ["value"]
+    ],
+    "custom15": [
+      ["value"]
+    ],
+    "custom16": [
+      ["value"]
+    ],
+    "summary": [
+      ["value"]
+    ],
+    "attendance": [
+      ["value"]
+    ],
+    "cgAppointment": [
+      ["value"]
+    ],
+    "aiface": [
+      ["value"]
+    ],
+    "refund": [
+      ["value"]
+    ],
+    "payNotice_history": ["缴费历史"],
+    "offline": [
+      ["value"]
+    ],
+    "getLossCard": [
+      ["value"]
+    ],
+    "ecard": [
+      ["value"]
+    ],
+    "deal_flow": ["交易流水"],
+    "auth_flow": ["认证流水"],
+    "consume": ["消费"],
+    "recharge_channels": ["充值渠道"],
+    "rechage_way": ["充值方式"],
+    "rechage_date": ["充值时间"],
+    "merchant_name": ["消费地点"],
+    "consume_way": ["消费类别"],
+    "consume_channels": ["消费渠道"],
+    "consume_date": ["消费时间"],
+    "consume_khdate": ["扣款时间"],
+    "refno": ["流水号"],
+    "miniprogram": ["小程序"],
+    "device_name": ["设备名称"],
+    "visit_time": ["刷卡时间"],
+    "note_info": ["备注信息"],
+    "no_note": ["无备注"],
+    "nomore": ["暂无更多"],
+    "loading": ["加载中..."],
+    "bill_no": ["订单号"],
+    "pwd_input_prompt": ["请输入校园卡密码"],
+    "pwd_input_btn": ["确认密码"],
+    "bankcard": ["银行卡"],
+    "logout": ["登出"],
+    "recharge_note": ["充值金额(元)"],
+    "pay_note": ["支付金额(元)"],
+    "recharge_input_placeholder": ["请输入充值金额"],
+    "recharge_kind": ["支付方式"],
+    "wxPay": ["微信支付"],
+    "student_id": ["学工号"],
+    "card_type": ["卡片类型"],
+    "report_loss": ["挂失"],
+    "reportLoss_rule": ["一卡通挂失，不影响一卡通小程序中虚拟卡的使用。"],
+    "loss_unregister": ["解挂"],
+    "prompt": ["温馨提示"],
+    "status_err": ["用户有效期已过！！！"],
+    "code_err": ["此二维码暂不支持"],
+    "scan_err": ["识别失败,请重新扫码"],
+    "function_err": ["功能暂未开放，后续开通"],
+    "add_bankcard": ["添加银行卡"],
+    "add_bankcard_prompt": ["请绑定本人的银行卡！"],
+    "cardholder": ["持卡人"],
+    "currently_select": ["当前可选择银行"],
+    "choose_bank": ["请选择银行"],
+    "cardno": ["卡号"],
+    "add_card_placeholder": ["请输入本人银行卡号"],
+    "name": ["姓名"],
+    "bind_name_placeholder": ["请输入姓名"],
+    "bind_student_id_placeholder": ["请输入学工号"],
+    "bind_outside": ["手机注册人员输手机号"],
+    "password": ["密码"],
+    "bind_pwd_placeholder": ["请输入密码"],
+    "login": ["登录"],
+    "bind": ["绑定"],
+    "transfer_name_placeholder": ["请输入收款人姓名"],
+    "transfer_student_id_placeholder": ["请输入收款人学工号"],
+    "transfer_balance": ["转账金额"],
+    "transfer_balance_placeholder": ["请输入转账金额"],
+    "transfer_balance_left": ["卡内余额"],
+    "transfer_btn": ["确认转账"],
+    "changePwd_1_pwd": ["请输入新密码:"],
+    "changePwd_1_placeholder": ["请输入长度为6位的新密码"],
+    "changePwd_2_pwd": ["确认新密码:"],
+    "changePwd_2_placeholder": ["请确认您的新密码"],
+    "changeQuota_once_limit": ["单次消费免密额度(元):"],
+    "changeQuota_day_limit": ["日累计消费免密额度(元):"],
+    "changeQuota_once_limit_set": ["单次消费免密额度(元):"],
+    "changeQuota_day_limit_set": ["日累计消费免密额度(元):"],
+    "changeQuota_once_limit_set_placeholder": ["请设置您的单次消费免密额度"],
+    "changeQuota_day_limit_set_placeholder": ["请设置您的日累计消费免密额度"],
+    "inteFeePay_system": ["网费系统"],
+    "inteFeePay_system_placeholder": ["请选择网费系统"],
+    "inteFeePay_account": ["上网账号"],
+    "inteFeePay_account_placeholder": ["请输入上网账号"],
+    "inteFeePay_query": ["查询"],
+    "inteFeePay_left": ["剩余网费"],
+    "inteFeePay_prompt": ["上网账户不对？点击这里重新输入"],
+    "elecharge_prompt": ["房间号不对？点击这里重新选择"],
+    "elecharge_select": ["请选择充值电表"],
+    "userDetails": ["个人信息"],
+    "amountTransfer_prompt": ["确认要将校园卡内余额转入银行卡内吗?"],
+    "amountTransfer_btn": ["确认退款"],
+    "amountTransfer_btn1": ["确认注销"],
+    "bathCode_personal_pwd": ["洗浴口令"],
+    "bathCode_unbind": ["解绑"],
+    "bathCode_prompt1": ["添加设备或浴室"],
+    "bathCode_prompt2": ["口令只能用于本人扫码添加的设备或浴室，输入口令和校园卡消费密码即可用水。请妥善保管好您的口令，谨防他人盗用！"],
+    "add_bathCode": ["设备绑定"],
+    "bindBathCode_bind": ["绑定成功！"],
+    "refresh_code": ["刷新口令"],
+    "phone": ["手机号"],
+    "phone_placeholder": ["请绑定本人的手机号"],
+    "choose_identity": ["选择身份"],
+    "choose_identity1": ["选择校区"],
+    "more_after_login": ["登录后更精彩"],
+    "inside_login": ["校内用户登录"],
+    "outside_login": ["校外用户登录"],
+    "reading": ["我已阅读并同意"],
+    "agreement": ["复旦大学校园一卡通管理规定"],
+    "elec_system": ["请选择查询系统"],
+    "elec_school": ["请选择校区"],
+    "elec_area": ["请选择区域"],
+    "elec_build": ["请选择楼栋"],
+    "elec_floor": ["请选择楼层"],
+    "elec_room": ["请选择房间"],
+    "elec_room_cqjtu": ["请输入房间号"],
+    "next": ["下一步"],
+    "profile_picture": ["证件照"],
+    "up_profile_picture": ["上传证件照"],
+    "getPhoto_notice": ["注意事项："],
+    "getPhoto_rule1": ["1.拍照请确保五官清晰显露，请勿佩戴帽子等饰品"],
+    "getPhoto_rule2": ["2.如上传照片请选择高宽比为4:3的证件照"],
+    "getPhoto_rule3": ["3.每天上传或拍摄照片次数不超过2次"],
+    "getPhoto_rule4": ["4.请选择证件照上传，照片高宽比为4:3，上传后将在3个工作日内审核！每月只能更新一次照片！"],
+    "getPhoto_rule1_hn": ["1.请上传本人一寸近期免冠白底证件照，295像素*413像素，分辨率300dpi；"],
+    "getPhoto_rule2_hn": ["2.上传照片文件大小不得大于200kb，仅支持jpg格式；"],
+    "getPhoto_rule3_hn": ["3.禁止上传生活照、卖萌照、卡通照、以及过度PS的照片；"],
+    "getPhoto_rule4_hn": ["4.审核不通过可查看原因，调整或更换照片后重新上传，审核通过后，可在“我的”菜单查看照片，审核后的照片在校期间不允许再更换。"],
+    "getPhoto_rule1_hs": ["1.照片背景须为纯色背景，无任何装饰，颜色以浅色为佳，请勿使用褐色、黑色等深色背景；"],
+    "getPhoto_rule2_hs": ["2.照片必须显示头部正面，并且不能佩戴帽饰。"],
+    "getPhoto_rule4_hs": ["友情提醒："],
+    "getPhoto_rule3_hs": ["照片上传成功后的待审核期间和照片审核通过后的六个月内将无法再次上传照片，请谨慎选择符合要求的照片。"],
+    "getPhoto_btn": ["确定剪裁"],
+    "lifeCharge_no_order": ["暂无订单"],
+    "lifeCharge_prompt": ["房间号不对？点击这里重新选择"],
+    "lifeCharge_room_name": ["房间名称"],
+    "lifeCharge_shop": ["缴费商户"],
+    "lifeCharge_bills_date": ["账单日期"],
+    "lifeCharge_bills_amount": ["缴费金额"],
+    "lifeCharge_btn": ["缴费"],
+    "no_message": ["暂无信息"],
+    "lifePay_select": ["请选择"],
+    "msgPush_prompt1": ["开启推送提醒需要先关注并绑定公众号"],
+    "msgPush_prompt2": ["1.充值提醒：开启后系统将会在您每次充值完成时对您进行提醒"],
+    "msgPush_prompt3": ["2.消费提醒：开启后系统将会在您每次消费成功时对您进行提醒"],
+    "msgPush_prompt4": ["3.余额不足提醒：开启后系统将会在您的余额不足20元、10元、5元时，分别进行一次提醒"],
+    "public": ["公众号"],
+    "public_name": ["复旦信息办"],
+    "msg_list_text1": ["充值提醒"],
+    "msg_list_text2": ["消费提醒"],
+    "msg_list_text3": ["余额不足提醒"],
+    "neterr": ["网络错误"],
+    "neterr_prompt": ["请检查网络后重新进入小程序"],
+    "payResult": ["扫码结果"],
+    "payResult_success": ["扫码成功"],
+    "payResult_fail": ["扫码失败"],
+    "return": ["返回首页"],
+    "scanPay": ["订单支付"],
+    "scanPay_cost": ["订单总价："],
+    "scanPay_more": ["还需支付"],
+    "scanPay_btn": ["立即支付"],
+    "card_no": ["卡号："],
+    "unbindBusCard_prompt": ["目前校园卡剩余金额"],
+    "unbindBusCard_prompt1": ["近期交易"],
+    "unbindBusCard_prompt2": ["目前暂未绑定联名交通卡"],
+    "unbindBankCards": ["银行卡解绑"],
+    "selectHost": ["登录环境判断"],
+    "wechat_host": ["微信app端企业号授权登录"],
+    "wechatqy_host": ["企业微信app端授权登录"],
+    "apply_h1": ["新用户注册"],
+    "apply_h2": ["校外人员注册申请"],
+    "apply_name": ["请输入姓名"],
+    "apply_sex1": ["男"],
+    "apply_sex2": ["女"],
+    "apply_phone": ["请输入手机号"],
+    "apply_code": ["请输入验证码"],
+    "apply_id": ["请填写正确身份证号,卡务凭有效证件退款"],
+    "apply_tobind": ["已有账号?立即登录"],
+    "apply_btn": ["立即注册"],
+    "parkPay_account": ["车牌号"],
+    "parkPay_account_placeholder": ["请输入车牌号"],
+    "parkPay_amount": ["停车费用"],
+    "pay_input_placeholder": ["请输入缴费金额"],
+    "query_account": ["查询账号"],
+    "left_water": ["水费余额"],
+    "query_account_input": ["请输入查询账号"],
+    "fliters_pay_recharge": ["当月充值："],
+    "fliters_pay_consume": ["消费："],
+    "money": ["元"],
+    "current_query": ["最近查询："],
+    "current_recharge": ["最近缴费："],
+    "elec_acc": ["电费账号"],
+    "water_acc": ["水费账号"],
+    "special_none": ["暂无专款账户"],
+    "verifycode": ["验证码"],
+    "fail": ["审核不通过"],
+    "reason": ["查看原因"],
+    "upload": ["最近于", ["value"], "上传"],
+    "account_placeholder": ["请输入账号"],
+    "cardno_placeholder": ["请输入卡号"],
+    "fixedTel_area": ["缴费区域"],
+    "fixedTel_tel": ["电话号码（0451）"],
+    "fixedTel_tel_placeholder": ["请输入电话号码"],
+    "fixedTel_balance": ["当前余额"],
+    "fixedTel_user": ["机主姓名"],
+    "fixedTel_add": ["装机地址"],
+    "fixedTel_dept": ["所属部门"],
+    "arrears": ["挂账流水"],
+    "arrears_now": ["当前挂账："],
+    "arrears_dtl": ["查看详情"],
+    "smsbind_placeholder": ["请输入手机号或工号"],
+    "smsbind_title": ["手机号/工号"],
+    "jkcodeRecord_startdate": ["起始日期"],
+    "jkcodeRecord_enddate": ["结束日期"],
+    "jkcodeRecord_date": ["登记日期"],
+    "jkcodeRecord_jkstatus": ["健康状况"],
+    "jkcodeRecord_position": ["具体位置"],
+    "jkcodeRecord_reviseposition": ["修订位置"],
+    "jkcodeRecord_triptype": ["行程类型"],
+    "jkcodeRecord_tourarea": ["途径区域"],
+    "jkcodeRecord_tourvehicle": ["具体行程"],
+    "jkcodeRecord_symptom": ["风险状态"],
+    "jkcodeRign_loginTime": ["上次登记时间"],
+    "jkcodeRign_loginTime_p": ["暂无记录"],
+    "jkcodeRign_phone": ["联系电话"],
+    "jkcodeRign_phone_p": ["请输入联系电话"],
+    "jkcodeRecord_triptype_p": ["请选择行程类型"],
+    "jkcodeRecord_tourarea_p": ["请输入途径的县市区"],
+    "jkcodeRecord_tourvehicle_p": ["请填写车次、航班、自驾路线等"],
+    "jkcodeRecord_position_p": ["请点击获取当前位置"],
+    "jkcodeRecord_street": ["街道"],
+    "jkcodeRecord_reviseposition_p": ["可修订位置"],
+    "jkcodeRecord_jkstatus_p": ["请选择健康状态"],
+    "jkcodeRecord_status": ["是否有以下状况"],
+    "jkcodeRecord_status_p": ["请选择是否有以下状况"],
+    "jkcodeRecord_note": ["请进一步说明以上信息不能说明的特殊情况"],
+    "jkcodeRecord": ["健康登记"],
+    "submit": ["提交"],
+    "heu_login": ["校园卡认证登录"],
+    "heu_name": ["收款人姓名"],
+    "heu_cardno": ["校园卡号"],
+    "heu_cardno_placeholder": ["请输入收款人校园卡号"],
+    "changepwd": ["消费密码修改"],
+    "kaikahang": ["开卡行"],
+    "bathCode_query": ["查看使用情况"],
+    "sfz": ["身份证号"],
+    "confirm": ["确认"],
+    "yanzheng": ["图形验证码"],
+    "recharge_kinds": ["暂无更多支付方式，请点击此处重试!"],
+    "paycode_prompt_h1": ["请将二维码"],
+    "paycode_prompt_h2": ["对准扫描设备"],
+    "refresh_prompt": ["二维码每", ["secend"], "s刷新一次"],
+    "refresh": ["手动刷新"],
+    "code": ["二维码"],
+    "email": ["邮箱"],
+    "jine": ["金额"],
+    "refund_all": ["全部捐赠"],
+    "aiface_desc": ["开启校园卡人脸消费授权"],
+    "getLossCard_search": ["输入学号/工号查询失卡登记情况"],
+    "stuempno1": ["学号/工号"],
+    "back": ["退"],
+    "dhf": ["搭伙费"],
+    "take": ["收"],
+    "managefee": ["优惠金额"],
+    "yskk": ["延时扣款"],
+    "evaluate": ["评价"],
+    "bath_district_area": ["请选择浴室区域"],
+    "bath_district_room": ["请选择浴室"],
+  }),
+});
+var Interpreter = (function(r) {
+  arguments.length = arguments.length;
+  var i = "";
+
+  function f(r, n) {
+    return (r ? "string" == typeof r ? r : r.reduce((function(r, t) {
+      return (r.concat([(function(n, e) {
+        if (e = e || ({}), "string" == typeof n) return (n);;
+        if (n[(2)] && "object" == typeof n[(2)]) {
+          var r = Object.keys(n[(2)]).reduce((function(r, t) {
+            return (r[((nt_3 = (t), null == nt_3 ? undefined : 'number' === typeof nt_3 ? nt_3 : "" + nt_3))] = f(n[(2)][((nt_4 = (t), null == nt_4 ? undefined : 'number' === typeof nt_4 ? nt_4 : "" + nt_4))], e), r)
+          }), ({}));
+          var t = r[((nt_5 = (e[(0)]), null == nt_5 ? undefined : 'number' === typeof nt_5 ? nt_5 : "" + nt_5))];
+          var u = e[((nt_7 = (n[(0)]), null == nt_7 ? undefined : 'number' === typeof nt_7 ? nt_7 : "" + nt_7))];
+          return (void(0 !== u ? r[((nt_9 = (u.toString()), null == nt_9 ? undefined : 'number' === typeof nt_9 ? nt_9 : "" + nt_9))] || r.other || i : t || r.other || i))
+        };
+        if ("object" == typeof n && 0 < n.length) {
+          return (function r(t, n, e) {
+            void(0 === e && (e = 0));
+            if (!n || !t || t.length <= 0) return ("");;
+            var n = n[((nt_10 = (t[((nt_11 = (e), null == nt_11 ? undefined : 'number' === typeof nt_11 ? nt_11 : "" + nt_11))]), null == nt_10 ? undefined : 'number' === typeof nt_10 ? nt_10 : "" + nt_10))];
+            if ("string" == typeof n) return (n);;
+            if ("number" == typeof n) return (n.toString());;
+            if (!n) return ("{" + t.join(".") + "}");;
+            return (r(t, n, ++e))
+          }(n[(0)].split("."), e, 0))
+        };
+        return ("")
+      }(t, n))]))
+    }), []).join("") : i)
+  };
+
+  function c(r, t, n) {
+    t = r[((nt_13 = (t), null == nt_13 ? undefined : 'number' === typeof nt_13 ? nt_13 : "" + nt_13))];
+    if (!t) return (n);;
+    t = t[((nt_14 = (n), null == nt_14 ? undefined : 'number' === typeof nt_14 ? nt_14 : "" + nt_14))];
+    return (t || n)
+  };
+  return (r.getMessageInterpreter = (function(i, o) {
+    arguments.length = arguments.length;
+
+    function e(r, t, n) {
+      var e;
+      var u;
+      return (f((e = r, u = o, (n = (r = i)[((nt_15 = (n = n), null == nt_15 ? undefined : 'number' === typeof nt_15 ? nt_15 : "" + nt_15))]) && (n = n[((nt_16 = (e), null == nt_16 ? undefined : 'number' === typeof nt_16 ? nt_16 : "" + nt_16))]) || c(r, u, e)), t))
+    };
+    return ((function(r, t, n) {
+      arguments.length = arguments.length;
+      return (2 === arguments.length ? e(r, null, t) : 3 !== arguments.length ? "" : e(r, t, n))
+    }))
+  }), r)
+}(({})));
+module.exports.t = Interpreter.getMessageInterpreter(translations, fallbackLocale);

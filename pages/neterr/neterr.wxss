@@ -1,0 +1,32 @@
+.neterr {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column
+}
+
+wx-text {
+    font-size: 36rpx
+}
+
+wx-image {
+    margin: 100rpx 0 50rpx;
+    width: 400rpx
+}
+
+.loginout {
+    background-color: #3c9dfb;
+    border-radius: 50rpx;
+    color: #fff;
+    font-size: 30rpx;
+    margin-top: 60rpx;
+    width: 40%
+}
+
+.btn-box {
+    display: -webkit-flex;
+    display: flex;
+    width: 80%
+}

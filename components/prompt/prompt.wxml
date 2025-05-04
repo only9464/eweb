@@ -1,0 +1,18 @@
+<view class="modal" wx:if="{{show}}">
+    <view class="modal_background"></view>
+    <view class="modal_modal">
+        <image mode="widthFix" src="/style/images/aiface/facePropmt.min.png"></image>
+        <view class="modal_modal_title">开通人脸识别消费须知</view>
+        <view class="modal_modal_content">
+            <view>在您正式开启“人脸识别消费”之前，请仔细阅读并理解以下全部内容：</view>
+            <view style="text-indent:60rpx;">1.为向用户提供更便捷高效的校园卡消费服务，学校建设了人脸识别支付系统，在食堂、超市、校医院等具备人脸识别交易功能的校园卡消费终端上进行刷脸消费。首次使用需登录“HEU移动校园”APP或“HEU微服务”小程序，开启“人脸识别消费”功能，并完成本人人像的信息采集。</view>
+            <view style="text-indent:60rpx;">2.如点击“同意”，则视为您在使用人脸识别服务时，同意并授权获取、使用您在刷脸消费过程中所提供的个人信息（包括姓名、身份证号、校园卡账户）及人脸影像数据，并提供给合法存有您信息的第三方合作机构进行比对核验身份。您同意并授权当使用人脸识别消费时，将从您的校园卡账户中支付相关费用。如您不同意以上任何内容，请勿进行下一步操作。</view>
+        </view>
+        <view class="btn">
+            <text bindtap="close" data-flag="{{true}}">同意</text>
+            <text bindtap="close" data-flag="{{false}}">拒绝</text>
+        </view>
+    </view>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

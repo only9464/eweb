@@ -1,0 +1,14 @@
+<view class="life-pay">
+    <view class="life-pay-item" wx:for="{{levels}}" wx:key="index">
+        <picker bindchange="{{'bindLevelnumChange_'+index}}" range="{{item.list}}" rangeKey="name" value="{{0}}">
+            <view class="weui-cell" style="display:block">
+                <label class="weui-label">{{i18n.t('lifePay_select',$_locale)}}{{item.name}}</label>
+                <view class="picker-value" wx:if="{{item.check_num}}">{{item.list[item.check_num].name}}</view>
+                <view class="picker-value" wx:else>{{i18n.t('lifePay_select',$_locale)}}{{item.name}}</view>
+            </view>
+        </picker>
+    </view>
+</view>
+<button bindtap="query" class="longbutton">{{i18n.t('query',$_locale)}}</button>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "code-verify": "components\\verify\\verify"
+  },
+  "navigationBarTitleText": "登录"
+}

@@ -1,0 +1,45 @@
+<view class="filters-header" wx:if="{{showTurnoverFilter}}">
+    <view bindtap="chooseMonth">
+        <picker bindcancel="cancel" bindchange="bindDateChange" end="{{maxDate}}" fields="month" mode="date" start="{{minDate}}">
+            <view class="picker">
+                <view class="filters-title">
+                    <view class="filters-content">
+                        <view class="filters-content-items">
+                            <text class="filters-content-items-name" wx:if="{{$_locale!='en-US'}}">{{month}}月</text>
+                            <text class="filters-content-items-name" wx:if="{{$_locale=='en-US'}}">{{enmonth}}</text>
+                            <view class="filters-content-items-pic">
+                                <image class="filters-content-items-pic-img" mode="aspectFit" src="{{isFilterMonth?'../../style/images/turnover/show_more.png':'../../style/images/turnover/show_less.png'}}"></image>
+                            </view>
+                        </view>
+                    </view>
+                    <image class="filters-content-pic" mode="aspectFit" src="../../style/images/turnover/bar_chart.png"></image>
+                </view>
+            </view>
+        </picker>
+    </view>
+    <scroll-view scrollY bindscrolltolower="getTurnoverList" class="scrollView" enableBackToTop="{{true}}" lowerThreshold="{{10}}" scrollTop="{{scrollTop}}">
+        <view class="list-item {{type=='erGongYe'?'sspu':''}}" wx:for="{{list}}" wx:key="index">
+            <view class="imgBox {{type=='erGongYe'?'sspu-img':''}}">
+                <image class="itemImg" mode="widthFix" src="../../style/images/turnover/authIcon.png"></image>
+                <text class="itemKinds">{{i18n.t('auth_flow',$_locale)}}</text>
+            </view>
+            <view class="item-con  item-recharge">
+                <view class="item-con-li">
+                    <text class="toast">{{i18n.t('device_name',$_locale)}}：</text>
+                    <text class="name">{{item.doorname?item.doorname:item.doorid}}</text>
+                </view>
+                <view class="item-con-li">
+                    <text class="toast">{{i18n.t('visit_time',$_locale)}}：</text>
+                    <text class="name">{{item.authtime}}</text>
+                </view>
+                <view class="item-con-li">
+                    <text class="toast">{{i18n.t('note_info',$_locale)}}：</text>
+                    <text class="name">{{item.dtldesc?item.dtldesc:i18n.t('no_note',$_locale)}}</text>
+                </view>
+            </view>
+        </view>
+        <view bindtap="getTurnoverList" class="loading">{{loadingText}}</view>
+    </scroll-view>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

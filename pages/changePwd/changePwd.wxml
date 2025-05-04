@@ -1,0 +1,19 @@
+<view class="changePwd">
+    <form bindsubmit="submit">
+        <view class="item">
+            <view class="item-title">{{i18n.t('changePwd_1_pwd',$_locale)}}</view>
+            <view class="box">
+                <input password maxlength="6" name="pwdf" placeholder="{{i18n.t('changePwd_1_placeholder',$_locale)}}" type="number"></input>
+            </view>
+        </view>
+        <view class="item">
+            <view class="item-title">{{i18n.t('changePwd_2_pwd',$_locale)}}</view>
+            <view class="box">
+                <input password maxlength="6" name="pwdt" placeholder="{{i18n.t('changePwd_2_placeholder',$_locale)}}" type="number"></input>
+            </view>
+        </view>
+        <button class="submit" formType="submit">{{i18n.t('changePwd',{value:$_locale!='en-US'?obj.title:obj.entitle},$_locale)}}</button>
+    </form>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "annual-report": "components\\annualReport\\annualReport"
+  }
+}

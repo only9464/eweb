@@ -1,0 +1,26 @@
+@import "..\..\components\fliters_pay\fliters_pay.wxss";
+
+.arrears {
+    padding: 30rpx
+}
+
+.arrears-header {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+
+.scrollView1 {
+    height: calc(100vh - 130rpx);
+    margin-top: 20rpx
+}
+
+.list-item {
+    border-radius: 20rpx;
+    padding: 50rpx
+}
+
+.color {
+    color: #3599fb
+}

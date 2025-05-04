@@ -1,0 +1,45 @@
+<view class="weui-cells">
+    <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <label class="weui-label">{{i18n.t('elec_acc',$_locale)}}</label>
+        </view>
+        <view class="weui-cell__bd">
+            <view class="weui-cell__ft">{{roomid?roomid:i18n.t('no_message',$_locale)}}</view>
+        </view>
+    </view>
+    <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <label class="weui-label">{{sys==='水控缴费'?'剩余水量':'剩余电量'}}</label>
+        </view>
+        <view class="weui-cell__bd">
+            <view class="weui-cell__ft">{{restElecDegree?restElecDegree:0}}度</view>
+        </view>
+    </view>
+</view>
+<view class="weui-cells">
+    <picker bindchange="bindDegree" range="{{degreelist}}" rangeKey="name" value="{{degreeIndex}}" wx:if="{{degreelist.length}}">
+        <view class="weui-cell" style="display:block">
+            <label class="weui-label">{{i18n.t('elecharge_select',$_locale)}}</label>
+            <view class="picker-value">{{degreelist[degreeIndex].name}}</view>
+        </view>
+    </picker>
+    <picker bindchange="changePayKind" range="{{array}}" rangeKey="bankname" value="{{index}}" wx:if="{{array.length!=1}}">
+        <view class="picker" style="padding:30rpx;display:flex;justify-content:space-between;">
+            <text>{{i18n.t('recharge_kind',$_locale)}}</text>
+            <text style="color:rgba(0,0,0,0.5);">{{array[index].bankname}}</text>
+        </view>
+    </picker>
+    <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <label class="weui-label">{{i18n.t('lifeCharge_bills_amount',$_locale)}}</label>
+        </view>
+        <view class="weui-cell__bd">
+            <input bindinput="setAmount" class="weui-cell__ft" maxlength="4" placeholder="{{i18n.t('pay_input_placeholder',$_locale)}}" style="color:black" type="number" value="{{amount}}"></input>
+        </view>
+    </view>
+</view>
+<view class="toast" wx:if="{{sys!=='水控缴费'}}">此处的“剩余电量”非实时查询，每天更新一次，实际电量以电表显示为准。</view>
+<button bindtap="doNext" class="longbutton">{{i18n.t('scanPay_btn',$_locale)}}</button>
+<pwd bind:close="close" bind:getValue="getPwd" bind:input="getPwdToPay" id="pwd" status="{{status}}" wx:if="{{status}}"></pwd>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

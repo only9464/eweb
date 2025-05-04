@@ -1,0 +1,8 @@
+<view class="venuesCode">
+    <view class="con">
+        <image mode="widthFix" src="{{status?'/style/images/venuesCode/success.png':'/style/images/venuesCode/fail.png'}}"></image>
+        <text>{{text}}</text>
+    </view>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

@@ -1,0 +1,31 @@
+<view class="addBankCards">
+    <view class="warn">{{i18n.t('add_bankcard_prompt',$_locale)}}</view>
+    <view class="writePart">
+        <view class="weui-cell">
+            <view class="weui-cell__hd">
+                <label class="weui-label">{{i18n.t('cardholder',$_locale)}}</label>
+            </view>
+            <view class="weui-cell__bd" style="text-align:right;">
+                <text style="color:#cfcfcf">{{username?username:i18n.t('user',$_locale)}}</text>
+            </view>
+        </view>
+        <picker bindchange="bindCardsChange" range="{{bankCardsList}}" rangeKey="bankname" value="{{bankCards}}">
+            <view class="weui-cell" style="display:block">
+                <label class="weui-label">{{i18n.t('currently_select',$_locale)}}</label>
+                <view class="picker-value" wx:if="{{bankIndex}}">{{bankCardsList[bankIndex].bankname}}</view>
+                <view class="picker-value" wx:else>{{i18n.t('choose_bank',$_locale)}}</view>
+            </view>
+        </picker>
+        <view class="weui-cell">
+            <view class="weui-cell__hd">
+                <label class="weui-label">{{i18n.t('cardno',$_locale)}}</label>
+            </view>
+            <view class="weui-cell__bd">
+                <input bindinput="getBankCardno" class="weui-cell__ft" maxlength="19" placeholder="{{i18n.t('add_card_placeholder',$_locale)}}" placeholderStyle="color:#cfcfcf" style="color:black" type="number" value="{{bankCardno}}"></input>
+            </view>
+        </view>
+    </view>
+    <button bindtap="bindBankCards" class="btn">{{i18n.t('bindBankCard',{value:$_locale!='en-US'?obj.title:obj.entitle},$_locale)}}</button>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

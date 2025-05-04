@@ -1,0 +1,31 @@
+<view class="smsBind">
+    <form bindsubmit="reset">
+        <view class="smsBind-con">
+            <view class="smsBind-con-item">
+                <text>{{i18n.t('name',$_locale)}}:</text>
+                <input bindinput="getCustname" name="custname" placeholder="{{i18n.t('bind_name_placeholder',$_locale)}}" type="text" value="{{custname}}"></input>
+            </view>
+            <view class="smsBind-con-item">
+                <text>{{i18n.t('student_id',$_locale)}}:</text>
+                <input bindinput="getStuempno" name="stuempno" placeholder="{{i18n.t('placeholder',$_locale)+i18n.t('student_id',$_locale)}}" type="text" value="{{stuempno}}"></input>
+            </view>
+            <view class="smsBind-con-item">
+                <text>{{i18n.t('sfz',$_locale)}}:</text>
+                <input bindinput="getIdno" name="idno" placeholder="{{i18n.t('placeholder',$_locale)+i18n.t('sfz',$_locale)}}" type="text" value="{{idno}}"></input>
+            </view>
+            <view class="smsBind-con-item">
+                <text>{{i18n.t('yanzheng',$_locale)}}:</text>
+                <input bindinput="getVerifyText" maxlength="4" name="verifytext" style="text-align:center;" type="text" value="{{verifytext}}"></input>
+                <code-verify bindchange="verifyTextChange" style="width:200rpx"></code-verify>
+            </view>
+            <view class="smsBind-con-item">
+                <text>{{i18n.t('verifycode',$_locale)}}:</text>
+                <input name="verifycode" placeholder="{{i18n.t('apply_code',$_locale)}}" type="text"></input>
+                <button bindtap="getCode" disabled="{{disabled}}">{{sendCode}}</button>
+            </view>
+        </view>
+        <button class="btn" formType="submit">{{i18n.t('confirm',$_locale)}}</button>
+    </form>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

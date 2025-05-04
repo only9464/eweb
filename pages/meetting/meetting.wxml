@@ -1,0 +1,3 @@
+<text>pages/meetting/meetting.wxml</text>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

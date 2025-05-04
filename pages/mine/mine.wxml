@@ -1,0 +1,53 @@
+<view class="mine">
+    <navigator url="/pages/userDetails/userDetails">
+        <view class="mine-header" style="background:{{subColor}}">
+            <view class="box">
+                <view class="mine-heade-avatar">
+                    <image class="{{type=='apply'?'avatarHn':'avatar'}}" mode="aspectFit" src="data:image/png;base64,{{avatar}}" wx:if="{{avatar}}"></image>
+                    <image class="avatar" mode="aspectFit" src="/style/images/mine/maleAvator.png" wx:if="{{!avatar}}"></image>
+                </view>
+                <view class="mine-header-descript">
+                    <view class="mine-header-descript-title">
+                        <text class="mine-header-desrcipt-name">{{accountinfo.username?accountinfo.username:i18n.t('user',$_locale)}}</text>
+                        <view class="header-line"></view>
+                        <text class="mine-header-desrcipt-id">{{filter.formatStuempno(accountinfo.stuempno)}}</text>
+                    </view>
+                    <text class="mine-header-descript-part">{{accountinfo.deptname?accountinfo.deptname:i18n.t('no_partment',$_locale)}}</text>
+                </view>
+            </view>
+            <image class="right-arrow" mode="aspectFit" src="/style/images/mine/right-arrow.png"></image>
+        </view>
+    </navigator>
+    <view class="mine-balance">
+        <view class="item">
+            <text class="balanceItem-title">{{i18n.t('status',$_locale)}}</text>
+            <text class="item-con {{accountinfo.statusname!='正常'?'red':'green'}}">{{accountinfo.statusname?accountinfo.statusname:'未知'}}</text>
+        </view>
+        <view class="item" style="border-right:1rpx solid #DEDEDE;border-left:1rpx solid #DEDEDE;" wx:if="{{type!='erGongYe'}}">
+            <text class="balanceItem-title">{{i18n.t('account_balance',$_locale)}}</text>
+            <text class="balanceItem-num">{{accountinfo.balance?accountinfo.balance:'0.00'}}</text>
+        </view>
+        <view class="item" style="border-right:1rpx solid #DEDEDE;border-left:1rpx solid #DEDEDE;" wx:if="{{accountinfo.subsidybal}}">
+            <text class="balanceItem-title">{{i18n.t('grants_credits',$_locale)}}</text>
+            <text class="balanceItem-num">{{accountinfo.subsidybal?accountinfo.subsidybal:'0.00'}}</text>
+        </view>
+        <view class="item">
+            <text class="balanceItem-title">{{i18n.t('validity_period',$_locale)}}</text>
+            <text class="balanceItem-num">{{expiredate}}</text>
+        </view>
+    </view>
+    <view class="mine-list">
+        <view bindtap="toPath" class="listItem" data-path="/pages/bindBankCard/bindBankCard" wx:if="{{isShowBindCard}}">
+            <text>{{i18n.t('bankcard',$_locale)}}</text>
+            <image class="right-arrow" src="/style/images/mine/right-arrow1.png"></image>
+        </view>
+        <view bindtap="toPath" class="listItem" data-path="/pages/changePwd/changePwd" wx:if="{{isShowPwd}}">
+            <text>{{type=='ecnu'?i18n.t('changepwd',$_locale):i18n.t('password',$_locale)}}</text>
+            <image class="right-arrow" src="../../style/images/mine/right-arrow1.png"></image>
+        </view>
+    </view>
+    <button bindtap="loginout" class="loginout" style="color:{{subColor}}">{{i18n.t('logout',$_locale)}}</button>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="filter" src="..\..\utils\format.wxs"/>

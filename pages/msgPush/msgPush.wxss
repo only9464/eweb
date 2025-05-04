@@ -1,0 +1,30 @@
+.msgPush {
+    margin-top: 30rpx
+}
+
+.msgPush-cell {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 1rpx solid #cfcfcf;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+
+.msgPush-cell,.notice {
+    display: -webkit-flex;
+    display: flex;
+    padding: 30rpx
+}
+
+.notice {
+    color: #999;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    line-height: 40rpx;
+    text-align: justify
+}
+
+.notice wx-text {
+    line-height: 55rpx
+}

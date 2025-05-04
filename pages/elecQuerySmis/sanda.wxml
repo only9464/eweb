@@ -1,0 +1,29 @@
+<view class="writePart">
+    <picker bindchange="bindSystemChange" range="{{elesystem}}" rangeKey="elcname" value="{{systemIndex}}">
+        <view class="weui-cell" style="display:block">
+            <label class="weui-label">{{i18n.t('elec_system',$_locale)}}</label>
+            <view class="picker-value" wx:if="{{systemIndex}}">{{elesystem[systemIndex].elcname}}</view>
+            <view class="picker-value" wx:else>{{i18n.t('elec_system',$_locale)}}</view>
+        </view>
+    </picker>
+    <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <label class="weui-label">{{i18n.t('query_account',$_locale)}}</label>
+        </view>
+        <view class="weui-cell__bd">
+            <input bindinput="getRoomid" class="weui-cell__ft" maxlength="16" placeholder="{{i18n.t('query_account_input',$_locale)}}" placeholderStyle="color:#cfcfcf" style="color:black" type="text" value="{{roomid}}"></input>
+        </view>
+    </view>
+</view>
+<view class="showAccount" wx:if="{{accountList.length!=0}}">
+    <text>{{i18n.t('current_query',$_locale)}}</text>
+    <text bindtap="setAccount" data-account="{{item}}" style="color:#3C9DFB;" wx:for="{{accountList}}">{{item}} </text>
+</view>
+<button bindtap="doNext" class="longbutton">{{i18n.t('next',$_locale)}}</button>
+<view class="notice">
+    <text>金海校区：1+楼号+房间号（例：1号楼101，填写为101101，加号不需要填写）</text>
+    <text>嘉善校区：2+楼号+房间号（例：1号楼101，填写为201101，加号不需要填写) </text>
+    <text>提示：楼号为两位数字，例：“1号楼”填写“01”；金海校区四期公寓“N”填写“40”，“S”填写“41”（例：房间号为N0101，填写为1400101）</text>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

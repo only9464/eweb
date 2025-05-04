@@ -1,0 +1,7 @@
+<view>
+    <text>{{$_locale}}</text>
+    <text>{{i18n.t('test',$_locale)}}</text>
+    <button bindtap="toggleLocale">{{i18n.t('toggle',$_locale)}}</button>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

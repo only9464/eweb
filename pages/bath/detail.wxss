@@ -1,0 +1,57 @@
+.detail {
+    background-color: #fff;
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 30rpx
+}
+
+.detail-title > wx-text {
+    color: #4387e4;
+    font-size: 40rpx
+}
+
+.detail-title-use {
+    margin: 30rpx 0
+}
+
+.detail-title-progress,.detail-title-use {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+
+wx-progress {
+    width: 80%
+}
+
+.detail-devices {
+    margin-top: 30rpx
+}
+
+.detail-devices > wx-text {
+    color: #4387e4;
+    font-size: 34rpx
+}
+
+.detail-devices-head,.detail-devices-item {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-top: 30rpx
+}
+
+.success {
+    color: #19be6b
+}
+
+.info {
+    color: #909399
+}
+
+.err {
+    color: #fa3534
+}

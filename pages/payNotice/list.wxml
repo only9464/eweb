@@ -1,0 +1,36 @@
+<view class="navibar" style="height:{{height}}px;">
+    <image bindtap="back" mode="widthFix" src="/style/images/payNotice/back.png"></image>
+    <text bindtap="toHistory">缴费历史</text>
+</view>
+<view class="payNotice">
+    <view class="container" wx:if="{{true}}">
+        <scroll-view scrollY bindscrolltolower="getMoreList" class="scrollView" enableBackToTop="{{true}}" lowerThreshold="{{80}}" scrollTop="{{scrollTop}}">
+            <view class="item" wx:for="{{list}}" wx:key="{{index}}">
+                <view class="header">
+                    <image mode="widthFix" src="/style/images/index/question.png"></image>
+                    <text>{{item.tradename}}</text>
+                </view>
+                <view class="content">
+                    <view>
+                        <text>截止时间</text>
+                        <text>{{item.expiredate}}</text>
+                    </view>
+                    <view>
+                        <text>交易状态</text>
+                        <text>{{item.status==1?'未付款':'已付款'}}</text>
+                    </view>
+                </view>
+                <view class="footer">
+                    <text>￥{{item.amount}}</text>
+                    <button bindtap="toPay" data-item="{{item}}">去缴费</button>
+                </view>
+            </view>
+            <view bindtap="getMoreList" class="loading">{{loadingText}}</view>
+        </scroll-view>
+    </view>
+    <view class="container1" wx:else>
+        <image mode="widthFix" src=""></image>
+    </view>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

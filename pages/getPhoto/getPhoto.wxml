@@ -1,0 +1,40 @@
+<view class="getPhoto">
+    <view bindtap="getPhoto" class="getPhoto-con">
+        <image class="photo" mode="widthFix" src="{{photo}}"></image>
+        <image class="camera" mode="widthFix" src="/style/images/getPhoto/photo.jpg"></image>
+    </view>
+    <button bindtap="getPhoto" class="submit">{{i18n.t('up_profile_picture',$_locale)}}</button>
+    <block wx:if="{{id=='Hn'||id=='Hs'}}">
+        <view class="getPhoto-up" wx:if="{{status.checkflag==2}}">
+            <text>{{i18n.t('upload',{value:status.date},$_locale)}}</text>
+            <text>{{i18n.t('fail',$_locale)}}</text>
+            <text bindtap="getReason">{{i18n.t('reason',$_locale)}}</text>
+        </view>
+    </block>
+    <view class="notice" wx:if="{{id=='Hn'}}">
+        <text>{{i18n.t('getPhoto_notice',$_locale)}}</text>
+        <text>{{i18n.t('getPhoto_rule1_hn',$_locale)}}</text>
+        <text>{{i18n.t('getPhoto_rule2_hn',$_locale)}}</text>
+        <text>{{i18n.t('getPhoto_rule3_hn',$_locale)}}</text>
+        <text>{{i18n.t('getPhoto_rule4_hn',$_locale)}}</text>
+    </view>
+    <view class="notice" wx:elif="{{id=='Hs'}}">
+        <text>{{i18n.t('getPhoto_notice',$_locale)}}</text>
+        <text>{{i18n.t('getPhoto_rule1_hs',$_locale)}}</text>
+        <text>{{i18n.t('getPhoto_rule2_hs',$_locale)}}</text>
+        <text>
+            <text style="color:red;font-weight:bold;">{{i18n.t('getPhoto_rule4_hs',$_locale)}}</text>{{i18n.t('getPhoto_rule3_hs',$_locale)}}</text>
+    </view>
+    <view class="notice" wx:else>
+        <text>{{i18n.t('getPhoto_notice',$_locale)}}</text>
+        <text>{{i18n.t('getPhoto_rule1',$_locale)}}</text>
+        <text>{{i18n.t('getPhoto_rule2',$_locale)}}</text>
+        <text>{{i18n.t('getPhoto_rule3',$_locale)}}</text>
+    </view>
+    <view wx:if="{{isShowCropper}}">
+        <image-cropper bindimageload="loadimage" bindload="cropperload" bindtapcut="clickcut" disable_ratio="{{true}}" disable_rotate="{{true}}" height="{{height}}" id="image-cropper" imgSrc="{{src}}" limit_move="{{true}}" width="{{width}}"></image-cropper>
+        <button bindtap="startCropper" class="cropperBtn">{{i18n.t('getPhoto_btn',$_locale)}}</button>
+    </view>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

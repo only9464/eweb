@@ -1,0 +1,36 @@
+<view class="payNotice">
+    <view class="container" wx:if="{{true}}">
+        <scroll-view scrollY bindscrolltolower="getMoreList" class="scrollView" enableBackToTop="{{true}}" lowerThreshold="{{80}}" scrollTop="{{scrollTop}}">
+            <view class="item" wx:for="{{list}}" wx:key="{{index}}">
+                <view class="header">
+                    <image mode="widthFix" src="/style/images/index/question.png"></image>
+                    <text>{{item.tradename}}</text>
+                </view>
+                <view class="content">
+                    <view>
+                        <text>支付时间</text>
+                        <text>{{item.expiredate}}</text>
+                    </view>
+                    <view>
+                        <text>支付方式</text>
+                        <text>{{item.transname}}</text>
+                    </view>
+                    <view>
+                        <text>交易状态</text>
+                        <text>{{item.status==2?'已付款':'未付款'}}</text>
+                    </view>
+                    <view>
+                        <text>缴费金额</text>
+                        <text>{{item.amount}}</text>
+                    </view>
+                </view>
+            </view>
+            <view bindtap="getMoreList" class="loading">{{loadingText}}</view>
+        </scroll-view>
+    </view>
+    <view class="container1" wx:else>
+        <image mode="widthFix" src=""></image>
+    </view>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

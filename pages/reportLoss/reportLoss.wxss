@@ -1,0 +1,66 @@
+.reportLoss {
+    padding-top: 30rpx
+}
+
+.reportLoss-item {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-bottom: 1px;
+    padding: 30rpx
+}
+
+.img {
+    height: 40rpx;
+    text-align: right;
+    width: 40rpx
+}
+
+.color {
+    color: #a3a3a3
+}
+
+.btn {
+    background-color: #3599fb;
+    border-radius: 50rpx;
+    color: #fff;
+    margin: 30rpx auto;
+    width: 600rpx
+}
+
+.box {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+
+wx-picker {
+    border-bottom: none
+}
+
+.notice {
+    color: red;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    line-height: 40rpx;
+    padding: 30rpx;
+    text-align: justify
+}
+
+.notice wx-text {
+    line-height: 55rpx
+}
+
+.toast {
+    color: red;
+    padding: 30rpx
+}

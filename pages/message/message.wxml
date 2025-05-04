@@ -1,0 +1,16 @@
+<view class="message">
+    <view class="message-item">
+        <image class="message-item-img" mode="aspectFit" src="../../style/images/message/lossCard_claim.jpg"></image>
+        <view class="message-item-con">
+            <view class="message-item-con-top">
+                <text class="message-item-con-title">失卡认领</text>
+                <text class="message-item-con-time color">7月14日</text>
+            </view>
+            <view class="message-item-con-con">
+                <text class="color">有人拾取你的校园卡，请及时到指定地点领取你的校园卡</text>
+            </view>
+        </view>
+    </view>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

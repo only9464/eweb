@@ -1,0 +1,32 @@
+wx-picker {
+    border-bottom: none
+}
+
+.pickerCell {
+    color: rgba(0,0,0,.3);
+    display: block;
+    padding: 0;
+    text-align: right
+}
+
+.picker-value {
+    color: #333
+}
+
+.btn {
+    background-color: #3c9dfb;
+    border-radius: 50rpx;
+    color: #fff;
+    width: 600rpx
+}
+
+.weui-cell__hd {
+    margin-right: 30rpx
+}
+
+.need {
+    color: red;
+    left: 15rpx;
+    position: absolute;
+    top: 25rpx
+}

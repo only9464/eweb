@@ -1,0 +1,43 @@
+<view class="specialFoundDetail">
+    <scroll-view lowerThreshold scrollY bindscrolltolower="getTurnoverList" class="scrollView" enableBackToTop="{{true}}">
+        <view class="list-item">
+            <image class="itemImg" mode="widthFix" src="{{is?'../../style/images/turnover/costIcon.png':'../../style/images/turnover/rechargeIcon.png'}}"></image>
+            <view class="item-con  item-recharge" wx:if="{{!is}}">
+                <view class="item-con-li">
+                    <text class="toast">充值渠道：</text>
+                    <text>悦校小程序</text>
+                </view>
+                <view class="item-con-li">
+                    <text class="toast">充值方式：</text>
+                    <text>线上充值</text>
+                </view>
+                <view class="item-con-li">
+                    <text class="toast">充值时间：</text>
+                    <text>今天 11:19</text>
+                </view>
+            </view>
+            <view class="item-con  item-pay" wx:if="{{is}}">
+                <view class="item-con-li">
+                    <text class="toast">商户名称：</text>
+                    <text>商户名称</text>
+                </view>
+                <view class="item-con-li">
+                    <text class="toast">支付终端：</text>
+                    <text>支付终端</text>
+                </view>
+                <view class="item-con-li">
+                    <text class="toast">支付方式：</text>
+                    <text>线上支付</text>
+                </view>
+                <view class="item-con-li">
+                    <text class="toast">支付时间：</text>
+                    <text>今天 11:19</text>
+                </view>
+            </view>
+            <text class="itemKinds">{{!is?'充值':'消费'}}</text>
+            <text class="itemEx" style="color:{{!is?'#FF9900':'#3599FB'}};">{{!is?'+':'-'}}500.00</text>
+        </view>
+    </scroll-view>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

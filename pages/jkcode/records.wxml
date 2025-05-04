@@ -1,0 +1,56 @@
+<view class="arrears">
+    <view class="topbox">
+        <view style="width:100%">
+            <picker bindchange="getStartdate" mode="date" style="margin-bottom:30rpx;width:100%;" value="{{date}}">
+                <view class="picker">{{i18n.t('jkcodeRecord_startdate',$_locale)}}:<text style="color:#3C9DFB;">{{startdate}}</text>
+                </view>
+            </picker>
+            <picker bindchange="getEnddate" mode="date" style="width:100%;" value="{{enddate}}">
+                <view class="picker">{{i18n.t('jkcodeRecord_enddate',$_locale)}}:<text style="color:#3C9DFB;">{{enddate}}</text>
+                </view>
+            </picker>
+        </view>
+        <button bindtap="query" class="btn">{{i18n.t('inteFeePay_query',$_locale)}}</button>
+    </view>
+    <scroll-view scrollY bindscrolltolower="getMoreList" class="scrollView2" enableBackToTop="{{true}}" lowerThreshold="{{80}}" scrollTop="{{scrollTop}}" style="height:{{height}};">
+        <view class="list-item" wx:for="{{list}}" wx:key="index">
+            <view class="item-con">
+                <view class="item-con-li">
+                    <text class="toast">{{i18n.t('jkcodeRecord_date',$_locale)}}：</text>
+                    <text class="name">{{item.date}}</text>
+                </view>
+                <view class="item-con-li">
+                    <text class="toast">{{i18n.t('jkcodeRecord_jkstatus',$_locale)}}：</text>
+                    <text class="name">{{item.healthtype}}</text>
+                </view>
+                <view class="item-con-li">
+                    <text class="toast">{{i18n.t('jkcodeRecord_position',$_locale)}}：</text>
+                    <text class="name">{{item.position}}</text>
+                </view>
+                <view class="item-con-li">
+                    <text class="toast">{{i18n.t('jkcodeRecord_reviseposition',$_locale)}}：</text>
+                    <text class="name">{{item.reviseposition?item.reviseposition:'无'}}</text>
+                </view>
+                <view class="item-con-li">
+                    <text class="toast">{{i18n.t('jkcodeRecord_triptype',$_locale)}}：</text>
+                    <text class="name">{{item.triptype}}</text>
+                </view>
+                <view class="item-con-li" wx:if="{{item.flag}}">
+                    <text class="toast">{{i18n.t('jkcodeRecord_tourarea',$_locale)}}：</text>
+                    <text class="name">{{item.tourarea}}</text>
+                </view>
+                <view class="item-con-li" wx:if="{{item.flag}}">
+                    <text class="toast">{{i18n.t('jkcodeRecord_tourvehicle',$_locale)}}：</text>
+                    <text class="name">{{item.tourvehicle}}</text>
+                </view>
+                <view class="item-con-li">
+                    <text class="toast">{{i18n.t('jkcodeRecord_symptom',$_locale)}}：</text>
+                    <text class="name">{{item.symptom}}</text>
+                </view>
+            </view>
+        </view>
+        <view bindtap="getTurnoverList" class="loading">{{loadingText}}</view>
+    </scroll-view>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

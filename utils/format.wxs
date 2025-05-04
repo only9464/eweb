@@ -1,0 +1,54 @@
+var filters = ({
+  toFix: (function(value) {
+    if ('-.--' == value) return (value);;
+    return (parseFloat(value).toFixed(2))
+  }),
+  toStr: (function(value) {
+    return (value.toString())
+  }),
+  toNum: (function(value) {
+    return (value.toNumber())
+  }),
+  formatDateTime: (function(value) {
+    var year = value.substring(0, 4);
+    var month = value.substring(4, 6);
+    var day = value.substring(6, 8);
+    var hour = value.substring(8, 10);
+    var minute = value.substring(10, 12);
+    var second = value.substring(12, 14);
+    return ([year, month, day].join('-') + ' ' + [hour, minute, second].join(':'))
+  }),
+  formatYMDHM: (function(value) {
+    var year = value.substring(0, 4);
+    var month = value.substring(4, 6);
+    var day = value.substring(6, 8);
+    var hour = value.substring(8, 10);
+    var minute = value.substring(10, 12);
+    return ([year, month, day].join('-') + ' ' + [hour, minute].join(':') + ':')
+  }),
+  formatS: (function(value) {
+    var second = value.substring(12, 14);
+    return (second)
+  }),
+  strSubstr: (function(value) {
+    value = value || '';
+    return (value.length < 10 ? value : '***' + value.substring(value.length - 3, value.length))
+  }),
+  formatStuempno: (function(val) {
+    val = val || '-';
+    if (val.length >= 15) {
+      return (val.substring(0, 2) + '******' + val.substring(val.length - 2))
+    };
+    return (val)
+  }),
+});
+module.exports = ({
+  toFix: filters.toFix,
+  toStr: filters.toStr,
+  toNum: filters.toNum,
+  formatDateTime: filters.formatDateTime,
+  formatYMDHM: filters.formatYMDHM,
+  formatS: filters.formatS,
+  strSubstr: filters.strSubstr,
+  formatStuempno: filters.formatStuempno,
+});

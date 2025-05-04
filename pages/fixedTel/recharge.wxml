@@ -1,0 +1,55 @@
+<view class="weui-cells">
+    <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <label class="weui-label">{{i18n.t('fixedTel_tel',$_locale)}}</label>
+        </view>
+        <view class="weui-cell__bd">
+            <view class="weui-cell__ft">{{roomname?roomname:i18n.t('no_message',$_locale)}}</view>
+        </view>
+    </view>
+    <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <label class="weui-label">{{i18n.t('fixedTel_user',$_locale)}}</label>
+        </view>
+        <view class="weui-cell__bd">
+            <view class="weui-cell__ft">{{username?username:i18n.t('no_message',$_locale)}}</view>
+        </view>
+    </view>
+    <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <label class="weui-label">{{i18n.t('fixedTel_balance',$_locale)}}</label>
+        </view>
+        <view class="weui-cell__bd">
+            <view class="weui-cell__ft">{{balance?balance:0}}元</view>
+        </view>
+    </view>
+</view>
+<view class="weui-cells">
+    <picker bindchange="changePayKind" range="{{array}}" rangeKey="bankname" value="{{index}}" wx:if="{{array.length!=1}}">
+        <view class="picker" style="padding:30rpx;display:flex;justify-content:space-between;">
+            <text>{{i18n.t('recharge_kind',$_locale)}}</text>
+            <text style="color:rgba(0,0,0,0.5);">{{array[index].bankname}}</text>
+        </view>
+    </picker>
+    <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <label class="weui-label">{{i18n.t('lifeCharge_bills_amount',$_locale)}}</label>
+        </view>
+        <view class="weui-cell__bd">
+            <input bindinput="setAmount" class="weui-cell__ft" maxlength="4" placeholder="{{i18n.t('pay_input_placeholder',$_locale)}}" style="color:black" type="number" value="{{amount}}"></input>
+        </view>
+    </view>
+</view>
+<view class="recharge">
+    <text class="recharge-title">{{i18n.t('recharge_note',$_locale)}}</text>
+    <radio-group bindchange="rechargeChange" class="recharge-radio-group" name="recharge">
+        <label class="recharge-radio {{item.checked?'recharge-radio-actived':''}}" wx:for="{{rechargeList}}" wx:key="index">
+            <radio checked="{{item.checked}}" style="display:none;" value="{{item.name}}"></radio>
+            <text class="radio-text">{{item.value}}</text>
+        </label>
+    </radio-group>
+</view>
+<button bindtap="doNext" class="longbutton">{{i18n.t('scanPay_btn',$_locale)}}</button>
+<pwd bind:close="close" bind:getValue="getPwd" bind:input="getPwdToPay" id="pwd" status="{{status}}" wx:if="{{status}}"></pwd>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

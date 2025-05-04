@@ -1,0 +1,33 @@
+<view class="arrears">
+    <view class="arrears-header">
+        <text>账户：{{user.name}}({{user.stuempno}})</text>
+        <text>总计欠费：<text class="color">￥{{consume}}</text>
+        </text>
+    </view>
+    <scroll-view scrollY bindscrolltolower="getTurnoverList" class="scrollView1" enableBackToTop="{{true}}" lowerThreshold="{{80}}" scrollTop="{{scrollTop}}">
+        <view class="list-item" wx:for="{{list}}" wx:key="index">
+            <view class="item-con">
+                <view class="item-con-li">
+                    <text class="toast">{{i18n.t('merchant_name',$_locale)}}：</text>
+                    <text class="name">{{item.shopname}}</text>
+                </view>
+                <view class="item-con-li">
+                    <text class="toast">{{i18n.t('consume_way',$_locale)}}：</text>
+                    <text class="name">{{item.routeinfo}}</text>
+                </view>
+                <view class="item-con-li">
+                    <text class="toast">{{i18n.t('consume_channels',$_locale)}}：</text>
+                    <text class="name">{{item.billname}}</text>
+                </view>
+                <view class="item-con-li">
+                    <text class="toast">{{i18n.t('consume_date',$_locale)}}：</text>
+                    <text class="name">{{item.paytime}}</text>
+                </view>
+            </view>
+            <text class="itemEx color">-{{item.amount}}</text>
+        </view>
+        <view bindtap="getTurnoverList" class="loading">{{loadingText}}</view>
+    </scroll-view>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

@@ -1,0 +1,23 @@
+<view class="overlay" wx:if="{{status}}">
+    <view class="container">
+        <view bindtap="offPayCode" class="iconClose">
+            <image mode="widthFix" src="/style/images/turnover/delete.png"></image>
+        </view>
+        <view class="pop">
+            <view class="pop_title">{{i18n.t('pwd_input_prompt',$_locale)}}</view>
+            <form bindsubmit="submitPwd">
+                <view class="content">
+                    <input disabled adjustPosition="{{true}}" catchtap="Tap" class="iptbox {{cursor===index+1?'border':''}}" password="{{ispassword}}" type="number" value="{{valueList.length>=index+1?valueList[index]:''}}" wx:for="{{6}}" wx:key="index"></input>
+                    <view class="bug {{'bug'+index}}" wx:if="{{valueList.length>index}}" wx:for="{{6}}" wx:key="index"></view>
+                    <view class="guangbiao" wx:if="{{!valueList.length}}"></view>
+                </view>
+                <input bindinput="getVal" class="ipt" focus="{{isFocus?isFocus:status}}" maxlength="{{6}}" name="password" password="{{true}}" type="number" value="{{pwd}}"></input>
+                <view>
+                    <button class="btn-area" disabled="{{disabled}}" formType="submit">{{i18n.t('pwd_input_btn',$_locale)}}</button>
+                </view>
+            </form>
+        </view>
+    </view>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

@@ -1,0 +1,14 @@
+<view class="annual">
+    <view class="bg"></view>
+    <view class="con">
+        <image mode="widthFix" src="/style/images/epeortal/annualBg.min.png"></image>
+        <view class="title">
+            <text>欢迎使用</text>
+            <text>一卡通系统</text>
+        </view>
+        <view bind:tap="open" class="btn">立即查看</view>
+        <image bind:tap="close" mode="widthFix" src="/style/images/turnover/delete.png"></image>
+    </view>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

@@ -1,0 +1,36 @@
+.message-item {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    display: -webkit-flex;
+    display: flex;
+    margin: 30rpx 30rpx 0;
+    padding: 20rpx 30rpx
+}
+
+.message-item-img {
+    height: 140rpx;
+    width: 140rpx
+}
+
+.message-item-con {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    margin-left: 30rpx
+}
+
+.message-item-con,.message-item-con-top {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+
+.color {
+    color: #a3a3a3;
+    font-size: 28rpx
+}
+
+.message-item-con-con {
+    margin-top: 10rpx
+}

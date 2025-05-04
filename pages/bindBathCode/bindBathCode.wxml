@@ -1,0 +1,10 @@
+<view class="bind">
+    <image class="bind-img" mode="widthFix" src="/style/images/bathCode/success.png"></image>
+    <text class="bind-text">{{i18n.t('bindBathCode_bind',$_locale)}}</text>
+    <view class="bind-pwd">
+        <view class="bind-pwd-item" wx:for="{{pwd}}" wx:key="index">{{item}}</view>
+    </view>
+    <text class="bind-toast">{{i18n.t('bathCode_prompt2',$_locale)}}</text>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

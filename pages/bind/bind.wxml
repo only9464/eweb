@@ -1,0 +1,47 @@
+<block wx:if="{{type!='erGongYe'}}">
+    <view class="weui-cells">
+        <view class="weui-cell" wx:if="{{type!='ecnu'}}">
+            <view class="weui-cell__hd">
+                <label class="weui-label">{{i18n.t('name',$_locale)}}</label>
+            </view>
+            <view class="weui-cell__bd">
+                <input bindinput="setName" class="weui-input" placeholder="{{i18n.t('bind_name_placeholder',$_locale)}}" type="text" value="{{custname}}"></input>
+            </view>
+        </view>
+        <view class="weui-cell">
+            <view class="weui-cell__hd">
+                <label class="weui-label">{{type=='phone'?i18n.t('account',$_locale):showIdDesc?i18n.t('id',$_locale):i18n.t('student_id',$_locale)}}</label>
+            </view>
+            <view class="weui-cell__bd">
+                <input bindinput="setSteno" class="weui-input" maxlength="20" placeholder="{{type=='apply'?i18n.t('bind_outside',$_locale):type=='phone'?i18n.t('account_placeholder',$_locale):showIdDesc?i18n.t('placeholder',$_locale)+i18n.t('id',$_locale):i18n.t('bind_student_id_placeholder',$_locale)}}" type="text" value="{{stuempno}}"></input>
+            </view>
+        </view>
+        <view class="weui-cell" wx:if="{{!showSsl}}">
+            <view class="weui-cell__hd">
+                <label class="weui-label">{{word}}{{i18n.t('password',$_locale)}}</label>
+            </view>
+            <view class="weui-cell__bd">
+                <input bindinput="setPayPwd" class="weui-input" password="true" placeholder="{{i18n.t('bind_pwd_placeholder',$_locale)}}" type="number" value="{{paypwd}}"></input>
+            </view>
+            <icon bindtap="toast" color="rgb(26, 132, 224))" size="{{20}}" style="margin-left:15rpx;" type="info"></icon>
+        </view>
+        <view class="weui-cell" wx:else>
+            <view class="weui-cell__hd">
+                <label class="weui-label">{{i18n.t('password',$_locale)}}</label>
+            </view>
+            <view class="weui-cell__bd">
+                <input bindinput="setPayPwd" class="weui-input" password="true" placeholder="{{i18n.t('bind_pwd_placeholder',$_locale)}}" type="text" value="{{paypwd}}"></input>
+            </view>
+            <icon bindtap="toast" color="rgb(26, 132, 224))" size="{{20}}" style="margin-left:15rpx;" type="info"></icon>
+        </view>
+    </view>
+    <button bindtap="doBind" class="longbutton">{{i18n.t('login',$_locale)}}</button>
+    <modal bind:close="close" showModal="{{show}}" type="rule"></modal>
+    <view class="notice" wx:if="{{!showSsl||type=='ecnu'}}">
+        <text style="color:red;">{{rule?i18n.t('prompt',$_locale):''}}</text>
+        <text>{{rule}}</text>
+    </view>
+</block>
+<view class="qiYe" wx:else>请从企业微信“校园卡”进入小程序</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

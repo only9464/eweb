@@ -1,0 +1,67 @@
+.btn {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #3599fb;
+    border-radius: 10rpx;
+    color: #fff;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin: 30rpx auto;
+    padding: 20rpx 0;
+    width: 690rpx
+}
+
+.btn-icon,.img {
+    height: 50rpx;
+    width: 50rpx
+}
+
+.bank-ul {
+    border-radius: 10rpx;
+    color: #fff;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    font-weight: 700;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin: 30rpx auto;
+    padding: 50rpx 0rpx;
+    width: 690rpx
+}
+
+.bank-ul,.bank-ul-header {
+    display: -webkit-flex;
+    display: flex
+}
+
+.bank-ul-header {
+    -webkit-align-items: center;
+    align-items: center;
+    margin-bottom: 20rpx;
+    margin-left: 60rpx;
+    margin-right: 60rpx
+}
+
+.bank-ul-header-logo {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-right: 10rpx;
+    padding: 10rpx
+}
+
+.bank-ul-bankcardno {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-left: 60rpx;
+    margin-right: 60rpx
+}

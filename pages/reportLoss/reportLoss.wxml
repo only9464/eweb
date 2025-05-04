@@ -1,0 +1,28 @@
+<view class="reportLoss">
+    <view class="reportLoss-item">
+        <text class="title">{{type=='phone'?i18n.t('heu_cardno',$_locale):showIdDesc?i18n.t('id',$_locale):i18n.t('student_id',$_locale)}}</text>
+        <text class="color">{{filter.formatStuempno(id)}}</text>
+    </view>
+    <view bindtap="openCardKinds" class="reportLoss-item ">
+        <text class="title">{{i18n.t('card_type',$_locale)}}</text>
+        <picker bindchange="bindPickerChange" disabled="{{!openCardKindsPop}}" range="{{columns}}">
+            <view class="picker">
+                <view class="box">
+                    <text class="color">{{cardsKind}}</text>
+                    <image class="img" mode="aspectFit" src="../../style/images/mine/right-arrow1.png"></image>
+                </view>
+            </view>
+        </picker>
+    </view>
+    <view class="notice">
+        <text>{{i18n.t('prompt',$_locale)}}</text>
+        <view>
+            <text>{{i18n.t('reportLoss_rule',$_locale)}}</text>
+            <text>{{toastMsg}}</text>
+        </view>
+    </view>
+    <button bindtap="loss_or_find" class="btn">{{cardStatus==='0'?i18n.t('report_loss',$_locale):i18n.t('loss_unregister',$_locale)}}</button>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="filter" src="..\..\utils\format.wxs"/>

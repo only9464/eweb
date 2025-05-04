@@ -1,0 +1,50 @@
+<view class="amountTransfer">
+    <view class="writePart">
+        <view class="weui-cell">
+            <view class="weui-cell__hd">
+                <label class="weui-label">{{i18n.t('name',$_locale)}}</label>
+            </view>
+            <view class="weui-cell__bd">
+                <input disabled class="weui-cell__ft" style="color:black" value="{{accountinfo.username}}"></input>
+            </view>
+        </view>
+        <view class="weui-cell">
+            <view class="weui-cell__hd">
+                <label class="weui-label">{{i18n.t('account_balance',$_locale)}}</label>
+            </view>
+            <view class="weui-cell__bd">
+                <input disabled class="weui-cell__ft" style="color:black" value="{{accountinfo.balance}}"></input>
+            </view>
+        </view>
+        <block wx:if="{{flag}}">
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <label class="weui-label">{{i18n.t('phone',$_locale)}}</label>
+                </view>
+                <view class="weui-cell__bd">
+                    <input bindinput="getPhone" class="weui-cell__ft" maxlength="11" placeholder="{{i18n.t('phone_placeholder',$_locale)}}" placeholderStyle="color:#cfcfcf" style="color:black" type="number" value="{{phone}}"></input>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <label class="weui-label">{{i18n.t('cardno',$_locale)}}</label>
+                </view>
+                <view class="weui-cell__bd">
+                    <input bindinput="getBankCardno" class="weui-cell__ft" maxlength="19" placeholder="{{i18n.t('add_card_placeholder',$_locale)}}" placeholderStyle="color:#cfcfcf" style="color:black" type="number" value="{{bankcardno}}"></input>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <label class="weui-label">{{i18n.t('kaikahang',$_locale)}}</label>
+                </view>
+                <view class="weui-cell__bd">
+                    <input disabled class="weui-cell__ft" placeholder="{{i18n.t('add_card_placeholder',$_locale)}}" placeholderStyle="color:#cfcfcf" style="color:black" value="{{kkh}}"></input>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>
+<button bindtap="start" class="longbutton" hoverStayTime="3000">{{i18n.t('amountTransfer_btn1',$_locale)}}</button>
+<modal bind:close="close" bindchange="change" showModal="{{show}}" type="closeAccount"></modal>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

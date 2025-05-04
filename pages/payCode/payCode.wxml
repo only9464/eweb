@@ -1,0 +1,29 @@
+<view class="page">
+    <view class="msg" wx:if="{{type!='erGongYe'}}">
+        <image class="user" mode="aspectFit" src="/style/images/paycode/user.png"></image>
+        <text>{{user.name}}（ {{filter.formatStuempno(user.stuempno)}} ）</text>
+    </view>
+    <view class="panel">
+        <text style="font-size:36rpx;">{{i18n.t('school_name',{value:$_locale!='en-US'?title:entitle},$_locale)}}</text>
+        <text>{{i18n.t('paycode_prompt_h1',$_locale)}}{{i18n.t('paycode_prompt_h2',$_locale)}}</text>
+        <view class="qrcode" style="width:{{width+'px'}};height:{{width+10+'px'}};" wx:if="{{showAuthorPay=='1'}}">
+            <canvas canvasId="pay_qrcode" wx:if="{{isShow}}"></canvas>
+            <view class="hideQr" wx:else>{{hideQrText}}({{secend}})</view>
+        </view>
+        <view class="qrcode" style="width:{{width+'px'}};height:{{width+10+'px'}};" wx:if="{{showAuthorPay=='2'}}">
+            <canvas canvasId="auth_qrcode" wx:if="{{isShow}}"></canvas>
+            <view class="hideQr" wx:else>{{hideQrText}}({{secend}})</view>
+        </view>
+        <text style="color:#999;font-size:28rpx;">{{i18n.t('refresh_prompt',{secend:refreshTime},$_locale)}}</text>
+        <button bindtap="{{showAuthorPay=='1'?'changePayCode':'changeAuthCode'}}">{{i18n.t('refresh',$_locale)}} {{i18n.t('code',$_locale)}}</button>
+    </view>
+    <view class="bottom">
+        <view bindtap="toUrl" class="item" data-id="{{index}}" data-title="{{item.title}}" wx:if="{{item.isHave}}" wx:for="{{list}}" wx:key="index">
+            <image class="img" src="{{item.isSelected?item.selUrl:item.url}}"></image>
+            <text class="item-name {{item.isSelected&&index!=2?'select':''}}">{{i18n.t(item.id,{value:$_locale!='en-US'?item.title:item.entitle},$_locale)}}</text>
+        </view>
+    </view>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="filter" src="..\..\utils\format.wxs"/>

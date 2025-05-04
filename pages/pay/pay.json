@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "pwd": "pages\\pay\\components\\pwdInput\\pwd_input",
+    "modal": "pages\\pay\\components\\modal\\modal"
+  },
+  "navigationBarTitleText": "充值"
+}

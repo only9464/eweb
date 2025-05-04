@@ -1,0 +1,38 @@
+<view class="weui-cells">
+    <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <label class="weui-label">{{i18n.t('lifeCharge_room_name',$_locale)}}</label>
+        </view>
+        <view class="weui-cell__bd">
+            <view class="weui-cell__ft">{{msg.locationfullname?msg.locationfullname:i18n.t('no_message',$_locale)}}</view>
+        </view>
+    </view>
+    <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <label class="weui-label">{{i18n.t('lifeCharge_shop',$_locale)}}</label>
+        </view>
+        <view class="weui-cell__bd">
+            <view class="weui-cell__ft">{{msg.shopname?msg.shopname:i18n.t('no_message',$_locale)}}</view>
+        </view>
+    </view>
+    <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <label class="weui-label">{{i18n.t('lifeCharge_bills_date',$_locale)}}</label>
+        </view>
+        <view class="weui-cell__bd">
+            <view class="weui-cell__ft">{{msg.date}}</view>
+        </view>
+    </view>
+    <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <label class="weui-label">{{i18n.t('lifeCharge_bills_amount',$_locale)}}</label>
+        </view>
+        <view class="weui-cell__bd">
+            <view class="weui-cell__ft">{{msg.amount?msg.amount:0}}</view>
+        </view>
+    </view>
+</view>
+<button bindtap="openPwdInput" class="longbutton">{{i18n.t('lifeCharge_btn',$_locale)}}</button>
+<pwd bind:close="close" bind:getValue="getPwd" status="{{showPwdInput}}" wx:if="{{showPwdInput}}"></pwd>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

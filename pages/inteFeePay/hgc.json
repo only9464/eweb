@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "pwd": "pages\\inteFeePay\\components\\pwdInput\\pwd_input"
+  },
+  "navigationBarTitleText": "网费缴纳"
+}

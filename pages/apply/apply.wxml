@@ -1,0 +1,38 @@
+<view style="position:relative;">
+    <view class="apply">
+        <view class="apply-header">
+            <text class="apply-header-h1">{{i18n.t('apply_h1',$_locale)}}</text>
+            <text class="apply-header-h2">{{i18n.t('apply_h2',$_locale)}}</text>
+        </view>
+        <form bindsubmit="apply">
+            <view class="apply-con">
+                <view class="apply-con-item">
+                    <input name="name" placeholder="{{i18n.t('apply_name',$_locale)}}" placeholderClass="place-holder" type="text"></input>
+                </view>
+                <view class="apply-con-item">
+                    <radio-group name="sex">
+                        <label class="sex-label">
+                            <radio checked="true" value="1"></radio>{{i18n.t('apply_sex1',$_locale)}}</label>
+                        <label class="sex-label" for="">
+                            <radio value="2"></radio>{{i18n.t('apply_sex2',$_locale)}}</label>
+                    </radio-group>
+                </view>
+                <view class="apply-con-item">
+                    <input bindinput="getPhone" maxlength="11" name="phone" placeholder="{{i18n.t('apply_phone',$_locale)}}" placeholderClass="place-holder" type="number"></input>
+                    <button bindtap="sendCode" disabled="{{disabled}}">{{sendCode}}</button>
+                </view>
+                <view class="apply-con-item">
+                    <input name="code" placeholder="{{i18n.t('apply_code',$_locale)}}" placeholderClass="place-holder" type="text"></input>
+                </view>
+                <view class="apply-con-item">
+                    <input maxlength="18" name="idno" placeholder="{{i18n.t('apply_id',$_locale)}}" placeholderClass="place-holder" type="idcard"></input>
+                </view>
+            </view>
+            <view bindtap="toBind" class="apply-tobind">{{i18n.t('apply_tobind',$_locale)}}</view>
+            <button class="btn" formType="submit">{{i18n.t('apply_btn',$_locale)}}</button>
+        </form>
+    </view>
+    <image mode="widthFix" src="/style/images/apply/footer.png"></image>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

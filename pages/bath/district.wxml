@@ -1,0 +1,19 @@
+<view class="weui-cells">
+    <picker bindchange="getDistrictIndex" range="{{district}}" rangeKey="fullname" value="{{districtIndex}}">
+        <view class="weui-cell" style="justify-content:space-between;">
+            <label class="weui-label" style="width:auto">{{i18n.t('bath_district_area',$_locale)}}</label>
+            <view class="picker-value" wx:if="{{districtIndex!==''}}">{{district[districtIndex].fullname}}</view>
+            <view class="picker-value" wx:else>{{i18n.t('bath_district_area',$_locale)}}</view>
+        </view>
+    </picker>
+    <picker bindchange="getroomIndex" range="{{room}}" rangeKey="name" value="{{roomIndex}}">
+        <view class="weui-cell" style="justify-content:space-between;">
+            <label class="weui-label" style="width:auto">{{i18n.t('bath_district_room',$_locale)}}</label>
+            <view class="picker-value" wx:if="{{roomIndex!==''}}">{{room[roomIndex].name}}</view>
+            <view class="picker-value" wx:else>{{i18n.t('bath_district_room',$_locale)}}</view>
+        </view>
+    </picker>
+</view>
+<button bindtap="bind" class="longbutton">{{i18n.t('bind',$_locale)}}</button>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

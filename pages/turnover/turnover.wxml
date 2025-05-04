@@ -1,0 +1,12 @@
+<view class="turnover">
+    <view style="background-color:#FFFFFF;padding-bottom:30rpx;">
+        <view class="header">
+            <view bindtap="changeTurnoverList" class="header-items left {{leftOright?'color':''}}" data-boolean="{{true}}" style="--color--:{{subColor}}">{{i18n.t('deal_flow',$_locale)}}</view>
+            <view bindtap="changeTurnoverList" class="header-items right {{leftOright?'':'color'}}" data-boolean="{{false}}" style="--color--:{{subColor}}">{{i18n.t('auth_flow',$_locale)}}</view>
+        </view>
+    </view>
+    <fliter-pay id="fliterPay" showTurnoverFilter="{{leftOright}}" wx:if="{{leftOright}}"></fliter-pay>
+    <fliter-auth id="fliterAuth" showTurnoverFilter="{{!leftOright}}" wx:if="{{!leftOright}}"></fliter-auth>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

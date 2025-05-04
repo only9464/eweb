@@ -1,0 +1,53 @@
+@import "list.wxss";
+
+.records-condition {
+    background-color: #fff;
+    color: #999;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    padding: 30rpx
+}
+
+.records-condition,.records-condition-date {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-bottom: 30rpx
+}
+
+wx-picker {
+    border: none;
+    width: 50%
+}
+
+.records-condition-status {
+    display: -webkit-flex;
+    display: flex
+}
+
+.scrollView2 {
+    box-sizing: border-box;
+    font-size: 30rpx;
+    padding: 0 30rpx;
+    width: 100%
+}
+
+.loading {
+    color: #9e9ea0;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 28rpx;
+    -webkit-justify-content: center;
+    justify-content: center
+}
+
+.query {
+    background-color: #2fa8e1;
+    border-radius: 20rpx;
+    color: #fff;
+    display: inline-block;
+    font-size: 28rpx;
+    padding: 10rpx 50rpx;
+    white-space: nowrap
+}

@@ -1,0 +1,94 @@
+<view class="filters-header" wx:if="{{showTurnoverFilter}}">
+    <view class="chooseMonth">
+        <picker bindcancel="cancel" bindchange="bindDateChange" end="{{maxDate}}" fields="month" mode="date" start="{{minDate}}">
+            <view bindtap="chooseMonth" class="picker">
+                <view class="filters-title">
+                    <view class="filters-content">
+                        <view class="filters-content-items">
+                            <text class="filters-content-items-name" wx:if="{{$_locale!='en-US'}}">{{month}}月</text>
+                            <text class="filters-content-items-name" wx:else>{{enmonth}}</text>
+                            <view class="filters-content-items-pic">
+                                <image class="filters-content-items-pic-img" mode="aspectFit" src="{{isFilterMonth?'../../style/images/turnover/show_more.png':'../../style/images/turnover/show_less.png'}}"></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </picker>
+    </view>
+    <view style="display:flex;justify-content:space-between;">
+        <text class="toast">{{i18n.t('fliters_pay_recharge',$_locale)}}<text style="color:#FF9900">{{recharge}}</text>{{i18n.t('money',$_locale)}},{{i18n.t('fliters_pay_consume',$_locale)}}<text style="color:#3599FB">{{consume}}</text>{{i18n.t('money',$_locale)}}</text>
+        <view bindtap="toSummary" class="summary-btn" wx:if="{{isShowSummary}}">
+            <image class="filters-content-pic" mode="aspectFit" src="../../style/images/turnover/bar_chart.png"></image>
+            <text>收支分析</text>
+        </view>
+    </view>
+    <scroll-view scrollY bindscrolltolower="getTurnoverList" class="scrollView1" enableBackToTop="{{true}}" lowerThreshold="{{80}}" scrollTop="{{scrollTop}}">
+        <view class="list-item {{type=='erGongYe'?'sspu':''}}" wx:for="{{list}}" wx:key="index">
+            <view class="imgBox {{type=='erGongYe'?'sspu-img':''}}">
+                <image class="itemImg" mode="widthFix" src="{{item.tradetype==2?'../../style/images/turnover/costIcon.png':'../../style/images/turnover/rechargeIcon.png'}}"></image>
+                <text class="itemKinds">{{item.tradetype==1?i18n.t('recharge',$_locale):i18n.t('consume',$_locale)}}</text>
+            </view>
+            <view class="item-con  item-recharge" wx:if="{{item.tradetype==1}}">
+                <view class="item-con-li">
+                    <text class="toast">{{i18n.t('recharge_channels',$_locale)}}：</text>
+                    <text class="name">{{item.billname?item.billname:i18n.t('miniprogram',$_locale)}}</text>
+                </view>
+                <view class="item-con-li">
+                    <text class="toast">{{i18n.t('rechage_way',$_locale)}}：</text>
+                    <text class="name">{{item.routeinfo}}</text>
+                </view>
+                <view class="item-con-li">
+                    <text class="toast">{{i18n.t('recharge',$_locale)+i18n.t('bills',$_locale)}}：</text>
+                    <text class="name">{{item.refno}}</text>
+                </view>
+                <view class="item-con-li">
+                    <text class="toast">{{i18n.t('rechage_date',$_locale)}}：</text>
+                    <text class="name">{{item.paytime}}</text>
+                </view>
+            </view>
+            <view class="item-con  item-pay" wx:if="{{item.tradetype==2}}">
+                <view class="item-con-li">
+                    <text class="toast">{{i18n.t('merchant_name',$_locale)}}：</text>
+                    <text class="name">{{item.shopname}}</text>
+                </view>
+                <view class="item-con-li">
+                    <text class="toast">{{i18n.t('consume_way',$_locale)}}：</text>
+                    <text class="name">{{item.routeinfo}}</text>
+                </view>
+                <view class="item-con-li">
+                    <text class="toast">{{i18n.t('consume_channels',$_locale)}}：</text>
+                    <text class="name">{{item.billname}}</text>
+                </view>
+                <view class="item-con-li">
+                    <text class="toast">{{i18n.t('consume',$_locale)+i18n.t('bills',$_locale)}}：</text>
+                    <text class="name">{{item.refno}}</text>
+                </view>
+                <view class="item-con-li" wx:if="{{item.delay}}">
+                    <text class="toast">{{i18n.t('consume_date',$_locale)}}：</text>
+                    <text class="name">{{item.transtime}}</text>
+                </view>
+                <view class="item-con-li">
+                    <text class="toast">{{i18n.t('consume_khdate',$_locale)}}：</text>
+                    <text class="name">{{item.paytime}}</text>
+                </view>
+                <block wx:if="{{item.managefee!='0.00'}}">
+                    <view class="item-con-li" wx:if="{{item.managefeetype=='mealer'}}">
+                        <text class="toast">{{item.fh=='+'?i18n.t('back',$_locale):i18n.t('take',$_locale)}}{{i18n.t('dhf',$_locale)}}：</text>
+                        <text class="name">{{item.managefee}}</text>
+                    </view>
+                    <view class="item-con-li" wx:if="{{item.managefeetype=='discount'||item.managefeetype=='coupon'}}">
+                        <text class="toast">{{i18n.t('managefee',$_locale)}}：</text>
+                        <text class="name">{{item.managefee}}</text>
+                    </view>
+                </block>
+            </view>
+            <button bindtap="toEvaluation" class="evaluate" data-item="{{item}}" wx:if="{{item.tradetype===2&&item.canComment}}">{{i18n.t('evaluate',$_locale)}}</button>
+            <text class="itemEx {{type=='erGongYe'?'sspu-font':''}}" style="color:{{item.fh=='+'?'#FF9900':'#3599FB'}};">{{item.fh+item.amount}}</text>
+            <text class="delay" wx:if="{{item.delay}}">{{i18n.t('yskk',$_locale)}}</text>
+        </view>
+        <view bindtap="getTurnoverList" class="loading">{{loadingText}}</view>
+    </scroll-view>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

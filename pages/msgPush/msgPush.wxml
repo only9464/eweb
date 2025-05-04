@@ -1,0 +1,20 @@
+<view class="msgPush">
+    <view class="msgPush-cell" wx:for="{{list}}" wx:for-index="i" wx:key="i">
+        <text>{{item.text}}</text>
+        <view bindtap="switchTab" data-index="{{i}}">
+            <switch checked="{{item.isChecked}}"></switch>
+        </view>
+    </view>
+</view>
+<view class="notice">
+    <text>{{i18n.t('prompt',$_locale)}}：</text>
+    <text>{{i18n.t('msgPush_prompt1',$_locale)}}</text>
+    <text>{{i18n.t('public',$_locale)}}:<text style="font-weight:bold;color:red;">{{i18n.t('public_name',$_locale)}}</text>
+    </text>
+    <text>{{i18n.t('msgPush_prompt2',$_locale)}}</text>
+    <text>{{i18n.t('msgPush_prompt3',$_locale)}}</text>
+    <text>{{i18n.t('msgPush_prompt4',$_locale)}}</text>
+</view>
+<official-account style="position:absolute;bottom:60rpx;width:100%;"></official-account>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

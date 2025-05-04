@@ -1,0 +1,19 @@
+.back {
+    color: #55befd
+}
+
+.back,.toast {
+    padding: 10rpx 30rpx
+}
+
+.toast {
+    color: rgba(0,0,0,.5)
+}
+
+.longbutton {
+    background-color: #3c9dfb;
+    border-radius: 50rpx;
+    color: #fff;
+    margin-top: 50rpx;
+    width: 600rpx
+}

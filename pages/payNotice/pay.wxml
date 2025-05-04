@@ -1,0 +1,21 @@
+<view class="payNotice">
+    <view class="payNotice-header">
+        <text>付款金额</text>
+        <text>￥{{tradeData.amount}}</text>
+    </view>
+    <view class="payNotice-con">
+        <text>选择支付方式</text>
+        <radio-group bindchange="radioChange" class="payNotice-con-kinds">
+            <label class="payNotice-con-kinds-label" wx:if="{{item.useflag}}" wx:for="{{payKindsList}}" wx:key="{{item.bankcode}}">
+                <view class="payNotice-con-kinds-label-left">
+                    <image mode="widthFix" src="{{item.url}}"></image>
+                    <text>{{item.bankname}}</text>
+                </view>
+                <radio checked="{{item.checked}}" value="{{index}}"></radio>
+            </label>
+        </radio-group>
+    </view>
+</view>
+<button bindtap="payInit" data-item="1">立即支付</button>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

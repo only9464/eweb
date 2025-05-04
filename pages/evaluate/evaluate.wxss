@@ -1,0 +1,144 @@
+.evaluate {
+    padding: 30rpx
+}
+
+.evaluate-con {
+    background: #fff;
+    border-radius: 20rpx;
+    padding: 30rpx
+}
+
+.evaluate-con-title {
+    font-size: 36rpx;
+    padding: 0 30rpx
+}
+
+.line {
+    background-color: #f5f6f7;
+    height: 1px;
+    margin: 30rpx 0;
+    width: 100%
+}
+
+.evaluate-con-star {
+    -webkit-align-items: center;
+    align-items: center;
+    color: #787878;
+    display: -webkit-flex;
+    display: flex;
+    padding: 5rpx 30rpx
+}
+
+.evaluate-con-star wx-text {
+    letter-spacing: 10rpx;
+    margin-right: 30rpx
+}
+
+.evaluate-con-textarea {
+    background-color: #fafafa;
+    border-radius: 20rpx;
+    margin: 50rpx 0;
+    padding: 0 30rpx;
+    text-align: right
+}
+
+.evaluate-con-textarea wx-text {
+    color: #808180;
+    display: inline-block;
+    font-size: 28rpx;
+    margin-bottom: 30rpx
+}
+
+wx-textarea {
+    padding: 30rpx 0;
+    text-align: left
+}
+
+wx-textarea-placeholder {
+    color: #808180;
+    font-size: 28rpx
+}
+
+.checkbox {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 28rpx
+}
+
+wx-checkbox .wx-checkbox-input {
+    border: 1rpx solid #aaa;
+    border-radius: 50%;
+    height: 40rpx;
+    width: 40rpx
+}
+
+wx-checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+    background: #49a3f9;
+    border: none
+}
+
+wx-checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+    background: transparent;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 30rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    text-align: center;
+    transform: translate(-50%,-50%) scale(1);
+    -webkit-transform: translate(-50%,-50%) scale(1);
+    width: 40rpx
+}
+
+.btn {
+    background: #49a3f9;
+    border-radius: 50rpx;
+    color: #fff;
+    font-size: 30rpx;
+    margin-top: 50rpx;
+    padding: 10rpx 0;
+    width: 600rpx
+}
+
+.evaluate-con-photo {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+.evaluate-con-photo-img {
+    margin: 0 5rpx 20rpx;
+    position: relative;
+    width: 200rpx
+}
+
+.evaluate-con-photo-img > wx-image:first-child {
+    height: 200rpx;
+    width: 100%
+}
+
+.evaluate-con-photo-img > wx-image:last-child {
+    position: absolute;
+    right: 0rpx;
+    top: -20rpx
+}
+
+.evaluate-con-photo-upload {
+    -webkit-align-items: center;
+    align-items: center;
+    border: 2rpx dashed #808180;
+    border-radius: 20rpx;
+    color: #808180;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    font-size: 28rpx;
+    height: 200rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 200rpx
+}

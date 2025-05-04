@@ -1,0 +1,39 @@
+<view class="writePart">
+    <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <label class="weui-label">{{i18n.t('query_account',$_locale)}}</label>
+        </view>
+        <view class="weui-cell__bd">
+            <input bindinput="getRoomid" class="weui-cell__ft" maxlength="16" placeholder="{{i18n.t('query_account_input',$_locale)}}" placeholderStyle="color:#cfcfcf" style="color:black" type="text" value="{{roomid}}"></input>
+        </view>
+    </view>
+</view>
+<button bindtap="doNext" class="longbutton">{{i18n.t('next',$_locale)}}</button>
+<view class="notice" wx:if="{{show&&showRule&&type!='shou'}}">
+    <text>提示：</text>
+    <text>房间号为6位数字，首位是“1”，第2、3位表示公寓号码，第4、5、6位表示所住房间号。</text>
+    <text>例如：“房间号”为“131602”表示的是公寓31号楼602房间。</text>
+</view>
+<view class="notice" wx:if="{{!show&&showRule&&type!='shou'}}">
+    <text>提示：</text>
+    <text>1-7号楼、21号楼、50-55号楼、63-63号楼的格式为6位数，前2位为楼号,不足2位前补0，后4位为房间号，不足4位前补0；</text>
+    <text>例：格式为 <text style="color:#55BEFD;">XX  XXXX</text>
+    </text>
+    <text style="margin-left:60rpx;">1号楼101为010101</text>
+    <text style="margin-left:60rpx;">21号楼301为210301</text>
+    <text style="margin-left:60rpx;">50号楼202为500202</text>
+    <text style="margin-left:60rpx;margin-bottom:60rpx;">63号楼1101为631101</text>
+    <text>22-37号楼、38-49号楼、56-62号楼的格式为6位数，第1位为区号（38-49号楼区号为<text style="color:#55BEFD;">2</text>、22-37号楼和56-62号楼区号为<text style="color:#55BEFD;">3</text>），第2-3位为楼号，不足2位前补0，后3位为房间号；</text>
+    <text>例：格式为 <text style="color:#55BEFD;">X  XX  XXX</text>
+    </text>
+    <text style="margin-left:60rpx;">22号楼101为322101</text>
+    <text style="margin-left:60rpx;">38号楼202为238202</text>
+    <text style="margin-left:60rpx;">56号楼505为356505</text>
+</view>
+<view class="notice" wx:if="{{type=='shou'}}">
+    <text>海洋大学电控房间规则：</text>
+    <text>输入要转入的房间号，例如：房间为“A069  101”，那么该房间对应的号码为“10690101”；房间为“B003  1201”，那么房间对应的号码为“20031201”。需要注意的是房间号码由8位数字组成，输入正确的房间号后输入需要转入的金额，最后点击"确定"按钮。</text>
+    <text>如果转账成功，会有成功提示。</text>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

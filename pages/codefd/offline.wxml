@@ -1,0 +1,52 @@
+<view class="container page">
+    <view style="width:100%;height:360rpx;">
+        <image class="bg" mode="widthFix" src="{{config.bg}}"></image>
+    </view>
+    <view class="panel">
+        <view class="msg">
+            <view class="msg-left">
+                <image mode="widthFix" src="data:image/png;base64,{{avatar}}" style="width:120rpx;margin-right:20rpx;" wx:if="{{avatar}}"></image>
+                <view class="img-box" wx:else>
+                    <image mode="aspectFit" src="/style/images/paycode/user.png"></image>
+                </view>
+                <view class="msg-box">
+                    <text>{{user.name}}</text>
+                    <text style="color:#a3a3a3;">{{filter.strSubstr(user.stuempno)}}</text>
+                </view>
+            </view>
+            <view>
+                <image class="msg-logo" mode="widthFix" src="{{config.headerlogo}}"></image>
+            </view>
+        </view>
+        <view style="line-height:60rpx;font-size:36rpx;">
+            <text>{{filter.toStr( filter.formatYMDHM(time) )}}</text>
+            <text style="font-size:50rpx;color:red;">{{filter.toStr( filter.formatS(time) )}}</text>
+        </view>
+        <text style="color:#999;font-size:30rpx;">请将二维码对准扫描设备</text>
+        <view class="qrcode" style="{{'width:'+config.width+'px;height:'+config.width+'px;padding:30rpx 0;'}}">
+            <canvas canvasId="{{config.canvasId}}" style="width:inherit;height:inherit;" wx:if="{{isShowQr}}"></canvas>
+            <view class="hideQr" wx:else>{{hideQrText}}({{secend}})</view>
+        </view>
+        <text style="color:#ccc;font-size:28rpx;">二维码每60s刷新一次</text>
+        <button bindtap="freshQrcode" disabled="{{fresh!='刷新'}}">{{fresh}}</button>
+    </view>
+    <view class="footer">
+        <view class="balance" wx:if="{{origin==''}}">
+            <view class="balance-title">
+                <image mode="widthFix" src="/style/images/paycode/balance.min.png"></image>
+                <text>账户余额</text>
+            </view>
+            <view class="balance-value">
+                <text>{{user.balance}}元</text>
+                <image mode="widthFix" src="/style/images/mine/right-arrow1.png"></image>
+            </view>
+        </view>
+        <view class="offline" wx:else>
+            <image mode="widthFix" src="/style/images/paycode/offline.min.png"></image>
+            <text>离线模式</text>
+        </view>
+    </view>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="filter" src="..\..\utils\format.wxs"/>

@@ -1,0 +1,26 @@
+<view class="weui-cells">
+    <picker bindchange="bindSystemChange" range="{{elesystem}}" rangeKey="elcname" value="{{systemIndex}}">
+        <view class="weui-cell" style="display:block">
+            <label class="weui-label">{{i18n.t('elec_system',$_locale)}}</label>
+            <view class="picker-value" wx:if="{{systemIndex}}">{{elesystem[systemIndex].elcname}}</view>
+            <view class="picker-value" wx:else>{{i18n.t('elec_system',$_locale)}}</view>
+        </view>
+    </picker>
+    <picker bindchange="bindBuildingChange" range="{{building}}" rangeKey="buiName" value="{{buildingIndex}}">
+        <view class="weui-cell" style="display:block">
+            <label class="weui-label">{{i18n.t('elec_build',$_locale)}}</label>
+            <view class="picker-value" wx:if="{{buildingIndex}}">{{building[buildingIndex].buiName}}</view>
+            <view class="picker-value" wx:else>{{i18n.t('elec_build',$_locale)}}</view>
+        </view>
+    </picker>
+    <picker bindchange="bindRoomChange" range="{{room}}" rangeKey="roomName" value="{{roomIndex}}">
+        <view class="weui-cell" style="display:block">
+            <label class="weui-label">{{i18n.t('elec_room',$_locale)}}</label>
+            <view class="picker-value" wx:if="{{roomIndex}}">{{room[roomIndex].roomName}}</view>
+            <view class="picker-value" wx:else>{{i18n.t('elec_room',$_locale)}}</view>
+        </view>
+    </picker>
+</view>
+<button bindtap="doNext" class="longbutton">{{i18n.t('next',$_locale)}}</button>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

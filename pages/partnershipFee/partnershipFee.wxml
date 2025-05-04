@@ -1,0 +1,13 @@
+<view class="partnershipFee">
+    <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <label class="weui-label">搭伙费</label>
+        </view>
+        <view class="weui-cell__bd" style="text-align:right;color:#a3a3a3;">
+            <text>￥{{msg.dahuobal?msg.dahuobal:'0.00'}}</text>
+        </view>
+    </view>
+</view>
+<button bindtap="pay" class="btn">立即清算</button>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

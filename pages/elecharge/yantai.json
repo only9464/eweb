@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "pwd": "pages\\elecharge\\components\\pwdInput\\pwd_input"
+  },
+  "navigationBarTitleText": "电费充值"
+}

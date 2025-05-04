@@ -1,0 +1,23 @@
+.flex-row {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex
+}
+
+.star {
+    height: 54rpx;
+    margin-right: 30rpx;
+    width: 54rpx
+}
+
+.rating_text {
+    color: #666;
+    font-size: 24rpx
+}
+
+.rating_text1 {
+    color: #ff911a;
+    font-size: 28rpx;
+    font-weight: 700
+}

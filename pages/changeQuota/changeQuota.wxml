@@ -1,0 +1,39 @@
+<view style="background-color:#FFFFFF;margin-bottom:30rpx;">
+    <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <label class="weui-label">{{i18n.t('changeQuota_once_limit',$_locale)}}</label>
+        </view>
+        <view class="weui-cell__bd" style="text-align:right;">
+            <text style="color:#a3a3a3">{{nowTimeConsumeQuota?nowTimeConsumeQuota:0}}</text>
+        </view>
+    </view>
+    <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <label class="weui-label">{{i18n.t('changeQuota_day_limit',$_locale)}}</label>
+        </view>
+        <view class="weui-cell__bd" style="text-align:right;">
+            <text style="color:#a3a3a3">{{nowDayConsumeQuota?nowDayConsumeQuota:0}}</text>
+        </view>
+    </view>
+</view>
+<view style="background-color:#FFFFFF;">
+    <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <label class="weui-label">{{i18n.t('changeQuota_once_limit_set',$_locale)}}</label>
+        </view>
+        <view class="weui-cell__bd">
+            <input bindinput="getTimeConsumeQuota" class="weui-cell__ft" maxlength="4" placeholder="{{i18n.t('changeQuota_once_limit_set_placeholder',$_locale)}}" placeholderStyle="color:#a3a3a3" style="color:black" type="number" value="{{timeConsumeQuota}}"></input>
+        </view>
+    </view>
+    <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <label class="weui-label">{{i18n.t('changeQuota_day_limit_set',$_locale)}}</label>
+        </view>
+        <view class="weui-cell__bd">
+            <input bindinput="getDayConsumeQuota" class="weui-cell__ft" maxlength="4" placeholder="{{i18n.t('changeQuota_day_limit_set_placeholder',$_locale)}}" placeholderStyle="color:#a3a3a3" style="color:black" type="number" value="{{dayConsumeQuota}}"></input>
+        </view>
+    </view>
+</view>
+<button bindtap="onChangeQuota" class="btn">{{i18n.t('changeQuota',{value:$_locale!='en-US'?obj.title:obj.entitle},$_locale)}}</button>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

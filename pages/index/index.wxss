@@ -1,0 +1,154 @@
+@import "index.skeleton.wxss";
+
+.index {
+    padding-bottom: 30rpx
+}
+
+.banner,.index {
+    position: relative
+}
+
+.banner {
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 30rpx;
+    margin-top: 30rpx;
+    padding: 0 30rpx;
+    width: 100%
+}
+
+.banner-bg {
+    display: block;
+    width: 100%
+}
+
+.banner-1st {
+    -webkit-align-items: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 0 30rpx;
+    position: absolute;
+    top: 30rpx;
+    width: calc(100% - 60rpx)
+}
+
+.banner-1st wx-image {
+    width: 250rpx
+}
+
+.banner-2nd {
+    left: 60rpx;
+    position: absolute;
+    top: 130rpx
+}
+
+.banner-3rd {
+    -webkit-align-items: center;
+    align-items: center;
+    bottom: 69rpx;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 0 30rpx;
+    position: absolute;
+    width: calc(100% - 60rpx)
+}
+
+.banner-3rd-balance {
+    font-size: 40rpx
+}
+
+.banner-3rd-btn {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #78cf9a;
+    border-radius: 20rpx;
+    color: #fff;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 26rpx;
+    padding: 5rpx 30rpx;
+    text-align: center;
+    white-space: nowrap
+}
+
+.banner-3rd-btn wx-image {
+    margin-left: 10rpx;
+    width: 40rpx
+}
+
+.lastFuncCss {
+    margin-bottom: 0rpx
+}
+
+.allFunc-title {
+    display: block;
+    font-size: 34rpx;
+    font-weight: 700;
+    padding: 30rpx
+}
+
+.allFunc-content {
+    background-color: #fff;
+    border-radius: 10rpx;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 30rpx;
+    padding: 10rpx 0
+}
+
+.allFunc-content-item {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    font-size: 24rpx;
+    padding: 20rpx 0;
+    width: 25%
+}
+
+.allFunc-content-item-image {
+    height: 50rpx;
+    margin-bottom: 20rpx;
+    width: 50rpx
+}
+
+.big {
+    height: 69rpx;
+    width: 69rpx
+}
+
+.allFunc-content-item-name {
+    font-size: 24rpx;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%
+}
+
+.isHaveGap {
+    margin: 0
+}
+
+.Hn_bottom {
+    background-color: #fff;
+    bottom: 0;
+    color: #55befd;
+    font-size: 24rpx;
+    left: 50%;
+    padding: 30rpx 0 0;
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+}

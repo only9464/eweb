@@ -1,0 +1,30 @@
+.amountTransfer {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column
+}
+
+.amountTransfer-item {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-bottom: 1px;
+    padding: 30rpx
+}
+
+.color {
+    color: #a3a3a3
+}
+
+.longbutton {
+    background-color: #3c9dfb;
+    border-radius: 50rpx;
+    color: #fff;
+    margin-top: 50rpx;
+    width: 600rpx
+}

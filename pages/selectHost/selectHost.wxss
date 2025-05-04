@@ -1,0 +1,20 @@
+.selectHost {
+    -webkit-align-content: center;
+    align-content: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    height: 60vh;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 100vw
+}
+
+.longbutton {
+    background-color: #3c9dfb;
+    border-radius: 50rpx;
+    color: #fff;
+    margin-bottom: 30rpx;
+    width: 600rpx
+}

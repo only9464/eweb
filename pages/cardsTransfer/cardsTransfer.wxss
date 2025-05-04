@@ -1,0 +1,13 @@
+.bottom {
+    color: #a9a9a9;
+    font-size: 24rpx;
+    margin-left: 30rpx
+}
+
+.btn {
+    background-color: #3c9dfb;
+    border-radius: 50rpx;
+    color: #fff;
+    margin-top: 50rpx;
+    width: 600rpx
+}

@@ -1,0 +1,13 @@
+<view class="amountTransfer">
+    <view class="amountTransfer-item">
+        <text>{{i18n.t('name',$_locale)}}</text>
+        <text class="color">{{accountinfo.username}}</text>
+    </view>
+    <view class="amountTransfer-item">
+        <text>{{i18n.t('account_balance',$_locale)}}</text>
+        <text class="color">{{accountinfo.balance}}</text>
+    </view>
+</view>
+<button bindtap="start" class="longbutton" hoverStayTime="3000">{{type=='closeAccount'?i18n.t('amountTransfer_btn1',$_locale):i18n.t('amountTransfer_btn',$_locale)}}</button>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

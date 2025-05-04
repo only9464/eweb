@@ -1,0 +1,108 @@
+.bind {
+    color: #000;
+    font-size: 32rpx
+}
+
+.bind-con {
+    background: #fff;
+    padding: 30rpx
+}
+
+.bind-con wx-view {
+    margin-bottom: 30rpx
+}
+
+.line {
+    background-color: #f5f6f7;
+    height: 1px;
+    margin: 30rpx 0;
+    width: 100%
+}
+
+.bind-desc {
+    color: rgba(0,0,0,.5);
+    font-size: 28rpx
+}
+
+.bind-desc wx-text {
+    color: #49a4f8;
+    text-decoration: underline
+}
+
+.btn {
+    background: #49a3f9;
+    border-radius: 50rpx;
+    color: #fff;
+    font-size: 30rpx;
+    margin-top: 50rpx;
+    padding: 10rpx 0;
+    width: 300rpx
+}
+
+.cancel {
+    background: #f4f4f4;
+    color: #49a3f9
+}
+
+.back {
+    width: 400rpx
+}
+
+.bind-popup {
+    background-color: rgba(0,0,0,.7);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2
+}
+
+.bind-popup-con {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50rpx 50rpx 0 0;
+    bottom: 0;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    padding: 30rpx 40rpx;
+    position: absolute;
+    width: 100%
+}
+
+.bind-popup-con > wx-view {
+    width: 100%
+}
+
+.bind-popup-con > wx-view:nth-child(3) {
+    color: rgba(0,0,0,.6);
+    font-size: 28rpx;
+    text-align: center
+}
+
+.bind-popup-con wx-image {
+    height: auto;
+    margin: 30rpx 0;
+    width: 500rpx
+}
+
+.result {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #fff;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    padding: 150rpx 0
+}
+
+.result wx-icon {
+    margin-bottom: 50rpx
+}

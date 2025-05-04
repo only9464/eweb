@@ -1,0 +1,26 @@
+.venuesCode {
+    background: #fff;
+    height: 100vh;
+    overflow: hidden;
+    width: 100%
+}
+
+.con {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    margin-top: 60rpx;
+    width: 100%
+}
+
+wx-image {
+    margin: auto;
+    width: 600rpx
+}
+
+wx-text {
+    font-size: 40rpx;
+    font-weight: 700;
+    text-align: center
+}

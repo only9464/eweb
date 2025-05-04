@@ -1,0 +1,74 @@
+.header {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50rpx;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin: 0rpx auto;
+    width: 80%
+}
+
+.left {
+    border-bottom-left-radius: 50rpx;
+    border-left: 2rpx solid #f1f1f1;
+    border-top-left-radius: 50rpx
+}
+
+.right {
+    border-bottom-right-radius: 50rpx;
+    border-right: 2rpx solid #f1f1f1;
+    border-top-right-radius: 50rpx
+}
+
+.header-items {
+    border-bottom: 2rpx solid #f1f1f1;
+    border-top: 2rpx solid #f1f1f1;
+    color: #999;
+    padding: 10rpx;
+    text-align: center;
+    width: 40%
+}
+
+.color {
+    background-color: var(--color--);
+    border: 2rpx solid transparent;
+    color: #fff;
+    padding: 10rpx
+}
+
+.search {
+    background-color: #fff;
+    border: 2rpx solid #f1f1f1;
+    margin: 30rpx 0;
+    position: relative
+}
+
+.search-input wx-input {
+    display: block;
+    font-size: 26rpx;
+    height: 80rpx;
+    margin: auto 0 auto 30rpx;
+    width: 570rpx
+}
+
+.icon {
+    height: 30rpx;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 30rpx
+}
+
+.deleteIcon {
+    left: 620rpx
+}
+
+.searchIcon {
+    height: 40rpx;
+    right: 30rpx;
+    width: 40rpx
+}

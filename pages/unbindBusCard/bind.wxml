@@ -1,0 +1,36 @@
+<view class="bind" wx:if="{{isBind}}">
+    <view class="bind-con">
+        <view>姓名：{{user.name}}（{{user.stuempno}}）</view>
+        <view>卡号：</view>
+        <input bindinput="getCardNo" maxlength="19" placeholder="请输入虚拟交通卡卡号" type="number" value="{{cardNo}}"></input>
+        <view class="line"></view>
+        <view class="bind-desc">
+            <view>绑定说明：</view>
+            <view>1. 绑定的虚拟交通卡必须为公共交通卡 · 交通联合版<text bindtap="changePopup">查看样例</text>
+            </view>
+            <view>2. 可通过“交通卡APP”或“手机钱包 - 卡包”找到联合版虚拟交通卡的卡号，直接复制</view>
+        </view>
+    </view>
+    <button bindtap="bind" class="btn" disabled="{{disabled}}">绑定</button>
+    <view class="bind-popup" wx:if="{{showExample}}">
+        <view class="bind-popup-con">
+            <view>查看样例</view>
+            <image mode="widthFix" src="/style/images/unbindBusCard/card1.png"></image>
+            <view>上海公共交通卡 · 交通联合版</view>
+            <button bindtap="changePopup" class="btn cancel">返回</button>
+        </view>
+    </view>
+</view>
+<view class="result" wx:else>
+    <block wx:if="{{isSuccess}}">
+        <icon size="60" type="success"></icon>
+        <text style="color:#09BB07;">{{respMsg}}</text>
+    </block>
+    <block wx:else>
+        <icon size="60" type="warn"></icon>
+        <text style="color:#F76260;">{{respMsg}}</text>
+    </block>
+    <button bindtap="back" class="btn back">返回</button>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

@@ -1,0 +1,15 @@
+<view class="outSpecialFound">
+    <block wx:if="{{list.length!=0}}">
+        <view class="item" wx:for="{{list}}">
+            <view class="item-header">
+                <image class="item-header-img" mode="aspectFit" src="../../style/images/outSpecialFound/icon.png"></image>
+                <view class="item-header-title">{{item.accname}}</view>
+                <view class="item-header-status statusTrue">{{i18n.t('card_status_ok',$_locale)}}</view>
+                <view class="item-header-balance">￥{{item.balance}}</view>
+            </view>
+        </view>
+    </block>
+    <view class="outSpecialFound-none" wx:else>{{i18n.t('special_none',$_locale)}}</view>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

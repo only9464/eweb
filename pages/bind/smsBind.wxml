@@ -1,0 +1,23 @@
+<view class="smsBind">
+    <form bindsubmit="bind">
+        <view class="smsBind-con">
+            <view class="smsBind-con-item">
+                <text>{{i18n.t('name',$_locale)}}:</text>
+                <input bindinput="getCustname" name="custname" placeholder="{{i18n.t('bind_name_placeholder',$_locale)}}" type="text" value="{{custname}}"></input>
+            </view>
+            <view class="smsBind-con-item">
+                <text>{{i18n.t('phone',$_locale)}}:</text>
+                <input bindinput="getStuempno" name="stuempno" placeholder="{{i18n.t('apply_phone',$_locale)}}" type="text" value="{{stuempno}}"></input>
+            </view>
+            <view class="smsBind-con-item">
+                <text>{{i18n.t('verifycode',$_locale)}}:</text>
+                <input name="verifycode" placeholder="{{i18n.t('apply_code',$_locale)}}" style="text-align:center;" type="text"></input>
+                <button bindtap="getCode" disabled="{{disabled}}">{{sendCode}}</button>
+            </view>
+        </view>
+        <button class="btn" formType="submit">{{i18n.t('login',$_locale)}}</button>
+        <view style="padding:30rpx;">提示：验证码将会以短信方式发送至您在一卡通系统预留的手机号中，若发现手机号有误或未收到短信请及时联系卡务中心处理。服务电话：0532-58281117</view>
+    </form>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

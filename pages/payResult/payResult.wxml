@@ -1,0 +1,71 @@
+<view class="payResult" wx:if="{{scanRerult}}">
+    <view class="payResult-status" wx:if="{{msg.billstatus==2}}">
+        <icon color="#3599FB" size="60" type="success"></icon>
+        <text class="payResult-status-text">{{i18n.t('payResult_success',$_locale)}}</text>
+    </view>
+    <view class="payResult-status" wx:if="{{msg.billstatus!=2}}">
+        <icon size="60" type="warn"></icon>
+        <text class="payResult-status-text">{{i18n.t('payResult_fail',$_locale)}}</text>
+    </view>
+    <view class="payResult-money" wx:if="{{msg.billstatus==2}}">
+        <text>￥{{msg.amount?msg.amount:'0.00'}}</text>
+    </view>
+    <view class="payResult-msg">
+        <view class="weui-cell">
+            <view class="weui-cell__hd">
+                <label class="weui-label" style="color:#cfcfcf">{{i18n.t('merchant_name',$_locale)}}</label>
+            </view>
+            <view class="weui-cell__bd" style="text-align:right;">
+                <text>{{msg.shopname?msg.shopname:'未知商户'}}</text>
+            </view>
+        </view>
+        <view class="weui-cell">
+            <view class="weui-cell__hd">
+                <label class="weui-label" style="color:#cfcfcf">{{i18n.t('device_name',$_locale)}}</label>
+            </view>
+            <view class="weui-cell__bd" style="text-align:right;">
+                <text>{{msg.termname?msg.termname:'未知终端'}}</text>
+            </view>
+        </view>
+        <view class="weui-cell">
+            <view class="weui-cell__hd">
+                <label class="weui-label" style="color:#cfcfcf">{{i18n.t('consume_way',$_locale)}}</label>
+            </view>
+            <view class="weui-cell__bd" style="text-align:right;">
+                <text>{{msg.billname?msg.billname:'未知方式'}}</text>
+            </view>
+        </view>
+        <view class="weui-cell">
+            <view class="weui-cell__hd">
+                <label class="weui-label" style="color:#cfcfcf">{{i18n.t('consume_date',$_locale)}}</label>
+            </view>
+            <view class="weui-cell__bd" style="text-align:right;">
+                <text>{{msg.paytime?msg.paytime:'未知时间'}}</text>
+            </view>
+        </view>
+        <view class="weui-cell">
+            <view class="weui-cell__hd">
+                <label class="weui-label" style="color:#cfcfcf">{{i18n.t('bill_no',$_locale)}}</label>
+            </view>
+            <view class="weui-cell__bd" style="text-align:right;">
+                <text>{{msg.refno?msg.refno:'未知订单号'}}</text>
+            </view>
+        </view>
+    </view>
+    <button bindtap="goBack" class="btn">{{i18n.t('return',$_locale)}}</button>
+</view>
+<view class="payResult" wx:else>
+    <view class="payResult-status" wx:if="{{msg.notifyStatus=='success'}}">
+        <icon color="#3599FB" size="60" type="success"></icon>
+        <text class="payResult-status-text">{{i18n.t('payResult_success',$_locale)}}</text>
+        <text class="payResult-status-text">{{msg.notifyContent}}</text>
+    </view>
+    <view class="payResult-status" wx:if="{{msg.notifyStatus=='failed'}}">
+        <icon size="60" type="warn"></icon>
+        <text class="payResult-status-text">{{i18n.t('payResult_fail',$_locale)}}</text>
+        <text class="payResult-status-text">{{msg.notifyContent}}</text>
+    </view>
+    <button bindtap="goBack" class="btn">{{i18n.t('return',$_locale)}}{{secend?'('+secend+')':''}}</button>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

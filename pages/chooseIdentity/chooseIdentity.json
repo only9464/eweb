@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "modal": "pages\\chooseIdentity\\components\\modal\\modal"
+  },
+  "navigationBarTitleText": "身份选择"
+}

@@ -1,0 +1,39 @@
+<import src="Empty"></import>
+<view class="progress-box" wx:if="{{hideProgress}}">
+    <progress active activeMode="forwards" bindactiveend="hidepro" duration="8" percent="{{progressVal}}" strokeWidth="2"></progress>
+</view>
+<template is="skeleton" data wx:if="{{showSkeleton}}"></template>
+<view class="index" wx:if="{{!showSkeleton}}">
+    <view class="banner">
+        <image class="banner-bg" mode="widthFix" src="/style/images/index/bg.png"></image>
+        <view class="banner-1st">
+            <text>{{accountinfo.username||i18n.t('user',$_locale)}}，{{i18n.t('hello',$_locale)}}！</text>
+            <image mode="widthFix" src="/style/images/index/headerLogo.png"></image>
+        </view>
+        <text class="banner-2nd">{{i18n.t('student_id',$_locale)+'：'}}{{filter.formatStuempno(accountinfo.stuempno)}}</text>
+        <view class="banner-3rd">
+            <view>
+                <text>{{i18n.t('account_balance',$_locale)+'：'}}</text>
+                <text class="banner-3rd-balance">￥{{accountinfo.balance||'0.00'}}</text>
+            </view>
+            <view bindtap="{{accountinfo.arrearsFreeze?'toUrl':''}}" class="banner-3rd-btn" data-path="/pages/turnover/arrears" style="background-color:{{accountinfo.statusname!='正常'?'#E64340':'#78CF9A'}};">
+                <text>{{accountinfo.statusname||'未知'}}</text>
+                <image mode="widthFix" src="/style/images/question.png" wx:if="{{accountinfo.arrearsFreeze}}"></image>
+            </view>
+        </view>
+    </view>
+    <view class="allFunc {{funcPart.length-1===parIndex?'lastFuncCss':''}}" wx:for="{{funcPart}}" wx:for-index="parIndex" wx:for-item="parItem" wx:key="parIndex">
+        <text class="allFunc-title" wx:if="{{parItem.title&&parItem.title=='常用功能'&&parItem.funcList}}">{{i18n.t('common_function',{value:$_locale!='en-US'?parItem.title:parItem.entitle},$_locale)}}</text>
+        <text class="allFunc-title" wx:if="{{parItem.title&&(parItem.title=='卡务中心'||parItem.title=='服务中心')}}">{{i18n.t('card_service_center',{value:$_locale!='en-US'?parItem.title:parItem.entitle},$_locale)}}</text>
+        <view class="allFunc-content" wx:if="{{parItem.funcList}}">
+            <view bindtap="allFunc" class="allFunc-content-item" data-item="{{childItem}}" wx:if="{{childItem.isHave}}" wx:for="{{parItem.funcList}}" wx:for-index="childIndex" wx:for-item="childItem" wx:key="childIndex">
+                <image class="allFunc-content-item-image {{parItem.size}}" mode="aspectFit" src="{{childItem.iconSrc}}"></image>
+                <text class="allFunc-content-item-name">{{i18n.t(childItem.id,{value:$_locale!='en-US'?childItem.title:childItem.entitle},$_locale)}}</text>
+            </view>
+        </view>
+    </view>
+</view>
+<annual-report bind:change="annualChange" wx:if="{{isShowAnnualReport}}"></annual-report>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="filter" src="..\..\utils\format.wxs"/>

@@ -1,0 +1,60 @@
+<view class="ecard">
+    <image src="{{imgBg[user.custtypename]||'https://eweb.hrbeu.edu.cn/cardsurface/ecardBg.png'}}"></image>
+    <view class="title">
+        <image mode="widthFix" src="/style/images/codefd/logo.min.png"></image>
+        <text>电子校园卡</text>
+    </view>
+    <view class="info">
+        <view class="img-box">
+            <image mode="widthFix" src="data:image/png;base64,{{avatar}}"></image>
+        </view>
+        <view class="msg">
+            <text>姓名：{{user.username}}</text>
+            <text>{{desc}}：{{user.stuempno}}</text>
+            <view style="display:flex;">
+                <text style="display:block;white-space:nowrap">部门：</text>
+                <view class="scroll-span">
+                    <text style="{{'animation:'+(user.deptname.length>8?'move 5s infinite':'none')}}">{{user.deptname}}</text>
+                </view>
+            </view>
+            <text>类别：{{user.custtypename}}卡</text>
+        </view>
+    </view>
+    <view class="card">
+        <view class="item">
+            <image mode="widthFix" src="/style/images/codefd/balance.min.png"></image>
+            <view>
+                <text>账户余额</text>
+                <text>：{{user.balance}}元</text>
+            </view>
+        </view>
+        <view class="item">
+            <image mode="widthFix" src="/style/images/codefd/status.min.png"></image>
+            <view>
+                <text>卡状态</text>
+                <text>：{{user.statusname}}</text>
+            </view>
+        </view>
+        <view class="item">
+            <image mode="widthFix" src="/style/images/codefd/date.min.png"></image>
+            <view>
+                <text>有效期</text>
+                <text>：{{user.expiredateFormat}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="qrcode" style="{{'width:'+config.width+'px;height:'+config.width+'px;'}}">
+        <canvas canvasId="{{config.canvasId}}" style="width:inherit;height:inherit;" wx:if="{{isShowQr}}"></canvas>
+        <view class="hideQr" wx:else>{{hideQrText}}({{secend}})</view>
+    </view>
+    <view class="time">
+        <text>{{filter.toStr( filter.formatYMDHM(time) )}}</text>
+        <text>{{filter.toStr( filter.formatS(time) )}}</text>
+    </view>
+    <view class="barcode">
+        <canvas canvasId="barcode" style="width:600rpx;height:150rpx;"></canvas>
+    </view>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="filter" src="..\..\utils\format.wxs"/>

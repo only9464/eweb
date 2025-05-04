@@ -1,0 +1,48 @@
+page {
+    background-color: #fff
+}
+
+.bind {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    padding: 30rpx
+}
+
+.bind-img {
+    margin: 50rpx 0 80rpx;
+    width: 350rpx
+}
+
+.bind-text {
+    font-size: 32rpx
+}
+
+.bind-pwd {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin: 100rpx 0;
+    width: 500rpx
+}
+
+.bind-pwd-item {
+    background-color: #f2fbf7;
+    color: #31ae6c;
+    font-size: 36rpx;
+    height: 140rpx;
+    line-height: 140rpx;
+    text-align: center;
+    width: 100rpx
+}
+
+.bind-toast {
+    color: #c3c3c3;
+    font-size: 26rpx
+}

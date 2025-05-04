@@ -1,0 +1,32 @@
+<view class="evaluate">
+    <view class="evaluate-con">
+        <view class="evaluate-con-title">{{ref.shopname}}</view>
+        <view class="line"></view>
+        <view class="evaluate-con-star" wx:if="{{item.enable}}" wx:for="{{canEvaluateItems}}" wx:key="{{item.commentType}}">
+            <text>{{item.commentName}}</text>
+            <rating showRating bind:click="scoreChange" data-index="{{index}}" desc="{{desc}}" rating="{{score[index].score}}" starWidth="35"></rating>
+        </view>
+        <view class="evaluate-con-textarea">
+            <textarea bindinput="getContent" maxlength="{{maxlength}}" placeholder="点击这里快捷输入评价..." value="{{content}}"></textarea>
+            <text>{{nowlength+'/'+maxlength}}</text>
+        </view>
+        <view class="evaluate-con-photo">
+            <view class="evaluate-con-photo-img" wx:for="{{imgList}}" wx:key="{{item}}">
+                <image bindtap="previewPhoto" data-src="{{item.tempFilePath}}" src="{{item.tempFilePath}}"></image>
+                <image bindtap="deletePhoto" data-index="{{index}}" mode="widthFix" src="/style/images/delete.png" style="width:40rpx;height:auto;"></image>
+            </view>
+            <view bindtap="choosePhotos" class="evaluate-con-photo-upload" wx:if="{{imgList.length<maxImgLength}}">
+                <text style="font-size:36rpx;font-weight:bold;">+</text>
+                <text>我要配图</text>
+            </view>
+        </view>
+        <view class="line"></view>
+        <view class="evaluate-con-ishide">
+            <label bindtap="changeHideName" class="checkbox">
+                <checkbox checked="{{hideName}}" value=""></checkbox>匿名评价</label>
+        </view>
+    </view>
+    <button bindtap="evaluate" class="btn">提交评价</button>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

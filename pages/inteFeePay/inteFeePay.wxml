@@ -1,0 +1,82 @@
+<view class="inteFeePay">
+    <block wx:if="{{!show}}">
+        <view class="writePart">
+            <picker bindchange="bindsysChange" range="{{sysList}}" rangeKey="netname" value="{{system}}">
+                <view class="weui-cell" style="display:block">
+                    <label class="weui-label">{{i18n.t('inteFeePay_system',$_locale)}}</label>
+                    <view class="picker-value" wx:if="{{sysIndex}}">{{sysList[sysIndex].netname}}</view>
+                    <view class="picker-value" wx:else>{{sysList[0].netname}}</view>
+                </view>
+            </picker>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <label class="weui-label">{{i18n.t('inteFeePay_account',$_locale)}}</label>
+                </view>
+                <view class="weui-cell__bd">
+                    <input bindinput="getInteId" class="weui-cell__ft" maxlength="16" placeholder="{{i18n.t('inteFeePay_account_placeholder',$_locale)}}" placeholderStyle="color:#cfcfcf" style="color:black" type="text" value="{{enterInteId}}"></input>
+                </view>
+            </view>
+        </view>
+        <view class="showAccount" wx:if="{{accountList.length!=0}}">
+            <text>{{i18n.t('current_query',$_locale)}}</text>
+            <text bindtap="setAccount" data-account="{{item}}" style="color:#3C9DFB;" wx:for="{{accountList}}">{{item}}
+			</text>
+        </view>
+        <button bindtap="query" class="longbutton">{{i18n.t('inteFeePay_query',$_locale)}}</button>
+    </block>
+    <block wx:else>
+        <view class="writePart">
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <label class="weui-label">{{i18n.t('inteFeePay_account',$_locale)}}</label>
+                </view>
+                <view class="weui-cell__bd" style="text-align:right;">
+                    <text style="color:gray">{{enterInteId}}</text>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <label class="weui-label">{{i18n.t('inteFeePay_left',$_locale)}}</label>
+                </view>
+                <view class="weui-cell__bd" style="text-align:right;">
+                    <text style="color:gray">{{inteBalance?inteBalance:0}}元</text>
+                </view>
+            </view>
+        </view>
+        <view class="writePart">
+            <picker bindchange="chooseProduction" range="{{productionList}}" rangeKey="name" value="{{pIndex}}" wx:if="{{productionList.length!=0}}">
+                <view class="picker" style="padding:30rpx;display:flex;justify-content:space-between;">
+                    <text>网费套餐</text>
+                    <text style="color:#cfcfcf;" wx:if="{{pIndex===''}}">请选择网费套餐</text>
+                    <text style="color:rgba(0,0,0,0.5);" wx:else>{{productionList[pIndex].name}}</text>
+                </view>
+            </picker>
+            <picker bindchange="changePayKind" range="{{array}}" rangeKey="bankname" value="{{index}}" wx:if="{{array.length!=1}}">
+                <view class="picker" style="padding:30rpx;display:flex;justify-content:space-between;">
+                    <text>{{i18n.t('recharge_kind',$_locale)}}</text>
+                    <text style="color:rgba(0,0,0,0.5);">{{array[index].bankname}}</text>
+                </view>
+            </picker>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <label class="weui-label">{{i18n.t('lifeCharge_bills_amount',$_locale)}}</label>
+                </view>
+                <view class="weui-cell__bd">
+                    <input bindinput="getInteFee" class="weui-cell__ft" disabled="{{isDisabled}}" maxlength="4" placeholder="{{i18n.t('pay_input_placeholder',$_locale)}}" placeholderStyle="color:#cfcfcf" style="color:black" type="number" value="{{inteFee}}"></input>
+                </view>
+            </view>
+        </view>
+        <view bindtap="backtosys" class="back">{{i18n.t('inteFeePay_prompt',$_locale)}}</view>
+        <button bindtap="recharge" class="longbutton">{{i18n.t('scanPay_btn',$_locale)}}</button>
+    </block>
+    <view style="padding:0 30rpx;text-align:justify;word-break:break-all;margin-top:30rpx;" wx:if="{{type=='apply'}}">
+        <view>
+            <view style="text-indent:30rpx;">学生首次使用校园网账号默认的基础套餐为"学生内网免费"，仅可访问校内网络资源。</view>
+            <view style="text-indent:30rpx;">交费成功请登录自助服务系统<text bindtap="toH5" style="color:#55BEFD;">https://xywzz.hainanu.edu.cn</text>,点击"产品"-"转移产品"自选产品套餐,完成后可以访问互联网.</view>
+            <view style="text-indent:30rpx;">校园网服务热线:66250099 邮箱:66250099@hainanu.edu.cn</view>
+        </view>
+    </view>
+    <pwd bind:close="close" bind:getValue="getPwd" bind:input="getPwdToPay" id="pwd" status="{{status}}" wx:if="{{status}}"></pwd>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

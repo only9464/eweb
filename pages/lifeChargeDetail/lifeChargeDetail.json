@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "pwd": "pages\\lifeChargeDetail\\components\\pwdInput\\pwd_input"
+  },
+  "navigationBarTitleText": "生活缴费"
+}

@@ -1,0 +1,17 @@
+<view class="bank-ul" style="background-color:{{detail.color}};">
+    <view class="bank-ul-header">
+        <view class="bank-ul-header-logo">
+            <image class="img" mode="aspectFit" src="{{detail.url}}"></image>
+        </view>
+        <text class="bank-ul-header-bankname">{{detail.routedesc}}</text>
+    </view>
+    <view class="bank-ul-bankcardno">
+        <text>****</text>
+        <text>****</text>
+        <text>****</text>
+        <text>{{detail.easybankcardno}}</text>
+    </view>
+</view>
+<view bindtap="unbundBankCard" class="btn">{{i18n.t('bathCode_unbind',$_locale)}}</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

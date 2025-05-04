@@ -1,0 +1,37 @@
+<view class="bathCode">
+    <view class="bathCode-con">
+        <view class="bathCode-con-item-con-code">
+            <view style="display:flex;align-items:center;color:#000;padding:0 30rpx;">
+                <text class="bathCode-con-item-con-code-des">{{i18n.t('bathCode_personal_pwd',$_locale)}}：</text>
+                <text class="bathCode-con-item-con-code-code {{isShow?'hidden':''}}">****</text>
+                <text class="bathCode-con-item-con-code-code {{!isShow?'hidden':''}}">{{watercode}}</text>
+                <image bindtap="change_status" mode="widthFix" src="{{isShow?'/style/images/bathCode/open.png':'/style/images/bathCode/close.png'}}" style="width:36rpx;"></image>
+                <text bindtap="generatewatercode" style="color:#284FA5;font-size:28rpx;margin-left:60rpx;font-weight:bold;">{{i18n.t('refresh_code',$_locale)}}</text>
+            </view>
+        </view>
+        <view class="bathCode-con-item" style="background-color:{{backgroud_color_list[index%3]}};" wx:for="{{device_list}}" wx:key="index">
+            <view class="bathCode-con-item-header">
+                <view style="display:flex;justify-content:space-between;align-items:center;">
+                    <view class="bathCode-con-item-header-icon" style="background-color:{{button_color_list[index%3]}};">
+                        <image mode="widthFix" src="/style/images/bathCode/icon.png" style="width:50rpx;"></image>
+                    </view>
+                    <text class="bathCode-con-item-header-pcname">{{item.name}}</text>
+                </view>
+                <text class="bathCode-con-item-header-username">{{name}}</text>
+            </view>
+            <view class="bathCode-con-item-con">
+                <button bindtap="query" class="query" data-device="{{item}}" style="background-color:{{button_color_list[index%3]}};">{{i18n.t('bathCode_query',$_locale)}}</button>
+            </view>
+        </view>
+    </view>
+    <view class="notice">
+        <text> 温馨提示：</text>
+        <text>1.该洗浴口令与校园卡密码结合，在如下图所示设备上使用，为您提供无卡洗浴服务；</text>
+        <text>2.洗浴口令七日内只能更新一次，请勿频繁刷新。</text>
+    </view>
+    <view class="img">
+        <image mode="widthFix" src="/style/images/bathCode/pos.min.png"></image>
+    </view>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

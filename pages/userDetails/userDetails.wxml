@@ -1,0 +1,17 @@
+<view class="userDetails">
+    <view class="user-message photo">
+        <image class="avatorImg" mode="aspectFit" src="data:image/png;base64,{{avatar}}" wx:if="{{avatar}}"></image>
+        <image class="avatar" mode="aspectFit" src="/style/images/mine/maleAvator.png" wx:if="{{!avatar}}"></image>
+    </view>
+    <view class="user-message">
+        <text>{{i18n.t('name',$_locale)}}</text>
+        <text class="color">{{accountinfo.username}}</text>
+    </view>
+    <view class="user-message">
+        <text>{{type=='ecnu'?i18n.t('heu_cardno',$_locale):i18n.t('account',$_locale)}}</text>
+        <text class="color">{{filter.formatStuempno(accountinfo.stuempno)}}</text>
+    </view>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="filter" src="..\..\utils\format.wxs"/>

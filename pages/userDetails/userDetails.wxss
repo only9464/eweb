@@ -1,0 +1,38 @@
+.userDetails {
+    -webkit-flex-direction: column;
+    flex-direction: column
+}
+
+.user-message,.userDetails {
+    display: -webkit-flex;
+    display: flex
+}
+
+.user-message {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-bottom: 1px;
+    padding: 30rpx
+}
+
+.avatorImg {
+    border-radius: 50%;
+    height: 230rpx;
+    width: 230rpx
+}
+
+.color {
+    color: #a3a3a3
+}
+
+.photo {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-bottom: 30rpx;
+    padding: 50rpx 30rpx
+}

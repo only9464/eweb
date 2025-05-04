@@ -1,0 +1,36 @@
+wx-input {
+    text-align: right
+}
+
+.toast {
+    color: rgba(0,0,0,.5);
+    padding: 30rpx 30rpx 0
+}
+
+.longbutton {
+    background-color: #3c9dfb;
+    border-radius: 50rpx;
+    color: #fff;
+    margin-top: 50rpx;
+    width: 600rpx
+}
+
+.notice {
+    color: #999;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    line-height: 40rpx;
+    padding: 30rpx;
+    text-align: justify
+}
+
+.notice wx-text {
+    line-height: 55rpx
+}
+
+.qiYe {
+    margin-top: 200rpx;
+    text-align: center
+}

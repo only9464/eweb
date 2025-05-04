@@ -1,0 +1,42 @@
+<view class="unbindBusCard">
+    <view class="unbindBusCard-header">
+        <image class="unbindBusCard-header-img" mode="widthFix" src="{{src}}"></image>
+        <view class="unbindBusCard-header-card">
+            <view class="unbindBusCard-header-card-no">
+                <text>{{i18n.t('card_no',$_locale)}}</text>
+                <text>****{{info._cardno}}</text>
+            </view>
+            <view bindtap="unbind" class="unbindBusCard-header-card-btn">{{i18n.t('bathCode_unbind',$_locale)}}</view>
+        </view>
+    </view>
+    <view class="unbindBusCard-item">
+        <view>
+            <text class="unbindBusCard-item-title">{{i18n.t('account_balance',$_locale)}}</text>
+        </view>
+        <view class="unbindBusCard-item-balance-no">
+            <text>{{i18n.t('unbindBusCard_prompt',$_locale)}}</text>
+            <text>￥{{balance}}</text>
+        </view>
+    </view>
+    <view class="unbindBusCard-item">
+        <view>
+            <text class="unbindBusCard-item-title">{{i18n.t('unbindBusCard_prompt1',$_locale)}}</text>
+        </view>
+        <view class="unbindBusCard-item-items" wx:for="{{cost_list}}" wx:key="index">
+            <view class="unbindBusCard-item-items-icon">
+                <image mode="widthFix" src="/style/images/unbindBusCard/icon.png"></image>
+                <view class="unbindBusCard-item-items-icon-text">
+                    <text>{{item.shopname}}</text>
+                    <text>{{item._paytime}}</text>
+                </view>
+            </view>
+            <text class="unbindBusCard-item-items-cost">{{item.tradetype==1?'+':'-'}}￥{{item._amount}}</text>
+        </view>
+    </view>
+    <view class="nocard" wx:if="{{is_have_card}}">
+        <image mode="widthFix" src="/style/images/unbindBusCard/nocard.png"></image>
+        <text>{{i18n.t('unbindBusCard_prompt2',$_locale)}}</text>
+    </view>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

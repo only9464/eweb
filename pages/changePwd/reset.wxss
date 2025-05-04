@@ -1,0 +1,62 @@
+.smsBind {
+    height: 100vh;
+    width: 100%
+}
+
+wx-form {
+    width: 80%
+}
+
+.smsBind-con {
+    background-color: #fff;
+    box-sizing: border-box;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    margin-top: 30rpx;
+    padding: 0 30rpx;
+    width: 100%
+}
+
+.smsBind-con,.smsBind-con-item {
+    display: -webkit-flex;
+    display: flex
+}
+
+.smsBind-con-item {
+    -webkit-align-items: center;
+    align-items: center;
+    border-bottom: 1px solid #cdcdcd;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 30rpx 0;
+    text-align: right
+}
+
+.smsBind-con-item wx-text {
+    text-align: left;
+    white-space: nowrap;
+    width: 20%
+}
+
+.smsBind-con-item:last-child wx-input {
+    text-align: center
+}
+
+.smsBind-con wx-button {
+    background-color: #3c9dfb;
+    font-size: 24rpx;
+    line-height: 1.5;
+    padding: 15rpx 20rpx
+}
+
+.btn,.smsBind-con wx-button {
+    border-radius: 50rpx;
+    color: #fff
+}
+
+.btn {
+    background-color: #3599fb;
+    margin: 50rpx auto;
+    white-space: nowrap;
+    width: 600rpx
+}

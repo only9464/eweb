@@ -1,0 +1,15 @@
+<view class="scanPay">
+    <view class="box">
+        <view class="scanPay-shop">{{msg.shopname}}</view>
+        <view class="scanPay-title">{{i18n.t('scanPay_cost',$_locale)}}￥{{msg.money}}</view>
+        <view class="scanPay-content">
+            <text class="scanPay-content-title">{{i18n.t('scanPay_more',$_locale)}}</text>
+            <view class="scanPay-content-con">￥<text class="scanPay-content-con-num">{{msg.money}}</text>
+            </view>
+        </view>
+    </view>
+    <button bindtap="pay" class="btn">{{i18n.t('scanPay_btn',$_locale)}}</button>
+    <pwd bind:close="close" bind:getValue="getPwd" bind:input="getPwdToPay" id="pwd" status="{{status}}"></pwd>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

@@ -1,0 +1,20 @@
+<view bindtap="toBankCardDetails" class="bank-ul" data-detail="{{item}}" style="background-color:{{item.color}};" wx:for="{{bankList}}" wx:key="index">
+    <view class="bank-ul-header">
+        <view class="bank-ul-header-logo">
+            <image class="img" mode="aspectFit" src="{{item.url}}"></image>
+        </view>
+        <text class="bank-ul-header-bankname">{{item.routedesc}}</text>
+    </view>
+    <view class="bank-ul-bankcardno">
+        <text>****</text>
+        <text>****</text>
+        <text>****</text>
+        <text>{{item.easybankcardno}}</text>
+    </view>
+</view>
+<view bindtap="bindBankCards" class="btn">
+    <image class="btn-icon" mode="aspectFit" src="../../style/images/bindBankCard/add.png"></image>
+    <text class="btn-text">{{i18n.t('add_bankcard',$_locale)}}</text>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

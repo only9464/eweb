@@ -1,0 +1,85 @@
+<view class="inteFeePay">
+    <block wx:if="{{!show}}">
+        <view class="writePart">
+            <picker bindchange="bindsysChange" range="{{sysList}}" rangeKey="netname" value="{{system}}">
+                <view class="weui-cell" style="display:block">
+                    <label class="weui-label">{{i18n.t('inteFeePay_system',$_locale)}}</label>
+                    <view class="picker-value" wx:if="{{sysIndex!==''}}">{{sysList[sysIndex].netname}}</view>
+                    <view class="picker-value" wx:else>{{i18n.t('inteFeePay_system_placeholder',$_locale)}}</view>
+                </view>
+            </picker>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <label class="weui-label">{{i18n.t('inteFeePay_account',$_locale)}}</label>
+                </view>
+                <view class="weui-cell__bd">
+                    <input bindinput="getInteId" class="weui-cell__ft" maxlength="16" placeholder="{{i18n.t('inteFeePay_account_placeholder',$_locale)}}" placeholderStyle="color:#cfcfcf" style="color:black" type="text" value="{{enterInteId}}"></input>
+                </view>
+            </view>
+        </view>
+        <view class="showAccount" wx:if="{{accountList.length!=0}}">
+            <text>{{i18n.t('current_query',$_locale)}}</text>
+            <text bindtap="setAccount" data-account="{{item}}" style="color:#3C9DFB;" wx:for="{{accountList}}">{{item}}
+			</text>
+        </view>
+        <button bindtap="query" class="longbutton">{{i18n.t('inteFeePay_query',$_locale)}}</button>
+    </block>
+    <block wx:else>
+        <view class="writePart">
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <label class="weui-label">{{i18n.t('inteFeePay_system',$_locale)}}</label>
+                </view>
+                <view class="weui-cell__bd" style="text-align:right;">
+                    <text style="color:gray">{{sysList[sysIndex].netname}}</text>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <label class="weui-label">{{i18n.t('inteFeePay_account',$_locale)}}</label>
+                </view>
+                <view class="weui-cell__bd" style="text-align:right;">
+                    <text style="color:gray">{{enterInteId}}</text>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <label class="weui-label">{{i18n.t('inteFeePay_left',$_locale)}}</label>
+                </view>
+                <view class="weui-cell__bd" style="text-align:right;">
+                    <text style="color:gray">{{inteBalance?inteBalance:0}}元</text>
+                </view>
+            </view>
+        </view>
+        <view class="writePart">
+            <picker bindchange="changePayKind" range="{{array}}" rangeKey="bankname" value="{{index}}" wx:if="{{array.length!=1}}">
+                <view class="picker" style="padding:30rpx;display:flex;justify-content:space-between;">
+                    <text>{{i18n.t('recharge_kind',$_locale)}}</text>
+                    <text style="color:rgba(0,0,0,0.5);">{{array[index].bankname}}</text>
+                </view>
+            </picker>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <label class="weui-label">{{i18n.t('lifeCharge_bills_amount',$_locale)}}</label>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-cell__ft" disabled="{{true}}" maxlength="4" placeholder="{{i18n.t('pay_input_placeholder',$_locale)}}" placeholderStyle="color:#cfcfcf" style="color:black" type="number" value="{{inteFee}}"></input>
+                </view>
+            </view>
+        </view>
+        <view class="recharge" wx:if="{{!isDisabled}}">
+            <text class="recharge-title">{{i18n.t('recharge_note',$_locale)}}</text>
+            <radio-group bindchange="rechargeChange" class="recharge-radio-group" name="recharge">
+                <label class="recharge-radio {{item.checked?'recharge-radio-actived':''}}" wx:for="{{rechargeList}}" wx:key="index">
+                    <radio checked="{{item.checked}}" style="display:none;" value="{{item.name}}"></radio>
+                    <text class="radio-text">{{item.value}}</text>
+                </label>
+            </radio-group>
+        </view>
+        <view bindtap="backtosys" class="back">{{i18n.t('inteFeePay_prompt',$_locale)}}</view>
+        <button bindtap="recharge" class="longbutton">{{i18n.t('scanPay_btn',$_locale)}}</button>
+    </block>
+    <pwd bind:close="close" bind:getValue="getPwd" bind:input="getPwdToPay" id="pwd" status="{{status}}" wx:if="{{status}}"></pwd>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

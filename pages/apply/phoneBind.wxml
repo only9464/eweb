@@ -1,0 +1,21 @@
+<view style="position:relative;">
+    <view class="apply">
+        <view class="apply-header">
+            <text class="apply-header-h1">{{i18n.t('apply_h1',$_locale)}}</text>
+            <text class="apply-header-h2">{{i18n.t('apply_h2',$_locale)}}</text>
+        </view>
+        <form bindsubmit="apply">
+            <view class="apply-con">
+                <view class="apply-con-item">
+                    <input bindinput="getPhone" maxlength="11" name="phone" placeholder="{{i18n.t('apply_phone',$_locale)}}" placeholderClass="place-holder" type="number"></input>
+                    <button bindtap="sendCode" disabled="{{disabled}}">{{sendCode}}</button>
+                </view>
+            </view>
+            <view bindtap="toBind" class="apply-tobind">{{i18n.t('apply_tobind',$_locale)}}</view>
+            <button class="btn" formType="submit">{{i18n.t('apply_btn',$_locale)}}</button>
+        </form>
+    </view>
+    <image mode="widthFix" src="/style/images/apply/footer.png"></image>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

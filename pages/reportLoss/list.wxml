@@ -1,0 +1,30 @@
+<view class="list">
+    <view class="list-notice">
+        <text>以下校园卡现存于启航活动中心108室，请尽快领取，服务电话：82589900</text>
+    </view>
+    <view class="list-search">
+        <input bindinput="change" class="list-search-input" placeholder="{{i18n.t('getLossCard_search',$_locale)}}" type="text" value="{{searchVal}}"></input>
+        <text bindtap="query">查询</text>
+    </view>
+    <view class="list-con">
+        <view class="list-con-header">
+            <text class="left">{{i18n.t('name',$_locale)}}</text>
+            <text class="center">{{i18n.t('stuempno1',$_locale)}}</text>
+            <text class="right" style="padding-right:20rpx;">{{i18n.t('jkcodeRecord_date',$_locale)}}</text>
+        </view>
+        <scroll-view scrollY bindscrolltolower="getmore" class="list-con-scroll" enableBackToTop="{{true}}" lowerThreshold="{{80}}">
+            <view class="nolist" wx:if="{{list.length==0}}">
+                <text>{{i18n.t('nomore',$_locale)}}</text>
+            </view>
+            <block wx:else>
+                <view class="list-con-item" wx:for="{{list}}" wx:key="{{index}}">
+                    <text class="left">{{item.custname}}</text>
+                    <text class="center">{{item.stuempno}}</text>
+                    <text class="right">{{item.transdate}}</text>
+                </view>
+            </block>
+        </scroll-view>
+    </view>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

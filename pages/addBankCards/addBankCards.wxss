@@ -1,0 +1,27 @@
+.warn {
+    padding: 30rpx
+}
+
+.writePart {
+    background-color: #fff
+}
+
+.weui-label {
+    color: #8e8e8e
+}
+
+wx-picker {
+    border-bottom: none
+}
+
+.btn {
+    background-color: #3599fb;
+    border-radius: 50rpx;
+    color: #fff;
+    margin: 50rpx auto;
+    width: 600rpx
+}
+
+.weui-cell {
+    border-bottom: 1rpx solid #f5f6f7
+}

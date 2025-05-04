@@ -1,0 +1,42 @@
+<view class="unbindBusCard">
+    <view class="unbindBusCard-header">
+        <image class="unbindBusCard-header-img" mode="widthFix" src="/style/images/unbindBusCard/card1.png"></image>
+        <view class="unbindBusCard-header-card">
+            <view class="unbindBusCard-header-card-no">
+                <text>卡号：</text>
+                <text>****{{info._cardno}}</text>
+            </view>
+            <view bindtap="unbind" class="unbindBusCard-header-card-btn">解绑</view>
+        </view>
+    </view>
+    <view class="unbindBusCard-item">
+        <view>
+            <text class="unbindBusCard-item-title">校园卡余额</text>
+        </view>
+        <view class="unbindBusCard-item-balance-no">
+            <text>目前校园卡剩余金额</text>
+            <text>￥{{balance}}</text>
+        </view>
+    </view>
+    <view class="unbindBusCard-item">
+        <view>
+            <text class="unbindBusCard-item-title">近期交易</text>
+        </view>
+        <view class="unbindBusCard-item-items" wx:for="{{cost_list}}" wx:key="index">
+            <view class="unbindBusCard-item-items-icon">
+                <image mode="widthFix" src="/style/images/unbindBusCard/icon.png"></image>
+                <view class="unbindBusCard-item-items-icon-text">
+                    <text>{{item.shopname}}</text>
+                    <text>{{item._paytime}}</text>
+                </view>
+            </view>
+            <text class="unbindBusCard-item-items-cost">{{item.tradetype==1?'+':'-'}}￥{{item._amount}}</text>
+        </view>
+    </view>
+    <view class="nocard" wx:if="{{is_have_card}}">
+        <image mode="widthFix" src="/style/images/unbindBusCard/nocard.png"></image>
+        <text>目前暂未绑定联名交通卡</text>
+    </view>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

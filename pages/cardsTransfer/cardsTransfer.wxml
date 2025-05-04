@@ -1,0 +1,30 @@
+<view style="background-color:#FFFFFF;">
+    <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <label class="weui-label">{{type=='phone'?i18n.t('heu_name',$_locale):i18n.t('name',$_locale)}}</label>
+        </view>
+        <view class="weui-cell__bd">
+            <input bindinput="getUsername" class="weui-cell__ft" placeholder="{{i18n.t('transfer_name_placeholder',$_locale)}}" placeholderStyle="color:#a3a3a3" style="color:black" type="text" value="{{username}}"></input>
+        </view>
+    </view>
+    <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <label class="weui-label">{{type=='phone'?i18n.t('heu_cardno',$_locale):i18n.t('student_id',$_locale)}}</label>
+        </view>
+        <view class="weui-cell__bd">
+            <input bindinput="getId" class="weui-cell__ft" maxlength="16" placeholder="{{type=='phone'?i18n.t('heu_cardno_placeholder',$_locale):i18n.t('transfer_student_id_placeholder',$_locale)}}" placeholderStyle="color:#a3a3a3" style="color:black" type="text" value="{{id}}"></input>
+        </view>
+    </view>
+    <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <label class="weui-label">{{i18n.t('transfer_balance',$_locale)}}</label>
+        </view>
+        <view class="weui-cell__bd">
+            <input bindinput="getBalance" class="weui-cell__ft" maxlength="7" placeholder="{{i18n.t('transfer_balance_placeholder',$_locale)}}" placeholderStyle="color:#a3a3a3" style="color:black" type="digit" value="{{amount}}"></input>
+        </view>
+    </view>
+</view>
+<text class="bottom">{{i18n.t('transfer_balance_left',$_locale)}}￥{{balance}}</text>
+<button bindtap="{{stopClick?'':'onceTransfer'}}" class="btn">{{i18n.t('transfer_btn',$_locale)}}</button>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

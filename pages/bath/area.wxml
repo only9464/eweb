@@ -1,0 +1,31 @@
+<view class="area">
+    <block wx:if="{{list.length}}">
+        <view class="area-item" wx:for="{{list}}" wx:key="id">
+            <view class="area-item-title">
+                <image mode="widthFix" src="/style/images/bathCode/bathCode.png"></image>
+                <text>{{item.name}}</text>
+            </view>
+            <view class="area-item-con">
+                <text>状态：{{item.status?'可用':'不可用'}}</text>
+                <button bindtap="query" data-item="{{item}}">查看</button>
+            </view>
+            <view class="area-item-dtl" wx:if="{{item.isShowDtl}}">
+                <view>
+                    <text>总数：{{item.dtl.total}}</text>
+                    <text>使用中：{{item.dtl.inuse}}</text>
+                    <text>可用：{{item.dtl.canuse}}</text>
+                    <text style="opacity:0;">离线：{{item.dtl.offline}}</text>
+                </view>
+                <view>
+                    <text>使用率</text>
+                    <progress showInfo borderRadius="20" percent="{{item.dtl.percent}}" strokeWidth="5"></progress>
+                </view>
+            </view>
+        </view>
+    </block>
+    <view class="noshower" wx:else>
+        <text>暂无可查看浴室</text>
+    </view>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

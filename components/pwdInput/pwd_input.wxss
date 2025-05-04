@@ -1,0 +1,130 @@
+.pop_title {
+    text-align: center
+}
+
+.content {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    margin-top: 100rpx;
+    position: relative;
+    width: 500rpx
+}
+
+.bug {
+    background-color: #606060;
+    border-radius: 50%;
+    height: 10rpx;
+    position: absolute;
+    top: 36rpx;
+    width: 10rpx
+}
+
+.bug0 {
+    left: 35rpx
+}
+
+.bug1 {
+    left: 120rpx
+}
+
+.bug2 {
+    left: 203rpx
+}
+
+.bug3 {
+    left: 287rpx
+}
+
+.bug4 {
+    left: 370rpx
+}
+
+.bug5 {
+    left: 453rpx
+}
+
+.iptbox {
+    -webkit-align-items: center;
+    align-items: center;
+    border: 1rpx solid #ddd;
+    box-sizing: border-box;
+    color: #606060;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 10rpx;
+    height: 80rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    text-align: center;
+    width: 80rpx
+}
+
+.border {
+    border: 1rpx solid #3599fb
+}
+
+.ipt {
+    height: 0;
+    width: 0
+}
+
+.btn-area {
+    background-color: #3599fb;
+    color: #fff;
+    margin-top: 60rpx;
+    width: 80%
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 20rpx;
+    margin: 20% auto auto;
+    padding: 50rpx;
+    position: relative;
+    width: 500rpx
+}
+
+.pop {
+    width: 100%
+}
+
+.iconClose {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    height: 80rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    position: absolute;
+    right: 20rpx;
+    top: 20rpx;
+    width: 80rpx
+}
+
+.iconClose wx-image {
+    width: 40rpx
+}
+
+.guangbiao {
+    background-color: #000;
+    height: 40rpx;
+    left: 35rpx;
+    position: absolute;
+    top: 20rpx;
+    width: 3rpx
+}
+
+.overlay {
+    background-color: rgba(0,0,0,.7);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3
+}

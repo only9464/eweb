@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "rating": "pages\\evaluate\\components\\rating\\index"
+  },
+  "navigationBarTitleText": "消费评价"
+}

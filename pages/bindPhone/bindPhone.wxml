@@ -1,0 +1,11 @@
+<view class="weui-cell">
+    <view class="weui-cell__hd">
+        <label class="weui-label">{{i18n.t('phone',$_locale)}}</label>
+    </view>
+    <view class="weui-cell__bd">
+        <input bindinput="getPhone" class="weui-input" placeholder="{{i18n.t('phone_placeholder',$_locale)}}" type="text" value="{{phone}}"></input>
+    </view>
+</view>
+<button bindtap="bind" class="longbutton" hoverStayTime="3000">{{i18n.t('bind',$_locale)}}</button>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

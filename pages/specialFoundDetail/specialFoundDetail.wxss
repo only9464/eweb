@@ -1,0 +1,37 @@
+.specialFoundDetail {
+    padding: 30rpx
+}
+
+.scrollView {
+    height: calc(100vh -30rpx)
+}
+
+.list-item {
+    background-color: #fff;
+    box-shadow: 0rpx 1rpx 10rpx #999;
+    font-size: 28rpx;
+    padding: 100rpx 100rpx 50rpx;
+    position: relative
+}
+
+.itemImg {
+    left: -50rpx;
+    position: absolute;
+    top: 0;
+    width: 250rpx
+}
+
+.itemKinds {
+    color: #fff;
+    font-size: 30rpx;
+    left: 60rpx;
+    position: absolute;
+    top: 20rpx
+}
+
+.itemEx {
+    bottom: 50rpx;
+    font-size: 36rpx;
+    position: absolute;
+    right: 30rpx
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "modal": "pages\\amountTransfer\\components\\modal\\modal"
+  },
+  "navigationBarTitleText": "离校销户"
+}

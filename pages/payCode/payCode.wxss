@@ -1,0 +1,154 @@
+page {
+    background-image: linear-gradient(#639cf7,#286cf3)
+}
+
+.page {
+    height: 100vh;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    overflow: hidden;
+    padding: 30rpx 0;
+    width: 100%
+}
+
+.page,.panel {
+    -webkit-align-items: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column
+}
+
+.panel {
+    background-color: #fff;
+    border-radius: 20rpx;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 50rpx 0;
+    width: 650rpx
+}
+
+.header {
+    background-color: #f0f0f0;
+    border-radius: 10rpx 10rpx 0 0;
+    height: 140rpx
+}
+
+.qrcode {
+    height: 230px;
+    padding: 40rpx 0 0rpx;
+    width: 200px
+}
+
+.title-toast {
+    color: #999;
+    display: block;
+    font-size: 32rpx
+}
+
+.hideQr,wx-canvas {
+    height: 100%;
+    width: 100%
+}
+
+.hideQr {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    font-weight: 700;
+    -webkit-justify-content: center;
+    justify-content: center;
+    opacity: .7
+}
+
+wx-text {
+    text-align: center
+}
+
+wx-button {
+    background-color: #3c9dfb;
+    border-radius: 50rpx;
+    color: #fff;
+    font-size: 32rpx;
+    margin-top: 30rpx;
+    width: 500rpx
+}
+
+.bottom {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    width: 500rpx
+}
+
+.img {
+    height: 50rpx;
+    width: 50rpx
+}
+
+.item {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center
+}
+
+.item-name {
+    color: #abc6fa;
+    font-size: 28rpx;
+    line-height: 50rpx
+}
+
+.select {
+    color: #fff
+}
+
+.payKind {
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 30rpx
+}
+
+.payKind,.payKind-left {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex
+}
+
+.pay-text {
+    margin-left: 30rpx
+}
+
+.scanImg {
+    height: 500rpx;
+    padding: 50rpx 0
+}
+
+.msg {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #6ca1f6;
+    border-radius: 20rpx;
+    box-sizing: border-box;
+    color: #fff;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 32rpx;
+    padding: 30rpx;
+    width: 650rpx
+}
+
+.user {
+    height: 50rpx;
+    margin-right: 20rpx;
+    width: 50rpx
+}

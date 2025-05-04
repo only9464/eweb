@@ -1,0 +1,67 @@
+<view class="list">
+    <view class="list-fliter">
+        <view class="list-fliter-title">
+            <text>{{ref.shopname}}</text>
+            <text>{{avgScore}}</text>
+        </view>
+        <view class="list-fliter-items">
+            <view class="list-fliter-items-btns">
+                <button bindtap="changeBtns" class="{{item.isClick?'active':''}}" data-index="{{index}}" size="mini" wx:for="{{fliterBtns}}" wx:key="{{item}}">{{item.text}}</button>
+            </view>
+            <view class="list-fliter-items-orders">
+                <text>丨</text>
+                <picker bindchange="pickChange" range="{{orderList}}" rangeKey="value" value="{{orderIndex}}">
+                    <text class="picker-value">{{orderList[orderIndex].value}}</text>
+                </picker>
+                <image src="/style/images/evaluate/s.png" wx:if="{{orderIndex==1}}"></image>
+                <image src="/style/images/evaluate/j.png" wx:elif="{{orderIndex==2}}"></image>
+                <image src="/style/images/evaluate/m.png" style="width:30rpx;height:30rpx;" wx:else></image>
+            </view>
+        </view>
+    </view>
+    <view class="list-con">
+        <scroll-view scrollY bindscrolltolower="getMoreList" enableBackToTop="{{true}}" lowerThreshold="{{80}}" style="height:{{height}};">
+            <view class="scroll-view-con" wx:if="{{list.length}}">
+                <view class="list-con-item" wx:for="{{list}}" wx:key="{{item.commentId}}">
+                    <view class="list-con-item-user">
+                        <view class="list-con-item-user-avatar">
+                            <image src="/style/images/mine/maleAvator.png"></image>
+                        </view>
+                        <view>
+                            <text>{{item.commentator}}</text>
+                            <text>{{item.createtimeFormat}}</text>
+                        </view>
+                    </view>
+                    <view class="list-con-item-star" wx:for="{{item.scores}}" wx:for-item="itemSco" wx:key="{{itemSco.commentType}}">
+                        <text>{{itemSco.commentName}}</text>
+                        <rating readOnly showRating desc="{{desc}}" descStyle="{{descStyle}}" rating="{{itemSco.score}}" starWidth="30"></rating>
+                    </view>
+                    <view class="list-con-item-evaluation">
+                        <text>{{item.content}}</text>
+                    </view>
+                    <view class="list-con-item-photos">
+                        <image bindtap="previewPhoto" class="list-con-item-photos-item" data-current="{{indexPic}}" data-index="{{index}}" src="{{itemPic.pic}}" wx:for="{{item.pictures}}" wx:for-index="indexPic" wx:for-item="itemPic" wx:key="{{itemPic.id}}"></image>
+                    </view>
+                    <view class="list-con-item-reply" wx:if="{{item.backContent&&item.backDateTimeFormat}}">
+                        <view>商家回复<text>（{{item.backDateTimeFormat}}）</text>
+                        </view>
+                        <view>{{item.backContent}}</view>
+                    </view>
+                    <block wx:if="{{isMyself}}">
+                        <view class="line"></view>
+                        <view class="list-con-item-delete">
+                            <view bindtap="delete" data-commentid="{{item.commentId}}" style="display:flex;align-items:center;">
+                                <image src="/style/images/evaluate/del.png"></image>
+                                <text>删除</text>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </view>
+            <view class="nomore" wx:else>暂无更多评价，快去抢先评价吧</view>
+        </scroll-view>
+    </view>
+    <button bindtap="toEvaluate" class="evaluationBtn" wx:if="{{height}}">我要评价</button>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

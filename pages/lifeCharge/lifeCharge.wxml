@@ -1,0 +1,15 @@
+<view class="none">
+    <text>———— {{i18n.t('lifeCharge_no_order',$_locale)}} ————</text>
+</view>
+<view class="list">
+    <view bindtap="toDetail" class="list-item" data-index="{{index}}" wx:for="{{msg}}" wx:key="index">
+        <view class="list-item-box">
+            <image class="img" mode="aspectFit" src="/style/images/index/outSpecialFound.png"></image>
+            <text class="list-item-title">{{item.billname}}</text>
+        </view>
+        <text class="list-item-date">{{item.date}}</text>
+    </view>
+</view>
+<view bindtap="backto" class="back">{{i18n.t('lifeCharge_prompt',$_locale)}}</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

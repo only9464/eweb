@@ -1,0 +1,23 @@
+<view class="coupon">
+    <block wx:if="{{list.length>0}}">
+        <view class="coupon-item" style="border-left-color:{{item.received?'#999999':'#2FA8E1'}}" wx:for="{{list}}">
+            <view class="coupon-item-left">
+                <text class="{{!item.received?'unreceived':''}}">{{item.amount}}元</text>
+                <text>优惠券</text>
+            </view>
+            <view class="coupon-item-right">
+                <text>{{item.name}}</text>
+                <text>有效期：{{item.date}}</text>
+                <text class="received">{{item.limit}}</text>
+            </view>
+            <view class="coupon-item-status">
+                <text bindtap="getCoupon" data-index="{{index}}" wx:if="{{!item.received}}">点击领取</text>
+                <text class="received" wx:else>已领取</text>
+            </view>
+        </view>
+    </block>
+    <view class="coupon-no" wx:else>暂无优惠券</view>
+    <text bindtap="toRecords" class="coupon-history">领取记录</text>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

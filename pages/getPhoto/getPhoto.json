@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "image-cropper": "pages\\getPhoto\\components\\image-cropper\\image-cropper"
+  },
+  "navigationBarTitleText": "照片采集",
+  "disableScroll": true
+}

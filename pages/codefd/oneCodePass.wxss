@@ -1,0 +1,215 @@
+@import "codefd.wxss";
+
+page {
+    --color1: #063190;
+    --color: #f5f6f8
+}
+
+.page {
+    background-color: var(--color);
+    -webkit-justify-content: start;
+    justify-content: start;
+    padding: 0 0 30rpx
+}
+
+.bg {
+    width: 100%
+}
+
+.img-box,.img-box1 {
+    background-color: var(--color1);
+    border-radius: 10rpx;
+    padding: 20rpx
+}
+
+.msg,.msg1 {
+    background-color: #fff;
+    box-shadow: 0 1px 6px #ccc;
+    margin-bottom: 0rpx;
+    padding: 30rpx 50rpx
+}
+
+.msg {
+    border-top-left-radius: 20rpx;
+    border-top-right-radius: 20rpx
+}
+
+.msg-circle-left {
+    box-shadow: 1px 0 1px gray;
+    left: 0;
+    -webkit-transform: translate(-50%,50%);
+    transform: translate(-50%,50%)
+}
+
+.msg-circle-left,.msg-circle-right {
+    background-color: initial;
+    border-radius: 50%;
+    bottom: 0;
+    height: 40rpx;
+    position: absolute;
+    width: 40rpx
+}
+
+.msg-circle-right {
+    box-shadow: -1px 0 1px gray;
+    right: 0;
+    -webkit-transform: translate(50%,50%);
+    transform: translate(50%,50%);
+    z-index: 10
+}
+
+.msg::before {
+    box-shadow: -1px 0 4px gray
+}
+
+.msg::after,.msg::before {
+    background-color: var(--color);
+    content: none
+}
+
+.msg::after {
+    box-shadow: 1px 0 4px gray
+}
+
+.button,wx-button {
+    background-color: #284fa5;
+    line-height: 70rpx;
+    width: 240rpx
+}
+
+.msg-box {
+    white-space: wrap;
+    width: 150rpx
+}
+
+.msg-logo {
+    width: 200rpx
+}
+
+.panel {
+    background-color: initial;
+    margin-top: -150rpx;
+    overflow: initial;
+    padding: 0;
+    z-index: 1
+}
+
+.offline {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    position: relative
+}
+
+.offline wx-image {
+    width: 400rpx
+}
+
+.offline > wx-text {
+    color: #ccc;
+    font-size: 28rpx;
+    left: 55%;
+    position: absolute;
+    top: 30%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%)
+}
+
+wx-canvas {
+    height: inherit;
+    width: inherit
+}
+
+.footer {
+    background-color: #fff;
+    border-radius: 20rpx;
+    box-shadow: 0 0 6px #ccc;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-top: 30rpx;
+    padding: 30rpx;
+    width: 650rpx
+}
+
+.balance {
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    width: 100%
+}
+
+.balance,.balance-title,.balance-value {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex
+}
+
+.balance-title,.balance-value {
+    font-size: 28rpx
+}
+
+.balance-title wx-image {
+    margin-right: 20rpx;
+    width: 60rpx
+}
+
+.balance-value wx-image {
+    margin-left: 20rpx;
+    width: 40rpx
+}
+
+.line {
+    height: 50rpx;
+    overflow: hidden;
+    position: relative;
+    width: 100%
+}
+
+.line > wx-view {
+    border-top: 2px dashed var(--color);
+    left: 36rpx;
+    position: absolute;
+    right: 36rpx;
+    top: 50%;
+    z-index: 9
+}
+
+.line:after,.line:before {
+    border: 300rpx solid #fff;
+    border-radius: 50%;
+    content: "";
+    height: 50rpx;
+    margin-top: -325rpx;
+    position: absolute;
+    top: 50%;
+    width: 50rpx
+}
+
+.line:before {
+    left: -325rpx
+}
+
+.line:after {
+    right: -325rpx
+}
+
+.content {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    border-bottom-left-radius: 20rpx;
+    border-bottom-right-radius: 20rpx;
+    box-shadow: 0 1px 6px #ccc;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    padding: 0 0 30rpx;
+    width: 100%
+}

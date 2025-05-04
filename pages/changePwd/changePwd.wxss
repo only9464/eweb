@@ -1,0 +1,35 @@
+.changePwd {
+    -webkit-justify-content: center;
+    justify-content: center;
+    padding: 30rpx
+}
+
+.changePwd,.item {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column
+}
+
+.item {
+    background-color: #fff;
+    margin-bottom: 30rpx;
+    padding: 0 30rpx
+}
+
+.item-title {
+    padding: 30rpx 0
+}
+
+.submit {
+    background-color: #3c9dfb;
+    border-radius: 50rpx;
+    color: #fff;
+    margin-top: 50rpx;
+    width: 600rpx
+}
+
+.box {
+    border-top: 1px solid #f6f6f6;
+    padding: 30rpx 0
+}

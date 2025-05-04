@@ -1,0 +1,120 @@
+.pay {
+    background-color: #f5f6f7;
+    color: #606060;
+    width: 100%
+}
+
+.input-recharge {
+    width: 650rpx
+}
+
+.recharge {
+    background-color: #fff;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    padding: 30rpx 20rpx;
+    width: 100%
+}
+
+.recharge-title {
+    font-size: 28rpx
+}
+
+.recharge-inputBox {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 40rpx;
+    margin: 30rpx 0
+}
+
+.recharge-radio-group {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+
+.recharge-radio {
+    -webkit-align-items: center;
+    align-items: center;
+    border: 1px solid #e3e3e3;
+    border-radius: 10rpx;
+    display: -webkit-flex;
+    display: flex;
+    height: 100rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 100rpx
+}
+
+.recharge-radio-actived {
+    border: 1px solid #3c9dfb;
+    color: #3c9dfb
+}
+
+.paykinds {
+    background-color: #fff;
+    box-sizing: border-box;
+    margin-top: 30rpx;
+    padding: 30rpx 20rpx 0
+}
+
+.paykinds-title {
+    font-size: 28rpx
+}
+
+.paykinds-radio {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    padding: 20rpx 0
+}
+
+.border {
+    border-bottom: 1px solid #f5f6f7
+}
+
+.paykinds-radio-content {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex
+}
+
+.paykinds-radio-content-img {
+    height: 60rpx;
+    margin: 0 30rpx;
+    width: 60rpx
+}
+
+.submit {
+    background-color: #3c9dfb;
+    border-radius: 50rpx;
+    color: #fff;
+    margin: 50rpx auto;
+    width: 600rpx
+}
+
+.arrears {
+    -webkit-align-items: center;
+    align-items: center;
+    color: red;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 30rpx;
+    gap: 0 20rpx;
+    margin: 30rpx 30rpx 0
+}
+
+.arrears > wx-text:last-child {
+    font-size: 26rpx;
+    text-decoration: underline
+}

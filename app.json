@@ -1,0 +1,165 @@
+{
+  "entryPagePath": "pages/index/index",
+  "pages": [
+    "pages/index/index",
+    "pages/bind/bind",
+    "pages/mine/mine",
+    "pages/message/message",
+    "pages/turnover/turnover",
+    "pages/payCode/payCode",
+    "pages/pay/pay",
+    "pages/reportLoss/reportLoss",
+    "pages/meetting/meetting",
+    "pages/attendance/attendance",
+    "pages/application/application",
+    "pages/approval/approval",
+    "pages/bindBankCard/bindBankCard",
+    "pages/outSpecialFound/outSpecialFound",
+    "pages/cardsTransfer/cardsTransfer",
+    "pages/changePwd/changePwd",
+    "pages/changePwd/reset",
+    "pages/userDetails/userDetails",
+    "pages/changeQuota/changeQuota",
+    "pages/specialFoundDetail/specialFoundDetail",
+    "pages/elecQuery/elecQuery",
+    "pages/inteFeePay/inteFeePay",
+    "pages/inteFeePay/hgc",
+    "pages/elecharge/elecharge",
+    "pages/elecharge/eleHgc",
+    "pages/elecharge/waterCharge",
+    "pages/addBankCards/addBankCards",
+    "pages/unbundBankCards/unbundBankCards",
+    "pages/orderOnline/orderOnline",
+    "pages/orderOnline/newcapech5",
+    "pages/scanResult/scanResult",
+    "pages/scanPay/scanPay",
+    "pages/payResult/payResult",
+    "pages/schoolPay/schoolPay",
+    "pages/getPhoto/getPhoto",
+    "pages/elecQuerySmis/elecQuerySmis",
+    "pages/elecQuerySmis/elecHgc",
+    "pages/subscribe/subscribe",
+    "pages/notice/notice",
+    "pages/waterOrder/waterOrder",
+    "pages/lifePay/lifePay",
+    "pages/lifeCharge/lifeCharge",
+    "pages/lifeChargeDetail/lifeChargeDetail",
+    "pages/msgPush/msgPush",
+    "pages/ccbecard/ccbecard",
+    "pages/chooseIdentity/chooseIdentity",
+    "pages/login/login",
+    "pages/onlineCharge/onlineCharge",
+    "pages/partnershipFee/partnershipFee",
+    "pages/codefd/codefd",
+    "pages/onlineRepair/onlineRepair",
+    "pages/amountTransfer/amountTransfer",
+    "pages/amountTransfer/closeAccount",
+    "pages/bindPhone/bindPhone",
+    "pages/bathCode/bathCode",
+    "pages/bindBathCode/bindBathCode",
+    "pages/unbindBusCard/unbindBusCard",
+    "pages/neterr/neterr",
+    "pages/corpBind/corpBind",
+    "pages/selectHost/selectHost",
+    "pages/authCorpBind/authCorpBind",
+    "pages/apply/apply",
+    "pages/apply/phoneBind",
+    "pages/waterPay/waterPay",
+    "pages/parkPay/parkPay",
+    "pages/h5/h5",
+    "pages/nkd/H5",
+    "pages/bind/smsBind",
+    "pages/bind/outside",
+    "pages/bind/appBind",
+    "pages/elecQuerySmis/sanda",
+    "pages/fixedTel/query",
+    "pages/fixedTel/recharge",
+    "pages/payNotice/list",
+    "pages/payNotice/pay",
+    "pages/payNotice/history",
+    "pages/bind/miniNavigatorLogin",
+    "pages/turnover/arrears",
+    "pages/turnover/summary",
+    "pages/jkcode/sign",
+    "pages/jkcode/records",
+    "pages/venuesCode/venuesCode",
+    "pages/bath/area",
+    "pages/bath/detail",
+    "pages/bath/district",
+    "pages/elecQuery/elecQueryCqjtu",
+    "pages/token/token",
+    "pages/evaluate/evaluate",
+    "pages/evaluate/list",
+    "pages/unbindBusCard/unbind",
+    "pages/unbindBusCard/bind",
+    "pages/coupon/list",
+    "pages/coupon/records",
+    "pages/codefd/offline",
+    "pages/wxpay/wxpay",
+    "pages/reportLoss/list",
+    "pages/elecQuery/yantai",
+    "pages/elecharge/yantai",
+    "pages/codefd/oneCodePass",
+    "pages/codefd/ecard",
+    "pages/h5/epeortal"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的展示"
+    }
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#284FA5",
+    "borderStyle": "white",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "style\\images\\tabBar\\index.png",
+        "selectedIconPath": "style\\images\\tabBar\\indexActive.png"
+      },
+      {
+        "text": "流水",
+        "pagePath": "pages/turnover/turnover",
+        "iconPath": "style\\images\\tabBar\\turnover.png",
+        "selectedIconPath": "style\\images\\tabBar\\turnoverActive.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/mine/mine",
+        "iconPath": "style\\images\\tabBar\\mine.png",
+        "selectedIconPath": "style\\images\\tabBar\\mineActive.png"
+      }
+    ]
+  },
+  "renderer": "webview",
+  "requiredPrivateInfos": [
+    "getLocation"
+  ],
+  "componentFramework": "exparser",
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "subPackages": [
+    {
+      "root": "hainan/",
+      "pages": [
+        "pages/refund",
+        "pages/payActivity"
+      ]
+    },
+    {
+      "root": "thirdpart/",
+      "pages": [
+        "pages/aiface",
+        "aiface/notice",
+        "aiface/index"
+      ]
+    }
+  ],
+  "plugins": {}
+}

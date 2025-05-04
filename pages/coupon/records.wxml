@@ -1,0 +1,40 @@
+<view class="records">
+    <view class="records-condition">
+        <view class="records-condition-date">
+            <picker bindchange="getStartdate" mode="date" style="width:100%;" value="{{startdate}}">
+                <view class="picker">起始日期:<text style="color:#3C9DFB;">{{startdate}}</text>
+                </view>
+            </picker>
+            <picker bindchange="getEnddate" mode="date" start="{{startdate}}" style="width:100%;" value="{{enddate}}">
+                <view class="picker">结束日期:<text style="color:#3C9DFB;">{{enddate}}</text>
+                </view>
+            </picker>
+        </view>
+        <view class="records-condition-status">
+            <picker bindchange="getStatus" range="{{statusList}}" rangeKey="name" value="{{status}}">
+                <view class="picker">优惠券状态:<text style="color:#3C9DFB;">{{status=='请选择'?status:statusList[status].name}}</text>
+                </view>
+            </picker>
+            <view bindtap="query" class="query">查询</view>
+        </view>
+    </view>
+    <scroll-view scrollY bindscrolltolower="getMoreList" class="scrollView2" enableBackToTop="{{true}}" lowerThreshold="{{80}}" scrollTop="{{scrollTop}}" style="height:{{height}};">
+        <view class="coupon-item" style="border-left-color:{{item.status=='init'?'#2FA8E1':'#999999'}}" wx:for="{{list}}" wx:key="index">
+            <view class="coupon-item-left">
+                <text class="{{item.status=='init'?'unreceived':'received'}}">{{item.amount}}元</text>
+                <text>优惠券</text>
+            </view>
+            <view class="coupon-item-right">
+                <text>{{item.name}}</text>
+                <text>有效期：{{item.date}}</text>
+                <text class="received">{{item.limit}}</text>
+            </view>
+            <view class="coupon-item-status">
+                <text class="{{item.status=='init'?'unreceived':'received'}}">{{statusFormat[item.status]}}</text>
+            </view>
+        </view>
+        <view bindtap="getTurnoverList" class="loading">{{loadingText}}</view>
+    </scroll-view>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

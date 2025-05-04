@@ -1,0 +1,39 @@
+<view class="pay">
+    <form bindsubmit="pay">
+        <view class="recharge">
+            <text class="recharge-title">{{i18n.t('recharge_note',$_locale)}}</text>
+            <view class="recharge-inputBox">
+                <text>￥</text>
+                <input bindfocus="getFocus" class="input-recharge" focus="{{isFocuse}}" maxlength="4" name="customRecharge" placeholder="{{i18n.t('recharge_input_placeholder',$_locale)}}" type="number" value="{{recharge}}"></input>
+            </view>
+            <radio-group bindchange="rechargeChange" class="recharge-radio-group" name="recharge">
+                <label class="recharge-radio {{item.checked?'recharge-radio-actived':''}}" wx:for="{{rechargeList}}" wx:key="index">
+                    <radio checked="{{item.checked}}" style="display:none;" value="{{item.name}}"></radio>
+                    <text class="radio-text">{{item.value}}</text>
+                </label>
+            </radio-group>
+        </view>
+        <view class="paykinds">
+            <text class="paykinds-title">{{i18n.t('recharge_kind',$_locale)}}</text>
+            <view bindtap="getCanUseBank" style="text-align:center;padding:30rpx;font-size:28rpx;" wx:if="{{isNoKind}}">{{i18n.t('recharge_kinds',$_locale)}}</view>
+            <radio-group class="paykinds-radio-group" name="paykinds" onChange="paykindsChange">
+                <label class="paykinds-radio {{index===payKindsList.length-1?'':'border'}}" wx:if="{{item.useflag}}" wx:for="{{payKindsList}}" wx:key="index">
+                    <radio checked="{{item.checked}}" color="#3C9DFB" value="{{item.bankcode}}"></radio>
+                    <view class="paykinds-radio-content">
+                        <image class="paykinds-radio-content-img" mode="widthFix" src="{{item.url}}"></image>
+                        <text class="radio-text">{{item.bankname}}</text>
+                    </view>
+                </label>
+            </radio-group>
+        </view>
+        <view class="arrears" wx:if="{{consume!='0.00'}}">
+            <text>{{i18n.t('arrears_now',$_locale)}}{{consume}}</text>
+            <text bindtap="toArrears">{{i18n.t('arrears_dtl',$_locale)}}</text>
+        </view>
+        <button class="submit" formType="submit">{{type=='phone'?i18n.t('school',$_locale)+i18n.t('recharge',$_locale):i18n.t('recharge',$_locale)}}</button>
+    </form>
+    <pwd bind:close="close" bind:getValue="getPwd" id="pwd" status="{{status}}"></pwd>
+    <modal bind:close="close_no_bank" showModal="{{showModal}}" type="nobank"></modal>
+</view>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

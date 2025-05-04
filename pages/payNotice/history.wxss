@@ -1,0 +1,27 @@
+@import "list.wxss";
+
+.content wx-view {
+    margin-bottom: 30rpx
+}
+
+.content wx-view:last-child {
+    margin-bottom: 0
+}
+
+.content {
+    border-bottom: none
+}
+
+.scrollView {
+    height: calc(100vh - 60rpx)
+}
+
+.loading {
+    color: #c3c3c3;
+    margin-top: 30rpx;
+    text-align: center
+}
+
+.item {
+    margin-bottom: 30rpx
+}

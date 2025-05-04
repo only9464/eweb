@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "fliter-pay": "components\\fliters_pay\\fliters_pay",
+    "fliter-auth": "components\\fliters_auth\\fliters_auth"
+  },
+  "navigationBarTitleText": "流水"
+}

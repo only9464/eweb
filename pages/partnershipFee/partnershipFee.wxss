@@ -1,0 +1,12 @@
+.btn {
+    background-color: #3c9dfb;
+    border-radius: 50rpx;
+    color: #fff;
+    margin-top: 60rpx;
+    width: 600rpx
+}
+
+.partnershipFee {
+    background-color: #fff;
+    margin-top: 30rpx
+}

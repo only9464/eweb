@@ -1,0 +1,78 @@
+.list-notice {
+    color: red;
+    padding: 30rpx
+}
+
+.list-con-header {
+    font-weight: 700
+}
+
+.list-con-header,.list-con-item {
+    background-color: #fff;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 20rpx 30rpx
+}
+
+.list-con-header wx-text,.list-con-item wx-text {
+    display: block;
+    text-align: center
+}
+
+.list-con-scroll {
+    height: calc(100vh - 360rpx);
+    position: relative
+}
+
+.nolist {
+    color: #ccc;
+    left: 50%;
+    position: absolute;
+    top: 80rpx;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+.right {
+    box-sizing: border-box;
+    text-align: right!important;
+    width: 35%
+}
+
+.left {
+    text-align: left!important;
+    width: 25%
+}
+
+.center {
+    text-align: center;
+    width: 40%
+}
+
+.list-search {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 28rpx;
+    padding: 0 30rpx 30rpx
+}
+
+.list-search-input {
+    border: 1px solid;
+    border-radius: 50rpx;
+    padding: 10rpx 30rpx;
+    width: 70%
+}
+
+.list-search > wx-text {
+    background-color: #3599fb;
+    border-radius: 50rpx;
+    color: #fff;
+    display: block;
+    margin-left: 30rpx;
+    padding: 5rpx 40rpx;
+    white-space: nowrap
+}

@@ -1,0 +1,20 @@
+<view class="writePart">
+    <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <label class="weui-label">{{i18n.t('fixedTel_tel',$_locale)}}</label>
+        </view>
+        <view class="weui-cell__bd">
+            <input bindinput="getRoomid" class="weui-cell__ft" maxlength="16" placeholder="{{i18n.t('fixedTel_tel_placeholder',$_locale)}}" placeholderStyle="color:#cfcfcf" style="color:black" type="number" value="{{roomid}}"></input>
+        </view>
+    </view>
+</view>
+<view class="showAccount" wx:if="{{accountList.length!=0}}">
+    <text>{{i18n.t('current_recharge',$_locale)}}</text>
+    <text bindtap="setAccount" data-account="{{item}}" style="color:#3C9DFB;" wx:for="{{accountList}}">{{item}} </text>
+</view>
+<view class="notice">
+    <text>温馨提示：电话号码为8位数字，例：82510000</text>
+</view>
+<button bindtap="doNext" class="longbutton">{{i18n.t('next',$_locale)}}</button>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

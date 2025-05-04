@@ -1,0 +1,63 @@
+<template name="skeleton">
+    <view class="sk-container">
+        <view class="index">
+            <view class="banner">
+                <image class="bannerImg sk-image" mode="widthFix" style="height:213.298px;"></image>
+            </view>
+            <view class="partment">
+                <view class="partment-msg">
+                    <view class="partment-msg-item">
+                        <image class="img sk-image" mode="aspectFit"></image>
+                        <text class="partment-msg-name sk-transparent sk-text-18-7500-28 sk-text">徐光超，您好！</text>
+                    </view>
+                    <view class="partment-msg-item">
+                        <image class="img sk-image" mode="aspectFit"></image>
+                        <text class="partment-msg-part sk-transparent sk-text-18-7500-828 sk-text">13035056100</text>
+                    </view>
+                </view>
+                <view class="balance-item-num">
+                    <view class="balance-item-num-num">
+                        <text class="sk-transparent sk-text-18-7500-818 sk-text">￥0.00</text>
+                    </view>
+                    <view class="balance-item-num-btn sk-transparent sk-text-18-7500-593 sk-text" style="background-color:rgb(120, 207, 154);background-position-x:50%;">正常</view>
+                </view>
+            </view>
+            <view class="allFunc">
+                <text class="allFunc-title sk-transparent sk-text-18-7500-336 sk-text">常用功能</text>
+                <view class="allFunc-content">
+                    <view class="allFunc-content-item" data-item="[object Object]">
+                        <image class="allFunc-content-item-image big sk-image" mode="aspectFit"></image>
+                        <text class="allFunc-content-item-name sk-transparent sk-text-18-7500-719 sk-text">扫一扫</text>
+                    </view>
+                    <view class="allFunc-content-item" data-item="[object Object]">
+                        <image class="allFunc-content-item-image big sk-image" mode="aspectFit"></image>
+                        <text class="allFunc-content-item-name sk-transparent sk-text-18-7500-158 sk-text">支付码</text>
+                    </view>
+                    <view class="allFunc-content-item" data-item="[object Object]">
+                        <image class="allFunc-content-item-image big sk-image" mode="aspectFit"></image>
+                        <text class="allFunc-content-item-name sk-transparent sk-text-18-7500-558 sk-text">认证码</text>
+                    </view>
+                </view>
+            </view>
+            <view class="allFunc lastFuncCss">
+                <text class="allFunc-title sk-transparent sk-text-18-7500-491 sk-text">卡务中心</text>
+                <view class="allFunc-content">
+                    <view class="allFunc-content-item" data-item="[object Object]">
+                        <image class="allFunc-content-item-image small sk-image" mode="aspectFit"></image>
+                    </view>
+                    <view class="allFunc-content-item" data-item="[object Object]">
+                        <image class="allFunc-content-item-image small sk-image" mode="aspectFit"></image>
+                    </view>
+                    <view class="allFunc-content-item" data-item="[object Object]">
+                        <image class="allFunc-content-item-image small sk-image" mode="aspectFit"></image>
+                    </view>
+                    <view class="allFunc-content-item" data-item="[object Object]">
+                        <image class="allFunc-content-item-image small sk-image" mode="aspectFit"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>

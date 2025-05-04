@@ -1,0 +1,51 @@
+.payResult {
+    background-color: #fff;
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 30rpx
+}
+
+.payResult,.payResult-status {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column
+}
+
+.payResult-status {
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center
+}
+
+.payResult-status-text {
+    font-size: 40rpx;
+    margin-top: 30rpx
+}
+
+.payResult-msg {
+    margin-top: 50rpx
+}
+
+.weui-cell {
+    padding: 20rpx
+}
+
+.payResult-money {
+    color: #3599fb;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 70rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-top: 30rpx
+}
+
+.btn {
+    background-color: #3c9dfb;
+    border-radius: 50rpx;
+    color: #fff;
+    margin: 100rpx auto 0;
+    width: 600rpx
+}

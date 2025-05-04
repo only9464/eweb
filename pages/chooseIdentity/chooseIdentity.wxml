@@ -1,0 +1,60 @@
+<view class="chooseIdentity">
+    <image class="chooseIdentity-bg" mode="widthFix" src="{{bg}}"></image>
+    <view class="img">
+        <image mode="widthFix" src="{{logo}}" style="width:{{imgWidth}}rpx;"></image>
+    </view>
+    <view class="content">
+        <view class="smsBind">
+            <form bindsubmit="bind">
+                <view class="smsBind-con">
+                    <view class="smsBind-con-item">
+                        <text>{{i18n.t('name',$_locale)}}:</text>
+                        <input bindinput="getCustname" name="custname" placeholder="{{i18n.t('bind_name_placeholder',$_locale)}}" type="text" value="{{custname}}"></input>
+                    </view>
+                    <view class="smsBind-con-item">
+                        <text>{{i18n.t('cardno',$_locale)}}:</text>
+                        <input bindinput="getStuempno" name="stuempno" placeholder="{{i18n.t('cardno_placeholder',$_locale)}}" type="text" value="{{stuempno}}"></input>
+                    </view>
+                    <view class="smsBind-con-item">
+                        <text>{{i18n.t('verifycode',$_locale)}}:</text>
+                        <input name="verifycode" placeholder="{{i18n.t('apply_code',$_locale)}}" style="text-align:center" type="text"></input>
+                        <button bindtap="getSmsCode" disabled="{{disabled}}">{{sendCode}}</button>
+                    </view>
+                </view>
+                <button class="btn" formType="submit">{{i18n.t('heu_login',$_locale)}}</button>
+            </form>
+        </view>
+        <view class="kinds">
+            <view bindtap="inside" class="item out">
+                <view class="item-img">
+                    <view class="img-box outback">
+                        <image mode="widthFix" src="/style/images/university/out.png"></image>
+                    </view>
+                    <text style="font-size:34rpx;white-space:nowrap;">统一身份认证登录</text>
+                </view>
+                <image mode="widthFix" src="/style/images/university/arrow.png"></image>
+            </view>
+            <view class="item in">
+                <label for="phone">
+                    <view class="item-img">
+                        <view class="img-box inback">
+                            <image mode="widthFix" src="/style/images/university/in.png"></image>
+                        </view>
+                        <text style="font-size:34rpx;white-space:nowrap;">{{desc}}</text>
+                    </view>
+                </label>
+                <button hidden bindtap="toSmsBind" id="phone"></button>
+                <image mode="widthFix" src="/style/images/university/arrow.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="lay" wx:if="{{isHavaLay}}">
+        <label bindtap="change" class="laybox">
+            <checkbox checked="{{isAgree}}" color="rgb(6,49,144)"></checkbox>我已阅读并同意</label>
+        <text bindtap="open_rule">《{{lay}}》</text>
+    </view>
+    <image class="footer" mode="widthFix" src="{{footer}}"></image>
+</view>
+<modal bind:close="close" showModal="{{show}}" type="{{rule}}"></modal>
+
+<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
