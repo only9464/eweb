@@ -11,4 +11,4 @@
 </view>
 <button bindtap="query" class="longbutton">{{i18n.t('query',$_locale)}}</button>
 
-<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="i18n" src="../../i18n/locales.wxs"/>

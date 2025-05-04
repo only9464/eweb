@@ -29,4 +29,4 @@
     <button bindtap="evaluate" class="btn">提交评价</button>
 </view>
 
-<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="i18n" src="../../i18n/locales.wxs"/>

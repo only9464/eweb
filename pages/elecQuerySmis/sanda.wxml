@@ -26,4 +26,4 @@
     <text>提示：楼号为两位数字，例：“1号楼”填写“01”；金海校区四期公寓“N”填写“40”，“S”填写“41”（例：房间号为N0101，填写为1400101）</text>
 </view>
 
-<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="i18n" src="../../i18n/locales.wxs"/>

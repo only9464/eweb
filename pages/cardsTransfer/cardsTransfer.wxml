@@ -27,4 +27,4 @@
 <text class="bottom">{{i18n.t('transfer_balance_left',$_locale)}}￥{{balance}}</text>
 <button bindtap="{{stopClick?'':'onceTransfer'}}" class="btn">{{i18n.t('transfer_btn',$_locale)}}</button>
 
-<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="i18n" src="../../i18n/locales.wxs"/>

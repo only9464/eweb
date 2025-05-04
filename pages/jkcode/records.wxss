@@ -1,4 +1,4 @@
-@import "..\..\components\fliters_pay\fliters_pay.wxss";
+@import "../../components/fliters_pay/fliters_pay.wxss";
 
 .arrears {
     padding: 30rpx

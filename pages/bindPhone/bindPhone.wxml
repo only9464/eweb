@@ -8,4 +8,4 @@
 </view>
 <button bindtap="bind" class="longbutton" hoverStayTime="3000">{{i18n.t('bind',$_locale)}}</button>
 
-<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="i18n" src="../../i18n/locales.wxs"/>

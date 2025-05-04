@@ -5,4 +5,4 @@
     <view class="rating_text1" style="{{descStyle}}" wx:if="{{showRating&&desc.length>0}}">{{desc[rating-1]}}</view>
 </view>
 
-<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="i18n" src="../../i18n/locales.wxs"/>

@@ -36,4 +36,4 @@
 </view>
 <button bindtap="onChangeQuota" class="btn">{{i18n.t('changeQuota',{value:$_locale!='en-US'?obj.title:obj.entitle},$_locale)}}</button>
 
-<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="i18n" src="../../i18n/locales.wxs"/>

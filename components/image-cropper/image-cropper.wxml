@@ -23,4 +23,4 @@
     <canvas canvasId="image-cropper" class="image-cropper-canvas" disableScroll="true" style="width:{{_canvas_width*export_scale}}px;height:{{_canvas_height*export_scale}}px;left:{{canvas_left}}px;top:{{canvas_top}}px"></canvas>
 </view>
 
-<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="i18n" src="../../i18n/locales.wxs"/>

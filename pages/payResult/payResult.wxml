@@ -68,4 +68,4 @@
     <button bindtap="goBack" class="btn">{{i18n.t('return',$_locale)}}{{secend?'('+secend+')':''}}</button>
 </view>
 
-<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="i18n" src="../../i18n/locales.wxs"/>

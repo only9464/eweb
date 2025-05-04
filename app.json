@@ -116,20 +116,20 @@
       {
         "text": "首页",
         "pagePath": "pages/index/index",
-        "iconPath": "style\\images\\tabBar\\index.png",
-        "selectedIconPath": "style\\images\\tabBar\\indexActive.png"
+        "iconPath": "style/images/tabBar/index.png",
+        "selectedIconPath": "style/images/tabBar/indexActive.png"
       },
       {
         "text": "流水",
         "pagePath": "pages/turnover/turnover",
-        "iconPath": "style\\images\\tabBar\\turnover.png",
-        "selectedIconPath": "style\\images\\tabBar\\turnoverActive.png"
+        "iconPath": "style/images/tabBar/turnover.png",
+        "selectedIconPath": "style/images/tabBar/turnoverActive.png"
       },
       {
         "text": "我的",
         "pagePath": "pages/mine/mine",
-        "iconPath": "style\\images\\tabBar\\mine.png",
-        "selectedIconPath": "style\\images\\tabBar\\mineActive.png"
+        "iconPath": "style/images/tabBar/mine.png",
+        "selectedIconPath": "style/images/tabBar/mineActive.png"
       }
     ]
   },

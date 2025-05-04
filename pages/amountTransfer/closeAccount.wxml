@@ -47,4 +47,4 @@
 <button bindtap="start" class="longbutton" hoverStayTime="3000">{{i18n.t('amountTransfer_btn1',$_locale)}}</button>
 <modal bind:close="close" bindchange="change" showModal="{{show}}" type="closeAccount"></modal>
 
-<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="i18n" src="../../i18n/locales.wxs"/>

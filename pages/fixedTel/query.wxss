@@ -1,4 +1,4 @@
-@import "..\elecQuerySmis\elecHgc.wxss";
+@import "../elecQuerySmis/elecHgc.wxss";
 
 .notice {
     color: #999;

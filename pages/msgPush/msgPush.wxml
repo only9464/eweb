@@ -17,4 +17,4 @@
 </view>
 <official-account style="position:absolute;bottom:60rpx;width:100%;"></official-account>
 
-<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="i18n" src="../../i18n/locales.wxs"/>

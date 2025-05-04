@@ -20,4 +20,4 @@
     <text bindtap="toRecords" class="coupon-history">领取记录</text>
 </view>
 
-<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="i18n" src="../../i18n/locales.wxs"/>

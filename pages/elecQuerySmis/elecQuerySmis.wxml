@@ -36,4 +36,4 @@
     <text>如果转账成功，会有成功提示。</text>
 </view>
 
-<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="i18n" src="../../i18n/locales.wxs"/>

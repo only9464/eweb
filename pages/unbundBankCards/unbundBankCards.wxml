@@ -14,4 +14,4 @@
 </view>
 <view bindtap="unbundBankCard" class="btn">{{i18n.t('bathCode_unbind',$_locale)}}</view>
 
-<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="i18n" src="../../i18n/locales.wxs"/>

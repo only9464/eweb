@@ -1,4 +1,4 @@
-@import "..\bind\smsBind.wxss";
+@import "../bind/smsBind.wxss";
 
 wx-image {
     height: auto

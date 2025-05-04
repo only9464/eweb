@@ -57,4 +57,4 @@
 </view>
 <modal bind:close="close" showModal="{{show}}" type="{{rule}}"></modal>
 
-<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="i18n" src="../../i18n/locales.wxs"/>

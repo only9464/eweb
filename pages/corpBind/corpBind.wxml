@@ -2,4 +2,4 @@
     <button bindtap="back" class="longbutton" wx:if="{{show}}">重新选择</button>
 </view>
 
-<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="i18n" src="../../i18n/locales.wxs"/>

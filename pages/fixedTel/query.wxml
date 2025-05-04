@@ -17,4 +17,4 @@
 </view>
 <button bindtap="doNext" class="longbutton">{{i18n.t('next',$_locale)}}</button>
 
-<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="i18n" src="../../i18n/locales.wxs"/>

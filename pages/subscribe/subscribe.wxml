@@ -2,4 +2,4 @@
     <web-view src="{{src}}"></web-view>
 </view>
 
-<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="i18n" src="../../i18n/locales.wxs"/>

@@ -10,4 +10,4 @@
 </view>
 <button bindtap="pay" class="btn">立即清算</button>
 
-<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="i18n" src="../../i18n/locales.wxs"/>

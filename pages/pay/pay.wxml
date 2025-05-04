@@ -36,4 +36,4 @@
     <modal bind:close="close_no_bank" showModal="{{showModal}}" type="nobank"></modal>
 </view>
 
-<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="i18n" src="../../i18n/locales.wxs"/>

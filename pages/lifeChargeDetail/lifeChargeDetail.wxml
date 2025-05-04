@@ -35,4 +35,4 @@
 <button bindtap="openPwdInput" class="longbutton">{{i18n.t('lifeCharge_btn',$_locale)}}</button>
 <pwd bind:close="close" bind:getValue="getPwd" status="{{showPwdInput}}" wx:if="{{showPwdInput}}"></pwd>
 
-<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="i18n" src="../../i18n/locales.wxs"/>

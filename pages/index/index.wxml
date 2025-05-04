@@ -35,5 +35,5 @@
 </view>
 <annual-report bind:change="annualChange" wx:if="{{isShowAnnualReport}}"></annual-report>
 
-<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
-<wxs module="filter" src="..\..\utils\format.wxs"/>
+<wxs module="i18n" src="../../i18n/locales.wxs"/>
+<wxs module="filter" src="../../utils/format.wxs"/>

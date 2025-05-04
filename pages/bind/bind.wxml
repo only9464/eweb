@@ -44,4 +44,4 @@
 </block>
 <view class="qiYe" wx:else>请从企业微信“校园卡”进入小程序</view>
 
-<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="i18n" src="../../i18n/locales.wxs"/>

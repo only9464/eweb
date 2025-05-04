@@ -10,4 +10,4 @@
 </view>
 <button bindtap="start" class="longbutton" hoverStayTime="3000">{{type=='closeAccount'?i18n.t('amountTransfer_btn1',$_locale):i18n.t('amountTransfer_btn',$_locale)}}</button>
 
-<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="i18n" src="../../i18n/locales.wxs"/>

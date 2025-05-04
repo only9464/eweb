@@ -28,4 +28,4 @@
     <button bindtap="bindBankCards" class="btn">{{i18n.t('bindBankCard',{value:$_locale!='en-US'?obj.title:obj.entitle},$_locale)}}</button>
 </view>
 
-<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="i18n" src="../../i18n/locales.wxs"/>

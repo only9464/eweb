@@ -18,4 +18,4 @@
 </view>
 <button bindtap="payInit" data-item="1">立即支付</button>
 
-<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="i18n" src="../../i18n/locales.wxs"/>

@@ -36,4 +36,4 @@
 <button bindtap="doNext" class="longbutton">{{i18n.t('scanPay_btn',$_locale)}}</button>
 <pwd bind:close="close" bind:getValue="getPwd" bind:input="getPwdToPay" id="pwd" status="{{status}}" wx:if="{{status}}"></pwd>
 
-<wxs module="i18n" src="..\..\i18n\locales.wxs"/>
+<wxs module="i18n" src="../../i18n/locales.wxs"/>
